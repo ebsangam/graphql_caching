@@ -1,0 +1,27 @@
+
+query Page{
+  Page{
+    media {
+      id
+      title {
+        english
+      }
+      coverImage {
+        extraLarge
+        large
+        medium
+        color
+      }
+      bannerImage
+      description
+      format
+    }
+    pageInfo {
+      total
+      perPage
+      currentPage
+      lastPage
+      hasNextPage
+    }
+  }
+}
