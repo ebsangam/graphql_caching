@@ -1,7 +1,16 @@
+import 'package:ferry/ferry.dart';
 import 'package:flutter/material.dart';
+import 'package:graphql_caching/client.dart';
+import 'package:graphql_caching/ferry_builder/ferry_builder.dart';
+import 'package:graphql_caching/gql/__generated__/posts.req.gql.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  final client = await initClient();
+  runApp(Provider(
+    create: (context) => client,
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,25 +21,63 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('GraphQLZero'),
+        ),
+        body: FerryBuilder(
+          client: context.read<Client>(),
+          operationRequest: GPostsReq(),
+          builder: (context, response) {
+            if (response.loading) {
+              return const Center(
+                child: CircularProgressIndicator.adaptive(),
+              );
+            }
+
+            if (response.data != null) {
+              return ListView.builder(
+                itemCount: response.data!.posts?.data?.length ?? 0,
+                itemBuilder: (context, index) {
+                  final post = response.data!.posts!.data![index]!;
+                  return Card(
+                    margin: const EdgeInsets.all(8.0),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            post.title!,
+                            style: Theme.of(context).textTheme.titleMedium,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          Text(
+                            '${post.user!.name!}, ${post.user!.email!.toLowerCase()}',
+                            style: Theme.of(context).textTheme.labelMedium,
+                          ),
+                          Text(post.body ?? ''),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            }
+
+            if (response.hasErrors) {
+              return Center(
+                child: Text(response.linkException.toString()),
+              );
+            }
+            return const Text('Wtf');
+          },
+        ),
+      ),
     );
   }
 }

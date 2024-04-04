@@ -1,26 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'page.req.gql.dart';
+part of 'posts.req.gql.dart';
 
-*************************************************************************
+// **************************************************************************
 // BuiltValueGenerator
-*************************************************************************
+// **************************************************************************
 
-Serializer<GPageReq> _$gPageReqSerializer = new _$GPageReqSerializer();
+Serializer<GPostsReq> _$gPostsReqSerializer = new _$GPostsReqSerializer();
 
-class _$GPageReqSerializer implements StructuredSerializer<GPageReq> {
+class _$GPostsReqSerializer implements StructuredSerializer<GPostsReq> {
   @override
-  final Iterable<Type> types = const [GPageReq, _$GPageReq];
+  final Iterable<Type> types = const [GPostsReq, _$GPostsReq];
   @override
-  final String wireName = 'GPageReq';
+  final String wireName = 'GPostsReq';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GPageReq object,
+  Iterable<Object?> serialize(Serializers serializers, GPostsReq object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
       'vars',
       serializers.serialize(object.vars,
-          specifiedType: const FullType(_i3.GPageVars)),
+          specifiedType: const FullType(_i3.GPostsVars)),
       'operation',
       serializers.serialize(object.operation,
           specifiedType: const FullType(_i4.Operation)),
@@ -41,7 +41,7 @@ class _$GPageReqSerializer implements StructuredSerializer<GPageReq> {
       result
         ..add('optimisticResponse')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GPageData)));
+            specifiedType: const FullType(_i2.GPostsData)));
     }
     value = object.updateCacheHandlerKey;
     if (value != null) {
@@ -69,9 +69,9 @@ class _$GPageReqSerializer implements StructuredSerializer<GPageReq> {
   }
 
   @override
-  GPageReq deserialize(Serializers serializers, Iterable<Object?> serialized,
+  GPostsReq deserialize(Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GPageReqBuilder();
+    final result = new GPostsReqBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -81,7 +81,8 @@ class _$GPageReqSerializer implements StructuredSerializer<GPageReq> {
       switch (key) {
         case 'vars':
           result.vars.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i3.GPageVars))! as _i3.GPageVars);
+                  specifiedType: const FullType(_i3.GPostsVars))!
+              as _i3.GPostsVars);
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
@@ -93,7 +94,8 @@ class _$GPageReqSerializer implements StructuredSerializer<GPageReq> {
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GPageData))! as _i2.GPageData);
+                  specifiedType: const FullType(_i2.GPostsData))!
+              as _i2.GPostsData);
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
@@ -122,17 +124,18 @@ class _$GPageReqSerializer implements StructuredSerializer<GPageReq> {
   }
 }
 
-class _$GPageReq extends GPageReq {
+class _$GPostsReq extends GPostsReq {
   @override
-  final _i3.GPageVars vars;
+  final _i3.GPostsVars vars;
   @override
   final _i4.Operation operation;
   @override
   final String? requestId;
   @override
-  final _i2.GPageData? Function(_i2.GPageData?, _i2.GPageData?)? updateResult;
+  final _i2.GPostsData? Function(_i2.GPostsData?, _i2.GPostsData?)?
+      updateResult;
   @override
-  final _i2.GPageData? optimisticResponse;
+  final _i2.GPostsData? optimisticResponse;
   @override
   final String? updateCacheHandlerKey;
   @override
@@ -144,10 +147,10 @@ class _$GPageReq extends GPageReq {
   @override
   final _i4.Context? context;
 
-  factory _$GPageReq([void Function(GPageReqBuilder)? updates]) =>
-      (new GPageReqBuilder()..update(updates))._build();
+  factory _$GPostsReq([void Function(GPostsReqBuilder)? updates]) =>
+      (new GPostsReqBuilder()..update(updates))._build();
 
-  _$GPageReq._(
+  _$GPostsReq._(
       {required this.vars,
       required this.operation,
       this.requestId,
@@ -159,24 +162,24 @@ class _$GPageReq extends GPageReq {
       required this.executeOnListen,
       this.context})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, r'GPageReq', 'vars');
-    BuiltValueNullFieldError.checkNotNull(operation, r'GPageReq', 'operation');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GPostsReq', 'vars');
+    BuiltValueNullFieldError.checkNotNull(operation, r'GPostsReq', 'operation');
     BuiltValueNullFieldError.checkNotNull(
-        executeOnListen, r'GPageReq', 'executeOnListen');
+        executeOnListen, r'GPostsReq', 'executeOnListen');
   }
 
   @override
-  GPageReq rebuild(void Function(GPageReqBuilder) updates) =>
+  GPostsReq rebuild(void Function(GPostsReqBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GPageReqBuilder toBuilder() => new GPageReqBuilder()..replace(this);
+  GPostsReqBuilder toBuilder() => new GPostsReqBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     final dynamic _$dynamicOther = other;
-    return other is GPageReq &&
+    return other is GPostsReq &&
         vars == other.vars &&
         operation == other.operation &&
         requestId == other.requestId &&
@@ -208,7 +211,7 @@ class _$GPageReq extends GPageReq {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GPageReq')
+    return (newBuiltValueToStringHelper(r'GPostsReq')
           ..add('vars', vars)
           ..add('operation', operation)
           ..add('requestId', requestId)
@@ -223,12 +226,13 @@ class _$GPageReq extends GPageReq {
   }
 }
 
-class GPageReqBuilder implements Builder<GPageReq, GPageReqBuilder> {
-  _$GPageReq? _$v;
+class GPostsReqBuilder implements Builder<GPostsReq, GPostsReqBuilder> {
+  _$GPostsReq? _$v;
 
-  _i3.GPageVarsBuilder? _vars;
-  _i3.GPageVarsBuilder get vars => _$this._vars ??= new _i3.GPageVarsBuilder();
-  set vars(_i3.GPageVarsBuilder? vars) => _$this._vars = vars;
+  _i3.GPostsVarsBuilder? _vars;
+  _i3.GPostsVarsBuilder get vars =>
+      _$this._vars ??= new _i3.GPostsVarsBuilder();
+  set vars(_i3.GPostsVarsBuilder? vars) => _$this._vars = vars;
 
   _i4.Operation? _operation;
   _i4.Operation? get operation => _$this._operation;
@@ -238,18 +242,18 @@ class GPageReqBuilder implements Builder<GPageReq, GPageReqBuilder> {
   String? get requestId => _$this._requestId;
   set requestId(String? requestId) => _$this._requestId = requestId;
 
-  _i2.GPageData? Function(_i2.GPageData?, _i2.GPageData?)? _updateResult;
-  _i2.GPageData? Function(_i2.GPageData?, _i2.GPageData?)? get updateResult =>
-      _$this._updateResult;
+  _i2.GPostsData? Function(_i2.GPostsData?, _i2.GPostsData?)? _updateResult;
+  _i2.GPostsData? Function(_i2.GPostsData?, _i2.GPostsData?)?
+      get updateResult => _$this._updateResult;
   set updateResult(
-          _i2.GPageData? Function(_i2.GPageData?, _i2.GPageData?)?
+          _i2.GPostsData? Function(_i2.GPostsData?, _i2.GPostsData?)?
               updateResult) =>
       _$this._updateResult = updateResult;
 
-  _i2.GPageDataBuilder? _optimisticResponse;
-  _i2.GPageDataBuilder get optimisticResponse =>
-      _$this._optimisticResponse ??= new _i2.GPageDataBuilder();
-  set optimisticResponse(_i2.GPageDataBuilder? optimisticResponse) =>
+  _i2.GPostsDataBuilder? _optimisticResponse;
+  _i2.GPostsDataBuilder get optimisticResponse =>
+      _$this._optimisticResponse ??= new _i2.GPostsDataBuilder();
+  set optimisticResponse(_i2.GPostsDataBuilder? optimisticResponse) =>
       _$this._optimisticResponse = optimisticResponse;
 
   String? _updateCacheHandlerKey;
@@ -278,11 +282,11 @@ class GPageReqBuilder implements Builder<GPageReq, GPageReqBuilder> {
   _i4.Context? get context => _$this._context;
   set context(_i4.Context? context) => _$this._context = context;
 
-  GPageReqBuilder() {
-    GPageReq._initializeBuilder(this);
+  GPostsReqBuilder() {
+    GPostsReq._initializeBuilder(this);
   }
 
-  GPageReqBuilder get _$this {
+  GPostsReqBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _vars = $v.vars.toBuilder();
@@ -301,27 +305,27 @@ class GPageReqBuilder implements Builder<GPageReq, GPageReqBuilder> {
   }
 
   @override
-  void replace(GPageReq other) {
+  void replace(GPostsReq other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GPageReq;
+    _$v = other as _$GPostsReq;
   }
 
   @override
-  void update(void Function(GPageReqBuilder)? updates) {
+  void update(void Function(GPostsReqBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GPageReq build() => _build();
+  GPostsReq build() => _build();
 
-  _$GPageReq _build() {
-    _$GPageReq _$result;
+  _$GPostsReq _build() {
+    _$GPostsReq _$result;
     try {
       _$result = _$v ??
-          new _$GPageReq._(
+          new _$GPostsReq._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, r'GPageReq', 'operation'),
+                  operation, r'GPostsReq', 'operation'),
               requestId: requestId,
               updateResult: updateResult,
               optimisticResponse: _optimisticResponse?.build(),
@@ -329,7 +333,7 @@ class GPageReqBuilder implements Builder<GPageReq, GPageReqBuilder> {
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GPageReq', 'executeOnListen'),
+                  executeOnListen, r'GPostsReq', 'executeOnListen'),
               context: context);
     } catch (_) {
       late String _$failedField;
@@ -341,7 +345,7 @@ class GPageReqBuilder implements Builder<GPageReq, GPageReqBuilder> {
         _optimisticResponse?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'GPageReq', _$failedField, e.toString());
+            r'GPostsReq', _$failedField, e.toString());
       }
       rethrow;
     }

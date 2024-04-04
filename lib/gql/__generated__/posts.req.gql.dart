@@ -6,30 +6,30 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:ferry_exec/ferry_exec.dart' as _i1;
 import 'package:gql_exec/gql_exec.dart' as _i4;
-import 'package:graphql_caching/__generated__/page.ast.gql.dart' as _i5;
-import 'package:graphql_caching/__generated__/page.data.gql.dart' as _i2;
-import 'package:graphql_caching/__generated__/page.var.gql.dart' as _i3;
 import 'package:graphql_caching/__generated__/serializers.gql.dart' as _i6;
+import 'package:graphql_caching/gql/__generated__/posts.ast.gql.dart' as _i5;
+import 'package:graphql_caching/gql/__generated__/posts.data.gql.dart' as _i2;
+import 'package:graphql_caching/gql/__generated__/posts.var.gql.dart' as _i3;
 
-part 'page.req.gql.g.dart';
+part 'posts.req.gql.g.dart';
 
-abstract class GPageReq
+abstract class GPostsReq
     implements
-        Built<GPageReq, GPageReqBuilder>,
-        _i1.OperationRequest<_i2.GPageData, _i3.GPageVars> {
-  GPageReq._();
+        Built<GPostsReq, GPostsReqBuilder>,
+        _i1.OperationRequest<_i2.GPostsData, _i3.GPostsVars> {
+  GPostsReq._();
 
-  factory GPageReq([void Function(GPageReqBuilder b) updates]) = _$GPageReq;
+  factory GPostsReq([void Function(GPostsReqBuilder b) updates]) = _$GPostsReq;
 
-  static void _initializeBuilder(GPageReqBuilder b) => b
+  static void _initializeBuilder(GPostsReqBuilder b) => b
     ..operation = _i4.Operation(
       document: _i5.document,
-      operationName: 'Page',
+      operationName: 'Posts',
     )
     ..executeOnListen = true;
 
   @override
-  _i3.GPageVars get vars;
+  _i3.GPostsVars get vars;
   @override
   _i4.Operation get operation;
   @override
@@ -43,12 +43,12 @@ abstract class GPageReq
   String? get requestId;
   @override
   @BuiltValueField(serialize: false)
-  _i2.GPageData? Function(
-    _i2.GPageData?,
-    _i2.GPageData?,
+  _i2.GPostsData? Function(
+    _i2.GPostsData?,
+    _i2.GPostsData?,
   )? get updateResult;
   @override
-  _i2.GPageData? get optimisticResponse;
+  _i2.GPostsData? get optimisticResponse;
   @override
   String? get updateCacheHandlerKey;
   @override
@@ -61,30 +61,30 @@ abstract class GPageReq
   @BuiltValueField(serialize: false)
   _i4.Context? get context;
   @override
-  _i2.GPageData? parseData(Map<String, dynamic> json) =>
-      _i2.GPageData.fromJson(json);
+  _i2.GPostsData? parseData(Map<String, dynamic> json) =>
+      _i2.GPostsData.fromJson(json);
 
   @override
   Map<String, dynamic> varsToJson() => vars.toJson();
 
   @override
-  Map<String, dynamic> dataToJson(_i2.GPageData data) => data.toJson();
+  Map<String, dynamic> dataToJson(_i2.GPostsData data) => data.toJson();
 
   @override
-  _i1.OperationRequest<_i2.GPageData, _i3.GPageVars> transformOperation(
+  _i1.OperationRequest<_i2.GPostsData, _i3.GPostsVars> transformOperation(
           _i4.Operation Function(_i4.Operation) transform) =>
       this.rebuild((b) => b..operation = transform(operation));
 
-  static Serializer<GPageReq> get serializer => _$gPageReqSerializer;
+  static Serializer<GPostsReq> get serializer => _$gPostsReqSerializer;
 
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
-        GPageReq.serializer,
+        GPostsReq.serializer,
         this,
       ) as Map<String, dynamic>);
 
-  static GPageReq? fromJson(Map<String, dynamic> json) =>
+  static GPostsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
-        GPageReq.serializer,
+        GPostsReq.serializer,
         json,
       );
 }

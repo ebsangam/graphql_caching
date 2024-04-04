@@ -2,2130 +2,161 @@
 
 part of 'schema.schema.gql.dart';
 
-*************************************************************************
+// **************************************************************************
 // BuiltValueGenerator
-*************************************************************************
+// **************************************************************************
 
-const GActivitySort _$gActivitySortID = const GActivitySort._('ID');
-const GActivitySort _$gActivitySortID_DESC = const GActivitySort._('ID_DESC');
-const GActivitySort _$gActivitySortPINNED = const GActivitySort._('PINNED');
+const GOperatorKindEnum _$gOperatorKindEnumGTE =
+    const GOperatorKindEnum._('GTE');
+const GOperatorKindEnum _$gOperatorKindEnumLTE =
+    const GOperatorKindEnum._('LTE');
+const GOperatorKindEnum _$gOperatorKindEnumNE = const GOperatorKindEnum._('NE');
+const GOperatorKindEnum _$gOperatorKindEnumLIKE =
+    const GOperatorKindEnum._('LIKE');
 
-GActivitySort _$gActivitySortValueOf(String name) {
+GOperatorKindEnum _$gOperatorKindEnumValueOf(String name) {
   switch (name) {
-    case 'ID':
-      return _$gActivitySortID;
-    case 'ID_DESC':
-      return _$gActivitySortID_DESC;
-    case 'PINNED':
-      return _$gActivitySortPINNED;
+    case 'GTE':
+      return _$gOperatorKindEnumGTE;
+    case 'LTE':
+      return _$gOperatorKindEnumLTE;
+    case 'NE':
+      return _$gOperatorKindEnumNE;
+    case 'LIKE':
+      return _$gOperatorKindEnumLIKE;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<GActivitySort> _$gActivitySortValues =
-    new BuiltSet<GActivitySort>(const <GActivitySort>[
-  _$gActivitySortID,
-  _$gActivitySortID_DESC,
-  _$gActivitySortPINNED,
+final BuiltSet<GOperatorKindEnum> _$gOperatorKindEnumValues =
+    new BuiltSet<GOperatorKindEnum>(const <GOperatorKindEnum>[
+  _$gOperatorKindEnumGTE,
+  _$gOperatorKindEnumLTE,
+  _$gOperatorKindEnumNE,
+  _$gOperatorKindEnumLIKE,
 ]);
 
-const GActivityType _$gActivityTypeTEXT = const GActivityType._('TEXT');
-const GActivityType _$gActivityTypeANIME_LIST =
-    const GActivityType._('ANIME_LIST');
-const GActivityType _$gActivityTypeMANGA_LIST =
-    const GActivityType._('MANGA_LIST');
-const GActivityType _$gActivityTypeMESSAGE = const GActivityType._('MESSAGE');
-const GActivityType _$gActivityTypeMEDIA_LIST =
-    const GActivityType._('MEDIA_LIST');
+const GSortOrderEnum _$gSortOrderEnumASC = const GSortOrderEnum._('ASC');
+const GSortOrderEnum _$gSortOrderEnumDESC = const GSortOrderEnum._('DESC');
 
-GActivityType _$gActivityTypeValueOf(String name) {
+GSortOrderEnum _$gSortOrderEnumValueOf(String name) {
   switch (name) {
-    case 'TEXT':
-      return _$gActivityTypeTEXT;
-    case 'ANIME_LIST':
-      return _$gActivityTypeANIME_LIST;
-    case 'MANGA_LIST':
-      return _$gActivityTypeMANGA_LIST;
-    case 'MESSAGE':
-      return _$gActivityTypeMESSAGE;
-    case 'MEDIA_LIST':
-      return _$gActivityTypeMEDIA_LIST;
+    case 'ASC':
+      return _$gSortOrderEnumASC;
+    case 'DESC':
+      return _$gSortOrderEnumDESC;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<GActivityType> _$gActivityTypeValues =
-    new BuiltSet<GActivityType>(const <GActivityType>[
-  _$gActivityTypeTEXT,
-  _$gActivityTypeANIME_LIST,
-  _$gActivityTypeMANGA_LIST,
-  _$gActivityTypeMESSAGE,
-  _$gActivityTypeMEDIA_LIST,
+final BuiltSet<GSortOrderEnum> _$gSortOrderEnumValues =
+    new BuiltSet<GSortOrderEnum>(const <GSortOrderEnum>[
+  _$gSortOrderEnumASC,
+  _$gSortOrderEnumDESC,
 ]);
 
-const GAiringSort _$gAiringSortID = const GAiringSort._('ID');
-const GAiringSort _$gAiringSortID_DESC = const GAiringSort._('ID_DESC');
-const GAiringSort _$gAiringSortMEDIA_ID = const GAiringSort._('MEDIA_ID');
-const GAiringSort _$gAiringSortMEDIA_ID_DESC =
-    const GAiringSort._('MEDIA_ID_DESC');
-const GAiringSort _$gAiringSortTIME = const GAiringSort._('TIME');
-const GAiringSort _$gAiringSortTIME_DESC = const GAiringSort._('TIME_DESC');
-const GAiringSort _$gAiringSortEPISODE = const GAiringSort._('EPISODE');
-const GAiringSort _$gAiringSortEPISODE_DESC =
-    const GAiringSort._('EPISODE_DESC');
-
-GAiringSort _$gAiringSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gAiringSortID;
-    case 'ID_DESC':
-      return _$gAiringSortID_DESC;
-    case 'MEDIA_ID':
-      return _$gAiringSortMEDIA_ID;
-    case 'MEDIA_ID_DESC':
-      return _$gAiringSortMEDIA_ID_DESC;
-    case 'TIME':
-      return _$gAiringSortTIME;
-    case 'TIME_DESC':
-      return _$gAiringSortTIME_DESC;
-    case 'EPISODE':
-      return _$gAiringSortEPISODE;
-    case 'EPISODE_DESC':
-      return _$gAiringSortEPISODE_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GAiringSort> _$gAiringSortValues =
-    new BuiltSet<GAiringSort>(const <GAiringSort>[
-  _$gAiringSortID,
-  _$gAiringSortID_DESC,
-  _$gAiringSortMEDIA_ID,
-  _$gAiringSortMEDIA_ID_DESC,
-  _$gAiringSortTIME,
-  _$gAiringSortTIME_DESC,
-  _$gAiringSortEPISODE,
-  _$gAiringSortEPISODE_DESC,
-]);
-
-const GCharacterRole _$gCharacterRoleMAIN = const GCharacterRole._('MAIN');
-const GCharacterRole _$gCharacterRoleSUPPORTING =
-    const GCharacterRole._('SUPPORTING');
-const GCharacterRole _$gCharacterRoleBACKGROUND =
-    const GCharacterRole._('BACKGROUND');
-
-GCharacterRole _$gCharacterRoleValueOf(String name) {
-  switch (name) {
-    case 'MAIN':
-      return _$gCharacterRoleMAIN;
-    case 'SUPPORTING':
-      return _$gCharacterRoleSUPPORTING;
-    case 'BACKGROUND':
-      return _$gCharacterRoleBACKGROUND;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GCharacterRole> _$gCharacterRoleValues =
-    new BuiltSet<GCharacterRole>(const <GCharacterRole>[
-  _$gCharacterRoleMAIN,
-  _$gCharacterRoleSUPPORTING,
-  _$gCharacterRoleBACKGROUND,
-]);
-
-const GCharacterSort _$gCharacterSortID = const GCharacterSort._('ID');
-const GCharacterSort _$gCharacterSortID_DESC =
-    const GCharacterSort._('ID_DESC');
-const GCharacterSort _$gCharacterSortROLE = const GCharacterSort._('ROLE');
-const GCharacterSort _$gCharacterSortROLE_DESC =
-    const GCharacterSort._('ROLE_DESC');
-const GCharacterSort _$gCharacterSortSEARCH_MATCH =
-    const GCharacterSort._('SEARCH_MATCH');
-const GCharacterSort _$gCharacterSortFAVOURITES =
-    const GCharacterSort._('FAVOURITES');
-const GCharacterSort _$gCharacterSortFAVOURITES_DESC =
-    const GCharacterSort._('FAVOURITES_DESC');
-const GCharacterSort _$gCharacterSortRELEVANCE =
-    const GCharacterSort._('RELEVANCE');
-
-GCharacterSort _$gCharacterSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gCharacterSortID;
-    case 'ID_DESC':
-      return _$gCharacterSortID_DESC;
-    case 'ROLE':
-      return _$gCharacterSortROLE;
-    case 'ROLE_DESC':
-      return _$gCharacterSortROLE_DESC;
-    case 'SEARCH_MATCH':
-      return _$gCharacterSortSEARCH_MATCH;
-    case 'FAVOURITES':
-      return _$gCharacterSortFAVOURITES;
-    case 'FAVOURITES_DESC':
-      return _$gCharacterSortFAVOURITES_DESC;
-    case 'RELEVANCE':
-      return _$gCharacterSortRELEVANCE;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GCharacterSort> _$gCharacterSortValues =
-    new BuiltSet<GCharacterSort>(const <GCharacterSort>[
-  _$gCharacterSortID,
-  _$gCharacterSortID_DESC,
-  _$gCharacterSortROLE,
-  _$gCharacterSortROLE_DESC,
-  _$gCharacterSortSEARCH_MATCH,
-  _$gCharacterSortFAVOURITES,
-  _$gCharacterSortFAVOURITES_DESC,
-  _$gCharacterSortRELEVANCE,
-]);
-
-const GExternalLinkMediaType _$gExternalLinkMediaTypeANIME =
-    const GExternalLinkMediaType._('ANIME');
-const GExternalLinkMediaType _$gExternalLinkMediaTypeMANGA =
-    const GExternalLinkMediaType._('MANGA');
-const GExternalLinkMediaType _$gExternalLinkMediaTypeSTAFF =
-    const GExternalLinkMediaType._('STAFF');
-
-GExternalLinkMediaType _$gExternalLinkMediaTypeValueOf(String name) {
-  switch (name) {
-    case 'ANIME':
-      return _$gExternalLinkMediaTypeANIME;
-    case 'MANGA':
-      return _$gExternalLinkMediaTypeMANGA;
-    case 'STAFF':
-      return _$gExternalLinkMediaTypeSTAFF;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GExternalLinkMediaType> _$gExternalLinkMediaTypeValues =
-    new BuiltSet<GExternalLinkMediaType>(const <GExternalLinkMediaType>[
-  _$gExternalLinkMediaTypeANIME,
-  _$gExternalLinkMediaTypeMANGA,
-  _$gExternalLinkMediaTypeSTAFF,
-]);
-
-const GExternalLinkType _$gExternalLinkTypeINFO =
-    const GExternalLinkType._('INFO');
-const GExternalLinkType _$gExternalLinkTypeSTREAMING =
-    const GExternalLinkType._('STREAMING');
-const GExternalLinkType _$gExternalLinkTypeSOCIAL =
-    const GExternalLinkType._('SOCIAL');
-
-GExternalLinkType _$gExternalLinkTypeValueOf(String name) {
-  switch (name) {
-    case 'INFO':
-      return _$gExternalLinkTypeINFO;
-    case 'STREAMING':
-      return _$gExternalLinkTypeSTREAMING;
-    case 'SOCIAL':
-      return _$gExternalLinkTypeSOCIAL;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GExternalLinkType> _$gExternalLinkTypeValues =
-    new BuiltSet<GExternalLinkType>(const <GExternalLinkType>[
-  _$gExternalLinkTypeINFO,
-  _$gExternalLinkTypeSTREAMING,
-  _$gExternalLinkTypeSOCIAL,
-]);
-
-const GLikeableType _$gLikeableTypeTHREAD = const GLikeableType._('THREAD');
-const GLikeableType _$gLikeableTypeTHREAD_COMMENT =
-    const GLikeableType._('THREAD_COMMENT');
-const GLikeableType _$gLikeableTypeACTIVITY = const GLikeableType._('ACTIVITY');
-const GLikeableType _$gLikeableTypeACTIVITY_REPLY =
-    const GLikeableType._('ACTIVITY_REPLY');
-
-GLikeableType _$gLikeableTypeValueOf(String name) {
-  switch (name) {
-    case 'THREAD':
-      return _$gLikeableTypeTHREAD;
-    case 'THREAD_COMMENT':
-      return _$gLikeableTypeTHREAD_COMMENT;
-    case 'ACTIVITY':
-      return _$gLikeableTypeACTIVITY;
-    case 'ACTIVITY_REPLY':
-      return _$gLikeableTypeACTIVITY_REPLY;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GLikeableType> _$gLikeableTypeValues =
-    new BuiltSet<GLikeableType>(const <GLikeableType>[
-  _$gLikeableTypeTHREAD,
-  _$gLikeableTypeTHREAD_COMMENT,
-  _$gLikeableTypeACTIVITY,
-  _$gLikeableTypeACTIVITY_REPLY,
-]);
-
-const GMediaFormat _$gMediaFormatTV = const GMediaFormat._('TV');
-const GMediaFormat _$gMediaFormatTV_SHORT = const GMediaFormat._('TV_SHORT');
-const GMediaFormat _$gMediaFormatMOVIE = const GMediaFormat._('MOVIE');
-const GMediaFormat _$gMediaFormatSPECIAL = const GMediaFormat._('SPECIAL');
-const GMediaFormat _$gMediaFormatOVA = const GMediaFormat._('OVA');
-const GMediaFormat _$gMediaFormatONA = const GMediaFormat._('ONA');
-const GMediaFormat _$gMediaFormatMUSIC = const GMediaFormat._('MUSIC');
-const GMediaFormat _$gMediaFormatMANGA = const GMediaFormat._('MANGA');
-const GMediaFormat _$gMediaFormatNOVEL = const GMediaFormat._('NOVEL');
-const GMediaFormat _$gMediaFormatONE_SHOT = const GMediaFormat._('ONE_SHOT');
-
-GMediaFormat _$gMediaFormatValueOf(String name) {
-  switch (name) {
-    case 'TV':
-      return _$gMediaFormatTV;
-    case 'TV_SHORT':
-      return _$gMediaFormatTV_SHORT;
-    case 'MOVIE':
-      return _$gMediaFormatMOVIE;
-    case 'SPECIAL':
-      return _$gMediaFormatSPECIAL;
-    case 'OVA':
-      return _$gMediaFormatOVA;
-    case 'ONA':
-      return _$gMediaFormatONA;
-    case 'MUSIC':
-      return _$gMediaFormatMUSIC;
-    case 'MANGA':
-      return _$gMediaFormatMANGA;
-    case 'NOVEL':
-      return _$gMediaFormatNOVEL;
-    case 'ONE_SHOT':
-      return _$gMediaFormatONE_SHOT;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaFormat> _$gMediaFormatValues =
-    new BuiltSet<GMediaFormat>(const <GMediaFormat>[
-  _$gMediaFormatTV,
-  _$gMediaFormatTV_SHORT,
-  _$gMediaFormatMOVIE,
-  _$gMediaFormatSPECIAL,
-  _$gMediaFormatOVA,
-  _$gMediaFormatONA,
-  _$gMediaFormatMUSIC,
-  _$gMediaFormatMANGA,
-  _$gMediaFormatNOVEL,
-  _$gMediaFormatONE_SHOT,
-]);
-
-const GMediaListSort _$gMediaListSortMEDIA_ID =
-    const GMediaListSort._('MEDIA_ID');
-const GMediaListSort _$gMediaListSortMEDIA_ID_DESC =
-    const GMediaListSort._('MEDIA_ID_DESC');
-const GMediaListSort _$gMediaListSortSCORE = const GMediaListSort._('SCORE');
-const GMediaListSort _$gMediaListSortSCORE_DESC =
-    const GMediaListSort._('SCORE_DESC');
-const GMediaListSort _$gMediaListSortSTATUS = const GMediaListSort._('STATUS');
-const GMediaListSort _$gMediaListSortSTATUS_DESC =
-    const GMediaListSort._('STATUS_DESC');
-const GMediaListSort _$gMediaListSortPROGRESS =
-    const GMediaListSort._('PROGRESS');
-const GMediaListSort _$gMediaListSortPROGRESS_DESC =
-    const GMediaListSort._('PROGRESS_DESC');
-const GMediaListSort _$gMediaListSortPROGRESS_VOLUMES =
-    const GMediaListSort._('PROGRESS_VOLUMES');
-const GMediaListSort _$gMediaListSortPROGRESS_VOLUMES_DESC =
-    const GMediaListSort._('PROGRESS_VOLUMES_DESC');
-const GMediaListSort _$gMediaListSortREPEAT = const GMediaListSort._('REPEAT');
-const GMediaListSort _$gMediaListSortREPEAT_DESC =
-    const GMediaListSort._('REPEAT_DESC');
-const GMediaListSort _$gMediaListSortPRIORITY =
-    const GMediaListSort._('PRIORITY');
-const GMediaListSort _$gMediaListSortPRIORITY_DESC =
-    const GMediaListSort._('PRIORITY_DESC');
-const GMediaListSort _$gMediaListSortSTARTED_ON =
-    const GMediaListSort._('STARTED_ON');
-const GMediaListSort _$gMediaListSortSTARTED_ON_DESC =
-    const GMediaListSort._('STARTED_ON_DESC');
-const GMediaListSort _$gMediaListSortFINISHED_ON =
-    const GMediaListSort._('FINISHED_ON');
-const GMediaListSort _$gMediaListSortFINISHED_ON_DESC =
-    const GMediaListSort._('FINISHED_ON_DESC');
-const GMediaListSort _$gMediaListSortADDED_TIME =
-    const GMediaListSort._('ADDED_TIME');
-const GMediaListSort _$gMediaListSortADDED_TIME_DESC =
-    const GMediaListSort._('ADDED_TIME_DESC');
-const GMediaListSort _$gMediaListSortUPDATED_TIME =
-    const GMediaListSort._('UPDATED_TIME');
-const GMediaListSort _$gMediaListSortUPDATED_TIME_DESC =
-    const GMediaListSort._('UPDATED_TIME_DESC');
-const GMediaListSort _$gMediaListSortMEDIA_TITLE_ROMAJI =
-    const GMediaListSort._('MEDIA_TITLE_ROMAJI');
-const GMediaListSort _$gMediaListSortMEDIA_TITLE_ROMAJI_DESC =
-    const GMediaListSort._('MEDIA_TITLE_ROMAJI_DESC');
-const GMediaListSort _$gMediaListSortMEDIA_TITLE_ENGLISH =
-    const GMediaListSort._('MEDIA_TITLE_ENGLISH');
-const GMediaListSort _$gMediaListSortMEDIA_TITLE_ENGLISH_DESC =
-    const GMediaListSort._('MEDIA_TITLE_ENGLISH_DESC');
-const GMediaListSort _$gMediaListSortMEDIA_TITLE_NATIVE =
-    const GMediaListSort._('MEDIA_TITLE_NATIVE');
-const GMediaListSort _$gMediaListSortMEDIA_TITLE_NATIVE_DESC =
-    const GMediaListSort._('MEDIA_TITLE_NATIVE_DESC');
-const GMediaListSort _$gMediaListSortMEDIA_POPULARITY =
-    const GMediaListSort._('MEDIA_POPULARITY');
-const GMediaListSort _$gMediaListSortMEDIA_POPULARITY_DESC =
-    const GMediaListSort._('MEDIA_POPULARITY_DESC');
-
-GMediaListSort _$gMediaListSortValueOf(String name) {
-  switch (name) {
-    case 'MEDIA_ID':
-      return _$gMediaListSortMEDIA_ID;
-    case 'MEDIA_ID_DESC':
-      return _$gMediaListSortMEDIA_ID_DESC;
-    case 'SCORE':
-      return _$gMediaListSortSCORE;
-    case 'SCORE_DESC':
-      return _$gMediaListSortSCORE_DESC;
-    case 'STATUS':
-      return _$gMediaListSortSTATUS;
-    case 'STATUS_DESC':
-      return _$gMediaListSortSTATUS_DESC;
-    case 'PROGRESS':
-      return _$gMediaListSortPROGRESS;
-    case 'PROGRESS_DESC':
-      return _$gMediaListSortPROGRESS_DESC;
-    case 'PROGRESS_VOLUMES':
-      return _$gMediaListSortPROGRESS_VOLUMES;
-    case 'PROGRESS_VOLUMES_DESC':
-      return _$gMediaListSortPROGRESS_VOLUMES_DESC;
-    case 'REPEAT':
-      return _$gMediaListSortREPEAT;
-    case 'REPEAT_DESC':
-      return _$gMediaListSortREPEAT_DESC;
-    case 'PRIORITY':
-      return _$gMediaListSortPRIORITY;
-    case 'PRIORITY_DESC':
-      return _$gMediaListSortPRIORITY_DESC;
-    case 'STARTED_ON':
-      return _$gMediaListSortSTARTED_ON;
-    case 'STARTED_ON_DESC':
-      return _$gMediaListSortSTARTED_ON_DESC;
-    case 'FINISHED_ON':
-      return _$gMediaListSortFINISHED_ON;
-    case 'FINISHED_ON_DESC':
-      return _$gMediaListSortFINISHED_ON_DESC;
-    case 'ADDED_TIME':
-      return _$gMediaListSortADDED_TIME;
-    case 'ADDED_TIME_DESC':
-      return _$gMediaListSortADDED_TIME_DESC;
-    case 'UPDATED_TIME':
-      return _$gMediaListSortUPDATED_TIME;
-    case 'UPDATED_TIME_DESC':
-      return _$gMediaListSortUPDATED_TIME_DESC;
-    case 'MEDIA_TITLE_ROMAJI':
-      return _$gMediaListSortMEDIA_TITLE_ROMAJI;
-    case 'MEDIA_TITLE_ROMAJI_DESC':
-      return _$gMediaListSortMEDIA_TITLE_ROMAJI_DESC;
-    case 'MEDIA_TITLE_ENGLISH':
-      return _$gMediaListSortMEDIA_TITLE_ENGLISH;
-    case 'MEDIA_TITLE_ENGLISH_DESC':
-      return _$gMediaListSortMEDIA_TITLE_ENGLISH_DESC;
-    case 'MEDIA_TITLE_NATIVE':
-      return _$gMediaListSortMEDIA_TITLE_NATIVE;
-    case 'MEDIA_TITLE_NATIVE_DESC':
-      return _$gMediaListSortMEDIA_TITLE_NATIVE_DESC;
-    case 'MEDIA_POPULARITY':
-      return _$gMediaListSortMEDIA_POPULARITY;
-    case 'MEDIA_POPULARITY_DESC':
-      return _$gMediaListSortMEDIA_POPULARITY_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaListSort> _$gMediaListSortValues =
-    new BuiltSet<GMediaListSort>(const <GMediaListSort>[
-  _$gMediaListSortMEDIA_ID,
-  _$gMediaListSortMEDIA_ID_DESC,
-  _$gMediaListSortSCORE,
-  _$gMediaListSortSCORE_DESC,
-  _$gMediaListSortSTATUS,
-  _$gMediaListSortSTATUS_DESC,
-  _$gMediaListSortPROGRESS,
-  _$gMediaListSortPROGRESS_DESC,
-  _$gMediaListSortPROGRESS_VOLUMES,
-  _$gMediaListSortPROGRESS_VOLUMES_DESC,
-  _$gMediaListSortREPEAT,
-  _$gMediaListSortREPEAT_DESC,
-  _$gMediaListSortPRIORITY,
-  _$gMediaListSortPRIORITY_DESC,
-  _$gMediaListSortSTARTED_ON,
-  _$gMediaListSortSTARTED_ON_DESC,
-  _$gMediaListSortFINISHED_ON,
-  _$gMediaListSortFINISHED_ON_DESC,
-  _$gMediaListSortADDED_TIME,
-  _$gMediaListSortADDED_TIME_DESC,
-  _$gMediaListSortUPDATED_TIME,
-  _$gMediaListSortUPDATED_TIME_DESC,
-  _$gMediaListSortMEDIA_TITLE_ROMAJI,
-  _$gMediaListSortMEDIA_TITLE_ROMAJI_DESC,
-  _$gMediaListSortMEDIA_TITLE_ENGLISH,
-  _$gMediaListSortMEDIA_TITLE_ENGLISH_DESC,
-  _$gMediaListSortMEDIA_TITLE_NATIVE,
-  _$gMediaListSortMEDIA_TITLE_NATIVE_DESC,
-  _$gMediaListSortMEDIA_POPULARITY,
-  _$gMediaListSortMEDIA_POPULARITY_DESC,
-]);
-
-const GMediaListStatus _$gMediaListStatusCURRENT =
-    const GMediaListStatus._('CURRENT');
-const GMediaListStatus _$gMediaListStatusPLANNING =
-    const GMediaListStatus._('PLANNING');
-const GMediaListStatus _$gMediaListStatusCOMPLETED =
-    const GMediaListStatus._('COMPLETED');
-const GMediaListStatus _$gMediaListStatusDROPPED =
-    const GMediaListStatus._('DROPPED');
-const GMediaListStatus _$gMediaListStatusPAUSED =
-    const GMediaListStatus._('PAUSED');
-const GMediaListStatus _$gMediaListStatusREPEATING =
-    const GMediaListStatus._('REPEATING');
-
-GMediaListStatus _$gMediaListStatusValueOf(String name) {
-  switch (name) {
-    case 'CURRENT':
-      return _$gMediaListStatusCURRENT;
-    case 'PLANNING':
-      return _$gMediaListStatusPLANNING;
-    case 'COMPLETED':
-      return _$gMediaListStatusCOMPLETED;
-    case 'DROPPED':
-      return _$gMediaListStatusDROPPED;
-    case 'PAUSED':
-      return _$gMediaListStatusPAUSED;
-    case 'REPEATING':
-      return _$gMediaListStatusREPEATING;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaListStatus> _$gMediaListStatusValues =
-    new BuiltSet<GMediaListStatus>(const <GMediaListStatus>[
-  _$gMediaListStatusCURRENT,
-  _$gMediaListStatusPLANNING,
-  _$gMediaListStatusCOMPLETED,
-  _$gMediaListStatusDROPPED,
-  _$gMediaListStatusPAUSED,
-  _$gMediaListStatusREPEATING,
-]);
-
-const GMediaRankType _$gMediaRankTypeRATED = const GMediaRankType._('RATED');
-const GMediaRankType _$gMediaRankTypePOPULAR =
-    const GMediaRankType._('POPULAR');
-
-GMediaRankType _$gMediaRankTypeValueOf(String name) {
-  switch (name) {
-    case 'RATED':
-      return _$gMediaRankTypeRATED;
-    case 'POPULAR':
-      return _$gMediaRankTypePOPULAR;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaRankType> _$gMediaRankTypeValues =
-    new BuiltSet<GMediaRankType>(const <GMediaRankType>[
-  _$gMediaRankTypeRATED,
-  _$gMediaRankTypePOPULAR,
-]);
-
-const GMediaRelation _$gMediaRelationADAPTATION =
-    const GMediaRelation._('ADAPTATION');
-const GMediaRelation _$gMediaRelationPREQUEL =
-    const GMediaRelation._('PREQUEL');
-const GMediaRelation _$gMediaRelationSEQUEL = const GMediaRelation._('SEQUEL');
-const GMediaRelation _$gMediaRelationPARENT = const GMediaRelation._('PARENT');
-const GMediaRelation _$gMediaRelationSIDE_STORY =
-    const GMediaRelation._('SIDE_STORY');
-const GMediaRelation _$gMediaRelationCHARACTER =
-    const GMediaRelation._('CHARACTER');
-const GMediaRelation _$gMediaRelationSUMMARY =
-    const GMediaRelation._('SUMMARY');
-const GMediaRelation _$gMediaRelationALTERNATIVE =
-    const GMediaRelation._('ALTERNATIVE');
-const GMediaRelation _$gMediaRelationSPIN_OFF =
-    const GMediaRelation._('SPIN_OFF');
-const GMediaRelation _$gMediaRelationOTHER = const GMediaRelation._('OTHER');
-const GMediaRelation _$gMediaRelationSOURCE = const GMediaRelation._('SOURCE');
-const GMediaRelation _$gMediaRelationCOMPILATION =
-    const GMediaRelation._('COMPILATION');
-const GMediaRelation _$gMediaRelationCONTAINS =
-    const GMediaRelation._('CONTAINS');
-
-GMediaRelation _$gMediaRelationValueOf(String name) {
-  switch (name) {
-    case 'ADAPTATION':
-      return _$gMediaRelationADAPTATION;
-    case 'PREQUEL':
-      return _$gMediaRelationPREQUEL;
-    case 'SEQUEL':
-      return _$gMediaRelationSEQUEL;
-    case 'PARENT':
-      return _$gMediaRelationPARENT;
-    case 'SIDE_STORY':
-      return _$gMediaRelationSIDE_STORY;
-    case 'CHARACTER':
-      return _$gMediaRelationCHARACTER;
-    case 'SUMMARY':
-      return _$gMediaRelationSUMMARY;
-    case 'ALTERNATIVE':
-      return _$gMediaRelationALTERNATIVE;
-    case 'SPIN_OFF':
-      return _$gMediaRelationSPIN_OFF;
-    case 'OTHER':
-      return _$gMediaRelationOTHER;
-    case 'SOURCE':
-      return _$gMediaRelationSOURCE;
-    case 'COMPILATION':
-      return _$gMediaRelationCOMPILATION;
-    case 'CONTAINS':
-      return _$gMediaRelationCONTAINS;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaRelation> _$gMediaRelationValues =
-    new BuiltSet<GMediaRelation>(const <GMediaRelation>[
-  _$gMediaRelationADAPTATION,
-  _$gMediaRelationPREQUEL,
-  _$gMediaRelationSEQUEL,
-  _$gMediaRelationPARENT,
-  _$gMediaRelationSIDE_STORY,
-  _$gMediaRelationCHARACTER,
-  _$gMediaRelationSUMMARY,
-  _$gMediaRelationALTERNATIVE,
-  _$gMediaRelationSPIN_OFF,
-  _$gMediaRelationOTHER,
-  _$gMediaRelationSOURCE,
-  _$gMediaRelationCOMPILATION,
-  _$gMediaRelationCONTAINS,
-]);
-
-const GMediaSeason _$gMediaSeasonWINTER = const GMediaSeason._('WINTER');
-const GMediaSeason _$gMediaSeasonSPRING = const GMediaSeason._('SPRING');
-const GMediaSeason _$gMediaSeasonSUMMER = const GMediaSeason._('SUMMER');
-const GMediaSeason _$gMediaSeasonFALL = const GMediaSeason._('FALL');
-
-GMediaSeason _$gMediaSeasonValueOf(String name) {
-  switch (name) {
-    case 'WINTER':
-      return _$gMediaSeasonWINTER;
-    case 'SPRING':
-      return _$gMediaSeasonSPRING;
-    case 'SUMMER':
-      return _$gMediaSeasonSUMMER;
-    case 'FALL':
-      return _$gMediaSeasonFALL;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaSeason> _$gMediaSeasonValues =
-    new BuiltSet<GMediaSeason>(const <GMediaSeason>[
-  _$gMediaSeasonWINTER,
-  _$gMediaSeasonSPRING,
-  _$gMediaSeasonSUMMER,
-  _$gMediaSeasonFALL,
-]);
-
-const GMediaSort _$gMediaSortID = const GMediaSort._('ID');
-const GMediaSort _$gMediaSortID_DESC = const GMediaSort._('ID_DESC');
-const GMediaSort _$gMediaSortTITLE_ROMAJI = const GMediaSort._('TITLE_ROMAJI');
-const GMediaSort _$gMediaSortTITLE_ROMAJI_DESC =
-    const GMediaSort._('TITLE_ROMAJI_DESC');
-const GMediaSort _$gMediaSortTITLE_ENGLISH =
-    const GMediaSort._('TITLE_ENGLISH');
-const GMediaSort _$gMediaSortTITLE_ENGLISH_DESC =
-    const GMediaSort._('TITLE_ENGLISH_DESC');
-const GMediaSort _$gMediaSortTITLE_NATIVE = const GMediaSort._('TITLE_NATIVE');
-const GMediaSort _$gMediaSortTITLE_NATIVE_DESC =
-    const GMediaSort._('TITLE_NATIVE_DESC');
-const GMediaSort _$gMediaSortTYPE = const GMediaSort._('TYPE');
-const GMediaSort _$gMediaSortTYPE_DESC = const GMediaSort._('TYPE_DESC');
-const GMediaSort _$gMediaSortFORMAT = const GMediaSort._('FORMAT');
-const GMediaSort _$gMediaSortFORMAT_DESC = const GMediaSort._('FORMAT_DESC');
-const GMediaSort _$gMediaSortSTART_DATE = const GMediaSort._('START_DATE');
-const GMediaSort _$gMediaSortSTART_DATE_DESC =
-    const GMediaSort._('START_DATE_DESC');
-const GMediaSort _$gMediaSortEND_DATE = const GMediaSort._('END_DATE');
-const GMediaSort _$gMediaSortEND_DATE_DESC =
-    const GMediaSort._('END_DATE_DESC');
-const GMediaSort _$gMediaSortSCORE = const GMediaSort._('SCORE');
-const GMediaSort _$gMediaSortSCORE_DESC = const GMediaSort._('SCORE_DESC');
-const GMediaSort _$gMediaSortPOPULARITY = const GMediaSort._('POPULARITY');
-const GMediaSort _$gMediaSortPOPULARITY_DESC =
-    const GMediaSort._('POPULARITY_DESC');
-const GMediaSort _$gMediaSortTRENDING = const GMediaSort._('TRENDING');
-const GMediaSort _$gMediaSortTRENDING_DESC =
-    const GMediaSort._('TRENDING_DESC');
-const GMediaSort _$gMediaSortEPISODES = const GMediaSort._('EPISODES');
-const GMediaSort _$gMediaSortEPISODES_DESC =
-    const GMediaSort._('EPISODES_DESC');
-const GMediaSort _$gMediaSortDURATION = const GMediaSort._('DURATION');
-const GMediaSort _$gMediaSortDURATION_DESC =
-    const GMediaSort._('DURATION_DESC');
-const GMediaSort _$gMediaSortSTATUS = const GMediaSort._('STATUS');
-const GMediaSort _$gMediaSortSTATUS_DESC = const GMediaSort._('STATUS_DESC');
-const GMediaSort _$gMediaSortCHAPTERS = const GMediaSort._('CHAPTERS');
-const GMediaSort _$gMediaSortCHAPTERS_DESC =
-    const GMediaSort._('CHAPTERS_DESC');
-const GMediaSort _$gMediaSortVOLUMES = const GMediaSort._('VOLUMES');
-const GMediaSort _$gMediaSortVOLUMES_DESC = const GMediaSort._('VOLUMES_DESC');
-const GMediaSort _$gMediaSortUPDATED_AT = const GMediaSort._('UPDATED_AT');
-const GMediaSort _$gMediaSortUPDATED_AT_DESC =
-    const GMediaSort._('UPDATED_AT_DESC');
-const GMediaSort _$gMediaSortSEARCH_MATCH = const GMediaSort._('SEARCH_MATCH');
-const GMediaSort _$gMediaSortFAVOURITES = const GMediaSort._('FAVOURITES');
-const GMediaSort _$gMediaSortFAVOURITES_DESC =
-    const GMediaSort._('FAVOURITES_DESC');
-
-GMediaSort _$gMediaSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gMediaSortID;
-    case 'ID_DESC':
-      return _$gMediaSortID_DESC;
-    case 'TITLE_ROMAJI':
-      return _$gMediaSortTITLE_ROMAJI;
-    case 'TITLE_ROMAJI_DESC':
-      return _$gMediaSortTITLE_ROMAJI_DESC;
-    case 'TITLE_ENGLISH':
-      return _$gMediaSortTITLE_ENGLISH;
-    case 'TITLE_ENGLISH_DESC':
-      return _$gMediaSortTITLE_ENGLISH_DESC;
-    case 'TITLE_NATIVE':
-      return _$gMediaSortTITLE_NATIVE;
-    case 'TITLE_NATIVE_DESC':
-      return _$gMediaSortTITLE_NATIVE_DESC;
-    case 'TYPE':
-      return _$gMediaSortTYPE;
-    case 'TYPE_DESC':
-      return _$gMediaSortTYPE_DESC;
-    case 'FORMAT':
-      return _$gMediaSortFORMAT;
-    case 'FORMAT_DESC':
-      return _$gMediaSortFORMAT_DESC;
-    case 'START_DATE':
-      return _$gMediaSortSTART_DATE;
-    case 'START_DATE_DESC':
-      return _$gMediaSortSTART_DATE_DESC;
-    case 'END_DATE':
-      return _$gMediaSortEND_DATE;
-    case 'END_DATE_DESC':
-      return _$gMediaSortEND_DATE_DESC;
-    case 'SCORE':
-      return _$gMediaSortSCORE;
-    case 'SCORE_DESC':
-      return _$gMediaSortSCORE_DESC;
-    case 'POPULARITY':
-      return _$gMediaSortPOPULARITY;
-    case 'POPULARITY_DESC':
-      return _$gMediaSortPOPULARITY_DESC;
-    case 'TRENDING':
-      return _$gMediaSortTRENDING;
-    case 'TRENDING_DESC':
-      return _$gMediaSortTRENDING_DESC;
-    case 'EPISODES':
-      return _$gMediaSortEPISODES;
-    case 'EPISODES_DESC':
-      return _$gMediaSortEPISODES_DESC;
-    case 'DURATION':
-      return _$gMediaSortDURATION;
-    case 'DURATION_DESC':
-      return _$gMediaSortDURATION_DESC;
-    case 'STATUS':
-      return _$gMediaSortSTATUS;
-    case 'STATUS_DESC':
-      return _$gMediaSortSTATUS_DESC;
-    case 'CHAPTERS':
-      return _$gMediaSortCHAPTERS;
-    case 'CHAPTERS_DESC':
-      return _$gMediaSortCHAPTERS_DESC;
-    case 'VOLUMES':
-      return _$gMediaSortVOLUMES;
-    case 'VOLUMES_DESC':
-      return _$gMediaSortVOLUMES_DESC;
-    case 'UPDATED_AT':
-      return _$gMediaSortUPDATED_AT;
-    case 'UPDATED_AT_DESC':
-      return _$gMediaSortUPDATED_AT_DESC;
-    case 'SEARCH_MATCH':
-      return _$gMediaSortSEARCH_MATCH;
-    case 'FAVOURITES':
-      return _$gMediaSortFAVOURITES;
-    case 'FAVOURITES_DESC':
-      return _$gMediaSortFAVOURITES_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaSort> _$gMediaSortValues =
-    new BuiltSet<GMediaSort>(const <GMediaSort>[
-  _$gMediaSortID,
-  _$gMediaSortID_DESC,
-  _$gMediaSortTITLE_ROMAJI,
-  _$gMediaSortTITLE_ROMAJI_DESC,
-  _$gMediaSortTITLE_ENGLISH,
-  _$gMediaSortTITLE_ENGLISH_DESC,
-  _$gMediaSortTITLE_NATIVE,
-  _$gMediaSortTITLE_NATIVE_DESC,
-  _$gMediaSortTYPE,
-  _$gMediaSortTYPE_DESC,
-  _$gMediaSortFORMAT,
-  _$gMediaSortFORMAT_DESC,
-  _$gMediaSortSTART_DATE,
-  _$gMediaSortSTART_DATE_DESC,
-  _$gMediaSortEND_DATE,
-  _$gMediaSortEND_DATE_DESC,
-  _$gMediaSortSCORE,
-  _$gMediaSortSCORE_DESC,
-  _$gMediaSortPOPULARITY,
-  _$gMediaSortPOPULARITY_DESC,
-  _$gMediaSortTRENDING,
-  _$gMediaSortTRENDING_DESC,
-  _$gMediaSortEPISODES,
-  _$gMediaSortEPISODES_DESC,
-  _$gMediaSortDURATION,
-  _$gMediaSortDURATION_DESC,
-  _$gMediaSortSTATUS,
-  _$gMediaSortSTATUS_DESC,
-  _$gMediaSortCHAPTERS,
-  _$gMediaSortCHAPTERS_DESC,
-  _$gMediaSortVOLUMES,
-  _$gMediaSortVOLUMES_DESC,
-  _$gMediaSortUPDATED_AT,
-  _$gMediaSortUPDATED_AT_DESC,
-  _$gMediaSortSEARCH_MATCH,
-  _$gMediaSortFAVOURITES,
-  _$gMediaSortFAVOURITES_DESC,
-]);
-
-const GMediaSource _$gMediaSourceORIGINAL = const GMediaSource._('ORIGINAL');
-const GMediaSource _$gMediaSourceMANGA = const GMediaSource._('MANGA');
-const GMediaSource _$gMediaSourceLIGHT_NOVEL =
-    const GMediaSource._('LIGHT_NOVEL');
-const GMediaSource _$gMediaSourceVISUAL_NOVEL =
-    const GMediaSource._('VISUAL_NOVEL');
-const GMediaSource _$gMediaSourceVIDEO_GAME =
-    const GMediaSource._('VIDEO_GAME');
-const GMediaSource _$gMediaSourceOTHER = const GMediaSource._('OTHER');
-const GMediaSource _$gMediaSourceNOVEL = const GMediaSource._('NOVEL');
-const GMediaSource _$gMediaSourceDOUJINSHI = const GMediaSource._('DOUJINSHI');
-const GMediaSource _$gMediaSourceANIME = const GMediaSource._('ANIME');
-const GMediaSource _$gMediaSourceWEB_NOVEL = const GMediaSource._('WEB_NOVEL');
-const GMediaSource _$gMediaSourceLIVE_ACTION =
-    const GMediaSource._('LIVE_ACTION');
-const GMediaSource _$gMediaSourceGAME = const GMediaSource._('GAME');
-const GMediaSource _$gMediaSourceCOMIC = const GMediaSource._('COMIC');
-const GMediaSource _$gMediaSourceMULTIMEDIA_PROJECT =
-    const GMediaSource._('MULTIMEDIA_PROJECT');
-const GMediaSource _$gMediaSourcePICTURE_BOOK =
-    const GMediaSource._('PICTURE_BOOK');
-
-GMediaSource _$gMediaSourceValueOf(String name) {
-  switch (name) {
-    case 'ORIGINAL':
-      return _$gMediaSourceORIGINAL;
-    case 'MANGA':
-      return _$gMediaSourceMANGA;
-    case 'LIGHT_NOVEL':
-      return _$gMediaSourceLIGHT_NOVEL;
-    case 'VISUAL_NOVEL':
-      return _$gMediaSourceVISUAL_NOVEL;
-    case 'VIDEO_GAME':
-      return _$gMediaSourceVIDEO_GAME;
-    case 'OTHER':
-      return _$gMediaSourceOTHER;
-    case 'NOVEL':
-      return _$gMediaSourceNOVEL;
-    case 'DOUJINSHI':
-      return _$gMediaSourceDOUJINSHI;
-    case 'ANIME':
-      return _$gMediaSourceANIME;
-    case 'WEB_NOVEL':
-      return _$gMediaSourceWEB_NOVEL;
-    case 'LIVE_ACTION':
-      return _$gMediaSourceLIVE_ACTION;
-    case 'GAME':
-      return _$gMediaSourceGAME;
-    case 'COMIC':
-      return _$gMediaSourceCOMIC;
-    case 'MULTIMEDIA_PROJECT':
-      return _$gMediaSourceMULTIMEDIA_PROJECT;
-    case 'PICTURE_BOOK':
-      return _$gMediaSourcePICTURE_BOOK;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaSource> _$gMediaSourceValues =
-    new BuiltSet<GMediaSource>(const <GMediaSource>[
-  _$gMediaSourceORIGINAL,
-  _$gMediaSourceMANGA,
-  _$gMediaSourceLIGHT_NOVEL,
-  _$gMediaSourceVISUAL_NOVEL,
-  _$gMediaSourceVIDEO_GAME,
-  _$gMediaSourceOTHER,
-  _$gMediaSourceNOVEL,
-  _$gMediaSourceDOUJINSHI,
-  _$gMediaSourceANIME,
-  _$gMediaSourceWEB_NOVEL,
-  _$gMediaSourceLIVE_ACTION,
-  _$gMediaSourceGAME,
-  _$gMediaSourceCOMIC,
-  _$gMediaSourceMULTIMEDIA_PROJECT,
-  _$gMediaSourcePICTURE_BOOK,
-]);
-
-const GMediaStatus _$gMediaStatusFINISHED = const GMediaStatus._('FINISHED');
-const GMediaStatus _$gMediaStatusRELEASING = const GMediaStatus._('RELEASING');
-const GMediaStatus _$gMediaStatusNOT_YET_RELEASED =
-    const GMediaStatus._('NOT_YET_RELEASED');
-const GMediaStatus _$gMediaStatusCANCELLED = const GMediaStatus._('CANCELLED');
-const GMediaStatus _$gMediaStatusHIATUS = const GMediaStatus._('HIATUS');
-
-GMediaStatus _$gMediaStatusValueOf(String name) {
-  switch (name) {
-    case 'FINISHED':
-      return _$gMediaStatusFINISHED;
-    case 'RELEASING':
-      return _$gMediaStatusRELEASING;
-    case 'NOT_YET_RELEASED':
-      return _$gMediaStatusNOT_YET_RELEASED;
-    case 'CANCELLED':
-      return _$gMediaStatusCANCELLED;
-    case 'HIATUS':
-      return _$gMediaStatusHIATUS;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaStatus> _$gMediaStatusValues =
-    new BuiltSet<GMediaStatus>(const <GMediaStatus>[
-  _$gMediaStatusFINISHED,
-  _$gMediaStatusRELEASING,
-  _$gMediaStatusNOT_YET_RELEASED,
-  _$gMediaStatusCANCELLED,
-  _$gMediaStatusHIATUS,
-]);
-
-const GMediaTrendSort _$gMediaTrendSortID = const GMediaTrendSort._('ID');
-const GMediaTrendSort _$gMediaTrendSortID_DESC =
-    const GMediaTrendSort._('ID_DESC');
-const GMediaTrendSort _$gMediaTrendSortMEDIA_ID =
-    const GMediaTrendSort._('MEDIA_ID');
-const GMediaTrendSort _$gMediaTrendSortMEDIA_ID_DESC =
-    const GMediaTrendSort._('MEDIA_ID_DESC');
-const GMediaTrendSort _$gMediaTrendSortDATE = const GMediaTrendSort._('DATE');
-const GMediaTrendSort _$gMediaTrendSortDATE_DESC =
-    const GMediaTrendSort._('DATE_DESC');
-const GMediaTrendSort _$gMediaTrendSortSCORE = const GMediaTrendSort._('SCORE');
-const GMediaTrendSort _$gMediaTrendSortSCORE_DESC =
-    const GMediaTrendSort._('SCORE_DESC');
-const GMediaTrendSort _$gMediaTrendSortPOPULARITY =
-    const GMediaTrendSort._('POPULARITY');
-const GMediaTrendSort _$gMediaTrendSortPOPULARITY_DESC =
-    const GMediaTrendSort._('POPULARITY_DESC');
-const GMediaTrendSort _$gMediaTrendSortTRENDING =
-    const GMediaTrendSort._('TRENDING');
-const GMediaTrendSort _$gMediaTrendSortTRENDING_DESC =
-    const GMediaTrendSort._('TRENDING_DESC');
-const GMediaTrendSort _$gMediaTrendSortEPISODE =
-    const GMediaTrendSort._('EPISODE');
-const GMediaTrendSort _$gMediaTrendSortEPISODE_DESC =
-    const GMediaTrendSort._('EPISODE_DESC');
-
-GMediaTrendSort _$gMediaTrendSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gMediaTrendSortID;
-    case 'ID_DESC':
-      return _$gMediaTrendSortID_DESC;
-    case 'MEDIA_ID':
-      return _$gMediaTrendSortMEDIA_ID;
-    case 'MEDIA_ID_DESC':
-      return _$gMediaTrendSortMEDIA_ID_DESC;
-    case 'DATE':
-      return _$gMediaTrendSortDATE;
-    case 'DATE_DESC':
-      return _$gMediaTrendSortDATE_DESC;
-    case 'SCORE':
-      return _$gMediaTrendSortSCORE;
-    case 'SCORE_DESC':
-      return _$gMediaTrendSortSCORE_DESC;
-    case 'POPULARITY':
-      return _$gMediaTrendSortPOPULARITY;
-    case 'POPULARITY_DESC':
-      return _$gMediaTrendSortPOPULARITY_DESC;
-    case 'TRENDING':
-      return _$gMediaTrendSortTRENDING;
-    case 'TRENDING_DESC':
-      return _$gMediaTrendSortTRENDING_DESC;
-    case 'EPISODE':
-      return _$gMediaTrendSortEPISODE;
-    case 'EPISODE_DESC':
-      return _$gMediaTrendSortEPISODE_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaTrendSort> _$gMediaTrendSortValues =
-    new BuiltSet<GMediaTrendSort>(const <GMediaTrendSort>[
-  _$gMediaTrendSortID,
-  _$gMediaTrendSortID_DESC,
-  _$gMediaTrendSortMEDIA_ID,
-  _$gMediaTrendSortMEDIA_ID_DESC,
-  _$gMediaTrendSortDATE,
-  _$gMediaTrendSortDATE_DESC,
-  _$gMediaTrendSortSCORE,
-  _$gMediaTrendSortSCORE_DESC,
-  _$gMediaTrendSortPOPULARITY,
-  _$gMediaTrendSortPOPULARITY_DESC,
-  _$gMediaTrendSortTRENDING,
-  _$gMediaTrendSortTRENDING_DESC,
-  _$gMediaTrendSortEPISODE,
-  _$gMediaTrendSortEPISODE_DESC,
-]);
-
-const GMediaType _$gMediaTypeANIME = const GMediaType._('ANIME');
-const GMediaType _$gMediaTypeMANGA = const GMediaType._('MANGA');
-
-GMediaType _$gMediaTypeValueOf(String name) {
-  switch (name) {
-    case 'ANIME':
-      return _$gMediaTypeANIME;
-    case 'MANGA':
-      return _$gMediaTypeMANGA;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GMediaType> _$gMediaTypeValues =
-    new BuiltSet<GMediaType>(const <GMediaType>[
-  _$gMediaTypeANIME,
-  _$gMediaTypeMANGA,
-]);
-
-const GModActionType _$gModActionTypeNOTE = const GModActionType._('NOTE');
-const GModActionType _$gModActionTypeBAN = const GModActionType._('BAN');
-const GModActionType _$gModActionTypeDELETE = const GModActionType._('DELETE');
-const GModActionType _$gModActionTypeEDIT = const GModActionType._('EDIT');
-const GModActionType _$gModActionTypeEXPIRE = const GModActionType._('EXPIRE');
-const GModActionType _$gModActionTypeREPORT = const GModActionType._('REPORT');
-const GModActionType _$gModActionTypeRESET = const GModActionType._('RESET');
-const GModActionType _$gModActionTypeANON = const GModActionType._('ANON');
-
-GModActionType _$gModActionTypeValueOf(String name) {
-  switch (name) {
-    case 'NOTE':
-      return _$gModActionTypeNOTE;
-    case 'BAN':
-      return _$gModActionTypeBAN;
-    case 'DELETE':
-      return _$gModActionTypeDELETE;
-    case 'EDIT':
-      return _$gModActionTypeEDIT;
-    case 'EXPIRE':
-      return _$gModActionTypeEXPIRE;
-    case 'REPORT':
-      return _$gModActionTypeREPORT;
-    case 'RESET':
-      return _$gModActionTypeRESET;
-    case 'ANON':
-      return _$gModActionTypeANON;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GModActionType> _$gModActionTypeValues =
-    new BuiltSet<GModActionType>(const <GModActionType>[
-  _$gModActionTypeNOTE,
-  _$gModActionTypeBAN,
-  _$gModActionTypeDELETE,
-  _$gModActionTypeEDIT,
-  _$gModActionTypeEXPIRE,
-  _$gModActionTypeREPORT,
-  _$gModActionTypeRESET,
-  _$gModActionTypeANON,
-]);
-
-const GModRole _$gModRoleADMIN = const GModRole._('ADMIN');
-const GModRole _$gModRoleLEAD_DEVELOPER = const GModRole._('LEAD_DEVELOPER');
-const GModRole _$gModRoleDEVELOPER = const GModRole._('DEVELOPER');
-const GModRole _$gModRoleLEAD_COMMUNITY = const GModRole._('LEAD_COMMUNITY');
-const GModRole _$gModRoleCOMMUNITY = const GModRole._('COMMUNITY');
-const GModRole _$gModRoleDISCORD_COMMUNITY =
-    const GModRole._('DISCORD_COMMUNITY');
-const GModRole _$gModRoleLEAD_ANIME_DATA = const GModRole._('LEAD_ANIME_DATA');
-const GModRole _$gModRoleANIME_DATA = const GModRole._('ANIME_DATA');
-const GModRole _$gModRoleLEAD_MANGA_DATA = const GModRole._('LEAD_MANGA_DATA');
-const GModRole _$gModRoleMANGA_DATA = const GModRole._('MANGA_DATA');
-const GModRole _$gModRoleLEAD_SOCIAL_MEDIA =
-    const GModRole._('LEAD_SOCIAL_MEDIA');
-const GModRole _$gModRoleSOCIAL_MEDIA = const GModRole._('SOCIAL_MEDIA');
-const GModRole _$gModRoleRETIRED = const GModRole._('RETIRED');
-const GModRole _$gModRoleCHARACTER_DATA = const GModRole._('CHARACTER_DATA');
-const GModRole _$gModRoleSTAFF_DATA = const GModRole._('STAFF_DATA');
-
-GModRole _$gModRoleValueOf(String name) {
-  switch (name) {
-    case 'ADMIN':
-      return _$gModRoleADMIN;
-    case 'LEAD_DEVELOPER':
-      return _$gModRoleLEAD_DEVELOPER;
-    case 'DEVELOPER':
-      return _$gModRoleDEVELOPER;
-    case 'LEAD_COMMUNITY':
-      return _$gModRoleLEAD_COMMUNITY;
-    case 'COMMUNITY':
-      return _$gModRoleCOMMUNITY;
-    case 'DISCORD_COMMUNITY':
-      return _$gModRoleDISCORD_COMMUNITY;
-    case 'LEAD_ANIME_DATA':
-      return _$gModRoleLEAD_ANIME_DATA;
-    case 'ANIME_DATA':
-      return _$gModRoleANIME_DATA;
-    case 'LEAD_MANGA_DATA':
-      return _$gModRoleLEAD_MANGA_DATA;
-    case 'MANGA_DATA':
-      return _$gModRoleMANGA_DATA;
-    case 'LEAD_SOCIAL_MEDIA':
-      return _$gModRoleLEAD_SOCIAL_MEDIA;
-    case 'SOCIAL_MEDIA':
-      return _$gModRoleSOCIAL_MEDIA;
-    case 'RETIRED':
-      return _$gModRoleRETIRED;
-    case 'CHARACTER_DATA':
-      return _$gModRoleCHARACTER_DATA;
-    case 'STAFF_DATA':
-      return _$gModRoleSTAFF_DATA;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GModRole> _$gModRoleValues =
-    new BuiltSet<GModRole>(const <GModRole>[
-  _$gModRoleADMIN,
-  _$gModRoleLEAD_DEVELOPER,
-  _$gModRoleDEVELOPER,
-  _$gModRoleLEAD_COMMUNITY,
-  _$gModRoleCOMMUNITY,
-  _$gModRoleDISCORD_COMMUNITY,
-  _$gModRoleLEAD_ANIME_DATA,
-  _$gModRoleANIME_DATA,
-  _$gModRoleLEAD_MANGA_DATA,
-  _$gModRoleMANGA_DATA,
-  _$gModRoleLEAD_SOCIAL_MEDIA,
-  _$gModRoleSOCIAL_MEDIA,
-  _$gModRoleRETIRED,
-  _$gModRoleCHARACTER_DATA,
-  _$gModRoleSTAFF_DATA,
-]);
-
-const GNotificationType _$gNotificationTypeACTIVITY_MESSAGE =
-    const GNotificationType._('ACTIVITY_MESSAGE');
-const GNotificationType _$gNotificationTypeACTIVITY_REPLY =
-    const GNotificationType._('ACTIVITY_REPLY');
-const GNotificationType _$gNotificationTypeFOLLOWING =
-    const GNotificationType._('FOLLOWING');
-const GNotificationType _$gNotificationTypeACTIVITY_MENTION =
-    const GNotificationType._('ACTIVITY_MENTION');
-const GNotificationType _$gNotificationTypeTHREAD_COMMENT_MENTION =
-    const GNotificationType._('THREAD_COMMENT_MENTION');
-const GNotificationType _$gNotificationTypeTHREAD_SUBSCRIBED =
-    const GNotificationType._('THREAD_SUBSCRIBED');
-const GNotificationType _$gNotificationTypeTHREAD_COMMENT_REPLY =
-    const GNotificationType._('THREAD_COMMENT_REPLY');
-const GNotificationType _$gNotificationTypeAIRING =
-    const GNotificationType._('AIRING');
-const GNotificationType _$gNotificationTypeACTIVITY_LIKE =
-    const GNotificationType._('ACTIVITY_LIKE');
-const GNotificationType _$gNotificationTypeACTIVITY_REPLY_LIKE =
-    const GNotificationType._('ACTIVITY_REPLY_LIKE');
-const GNotificationType _$gNotificationTypeTHREAD_LIKE =
-    const GNotificationType._('THREAD_LIKE');
-const GNotificationType _$gNotificationTypeTHREAD_COMMENT_LIKE =
-    const GNotificationType._('THREAD_COMMENT_LIKE');
-const GNotificationType _$gNotificationTypeACTIVITY_REPLY_SUBSCRIBED =
-    const GNotificationType._('ACTIVITY_REPLY_SUBSCRIBED');
-const GNotificationType _$gNotificationTypeRELATED_MEDIA_ADDITION =
-    const GNotificationType._('RELATED_MEDIA_ADDITION');
-const GNotificationType _$gNotificationTypeMEDIA_DATA_CHANGE =
-    const GNotificationType._('MEDIA_DATA_CHANGE');
-const GNotificationType _$gNotificationTypeMEDIA_MERGE =
-    const GNotificationType._('MEDIA_MERGE');
-const GNotificationType _$gNotificationTypeMEDIA_DELETION =
-    const GNotificationType._('MEDIA_DELETION');
-
-GNotificationType _$gNotificationTypeValueOf(String name) {
-  switch (name) {
-    case 'ACTIVITY_MESSAGE':
-      return _$gNotificationTypeACTIVITY_MESSAGE;
-    case 'ACTIVITY_REPLY':
-      return _$gNotificationTypeACTIVITY_REPLY;
-    case 'FOLLOWING':
-      return _$gNotificationTypeFOLLOWING;
-    case 'ACTIVITY_MENTION':
-      return _$gNotificationTypeACTIVITY_MENTION;
-    case 'THREAD_COMMENT_MENTION':
-      return _$gNotificationTypeTHREAD_COMMENT_MENTION;
-    case 'THREAD_SUBSCRIBED':
-      return _$gNotificationTypeTHREAD_SUBSCRIBED;
-    case 'THREAD_COMMENT_REPLY':
-      return _$gNotificationTypeTHREAD_COMMENT_REPLY;
-    case 'AIRING':
-      return _$gNotificationTypeAIRING;
-    case 'ACTIVITY_LIKE':
-      return _$gNotificationTypeACTIVITY_LIKE;
-    case 'ACTIVITY_REPLY_LIKE':
-      return _$gNotificationTypeACTIVITY_REPLY_LIKE;
-    case 'THREAD_LIKE':
-      return _$gNotificationTypeTHREAD_LIKE;
-    case 'THREAD_COMMENT_LIKE':
-      return _$gNotificationTypeTHREAD_COMMENT_LIKE;
-    case 'ACTIVITY_REPLY_SUBSCRIBED':
-      return _$gNotificationTypeACTIVITY_REPLY_SUBSCRIBED;
-    case 'RELATED_MEDIA_ADDITION':
-      return _$gNotificationTypeRELATED_MEDIA_ADDITION;
-    case 'MEDIA_DATA_CHANGE':
-      return _$gNotificationTypeMEDIA_DATA_CHANGE;
-    case 'MEDIA_MERGE':
-      return _$gNotificationTypeMEDIA_MERGE;
-    case 'MEDIA_DELETION':
-      return _$gNotificationTypeMEDIA_DELETION;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GNotificationType> _$gNotificationTypeValues =
-    new BuiltSet<GNotificationType>(const <GNotificationType>[
-  _$gNotificationTypeACTIVITY_MESSAGE,
-  _$gNotificationTypeACTIVITY_REPLY,
-  _$gNotificationTypeFOLLOWING,
-  _$gNotificationTypeACTIVITY_MENTION,
-  _$gNotificationTypeTHREAD_COMMENT_MENTION,
-  _$gNotificationTypeTHREAD_SUBSCRIBED,
-  _$gNotificationTypeTHREAD_COMMENT_REPLY,
-  _$gNotificationTypeAIRING,
-  _$gNotificationTypeACTIVITY_LIKE,
-  _$gNotificationTypeACTIVITY_REPLY_LIKE,
-  _$gNotificationTypeTHREAD_LIKE,
-  _$gNotificationTypeTHREAD_COMMENT_LIKE,
-  _$gNotificationTypeACTIVITY_REPLY_SUBSCRIBED,
-  _$gNotificationTypeRELATED_MEDIA_ADDITION,
-  _$gNotificationTypeMEDIA_DATA_CHANGE,
-  _$gNotificationTypeMEDIA_MERGE,
-  _$gNotificationTypeMEDIA_DELETION,
-]);
-
-const GRecommendationRating _$gRecommendationRatingNO_RATING =
-    const GRecommendationRating._('NO_RATING');
-const GRecommendationRating _$gRecommendationRatingRATE_UP =
-    const GRecommendationRating._('RATE_UP');
-const GRecommendationRating _$gRecommendationRatingRATE_DOWN =
-    const GRecommendationRating._('RATE_DOWN');
-
-GRecommendationRating _$gRecommendationRatingValueOf(String name) {
-  switch (name) {
-    case 'NO_RATING':
-      return _$gRecommendationRatingNO_RATING;
-    case 'RATE_UP':
-      return _$gRecommendationRatingRATE_UP;
-    case 'RATE_DOWN':
-      return _$gRecommendationRatingRATE_DOWN;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GRecommendationRating> _$gRecommendationRatingValues =
-    new BuiltSet<GRecommendationRating>(const <GRecommendationRating>[
-  _$gRecommendationRatingNO_RATING,
-  _$gRecommendationRatingRATE_UP,
-  _$gRecommendationRatingRATE_DOWN,
-]);
-
-const GRecommendationSort _$gRecommendationSortID =
-    const GRecommendationSort._('ID');
-const GRecommendationSort _$gRecommendationSortID_DESC =
-    const GRecommendationSort._('ID_DESC');
-const GRecommendationSort _$gRecommendationSortRATING =
-    const GRecommendationSort._('RATING');
-const GRecommendationSort _$gRecommendationSortRATING_DESC =
-    const GRecommendationSort._('RATING_DESC');
-
-GRecommendationSort _$gRecommendationSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gRecommendationSortID;
-    case 'ID_DESC':
-      return _$gRecommendationSortID_DESC;
-    case 'RATING':
-      return _$gRecommendationSortRATING;
-    case 'RATING_DESC':
-      return _$gRecommendationSortRATING_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GRecommendationSort> _$gRecommendationSortValues =
-    new BuiltSet<GRecommendationSort>(const <GRecommendationSort>[
-  _$gRecommendationSortID,
-  _$gRecommendationSortID_DESC,
-  _$gRecommendationSortRATING,
-  _$gRecommendationSortRATING_DESC,
-]);
-
-const GReviewRating _$gReviewRatingNO_VOTE = const GReviewRating._('NO_VOTE');
-const GReviewRating _$gReviewRatingUP_VOTE = const GReviewRating._('UP_VOTE');
-const GReviewRating _$gReviewRatingDOWN_VOTE =
-    const GReviewRating._('DOWN_VOTE');
-
-GReviewRating _$gReviewRatingValueOf(String name) {
-  switch (name) {
-    case 'NO_VOTE':
-      return _$gReviewRatingNO_VOTE;
-    case 'UP_VOTE':
-      return _$gReviewRatingUP_VOTE;
-    case 'DOWN_VOTE':
-      return _$gReviewRatingDOWN_VOTE;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GReviewRating> _$gReviewRatingValues =
-    new BuiltSet<GReviewRating>(const <GReviewRating>[
-  _$gReviewRatingNO_VOTE,
-  _$gReviewRatingUP_VOTE,
-  _$gReviewRatingDOWN_VOTE,
-]);
-
-const GReviewSort _$gReviewSortID = const GReviewSort._('ID');
-const GReviewSort _$gReviewSortID_DESC = const GReviewSort._('ID_DESC');
-const GReviewSort _$gReviewSortSCORE = const GReviewSort._('SCORE');
-const GReviewSort _$gReviewSortSCORE_DESC = const GReviewSort._('SCORE_DESC');
-const GReviewSort _$gReviewSortRATING = const GReviewSort._('RATING');
-const GReviewSort _$gReviewSortRATING_DESC = const GReviewSort._('RATING_DESC');
-const GReviewSort _$gReviewSortCREATED_AT = const GReviewSort._('CREATED_AT');
-const GReviewSort _$gReviewSortCREATED_AT_DESC =
-    const GReviewSort._('CREATED_AT_DESC');
-const GReviewSort _$gReviewSortUPDATED_AT = const GReviewSort._('UPDATED_AT');
-const GReviewSort _$gReviewSortUPDATED_AT_DESC =
-    const GReviewSort._('UPDATED_AT_DESC');
-
-GReviewSort _$gReviewSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gReviewSortID;
-    case 'ID_DESC':
-      return _$gReviewSortID_DESC;
-    case 'SCORE':
-      return _$gReviewSortSCORE;
-    case 'SCORE_DESC':
-      return _$gReviewSortSCORE_DESC;
-    case 'RATING':
-      return _$gReviewSortRATING;
-    case 'RATING_DESC':
-      return _$gReviewSortRATING_DESC;
-    case 'CREATED_AT':
-      return _$gReviewSortCREATED_AT;
-    case 'CREATED_AT_DESC':
-      return _$gReviewSortCREATED_AT_DESC;
-    case 'UPDATED_AT':
-      return _$gReviewSortUPDATED_AT;
-    case 'UPDATED_AT_DESC':
-      return _$gReviewSortUPDATED_AT_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GReviewSort> _$gReviewSortValues =
-    new BuiltSet<GReviewSort>(const <GReviewSort>[
-  _$gReviewSortID,
-  _$gReviewSortID_DESC,
-  _$gReviewSortSCORE,
-  _$gReviewSortSCORE_DESC,
-  _$gReviewSortRATING,
-  _$gReviewSortRATING_DESC,
-  _$gReviewSortCREATED_AT,
-  _$gReviewSortCREATED_AT_DESC,
-  _$gReviewSortUPDATED_AT,
-  _$gReviewSortUPDATED_AT_DESC,
-]);
-
-const GRevisionHistoryAction _$gRevisionHistoryActionCREATE =
-    const GRevisionHistoryAction._('CREATE');
-const GRevisionHistoryAction _$gRevisionHistoryActionEDIT =
-    const GRevisionHistoryAction._('EDIT');
-
-GRevisionHistoryAction _$gRevisionHistoryActionValueOf(String name) {
-  switch (name) {
-    case 'CREATE':
-      return _$gRevisionHistoryActionCREATE;
-    case 'EDIT':
-      return _$gRevisionHistoryActionEDIT;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GRevisionHistoryAction> _$gRevisionHistoryActionValues =
-    new BuiltSet<GRevisionHistoryAction>(const <GRevisionHistoryAction>[
-  _$gRevisionHistoryActionCREATE,
-  _$gRevisionHistoryActionEDIT,
-]);
-
-const GScoreFormat _$gScoreFormatPOINT_100 = const GScoreFormat._('POINT_100');
-const GScoreFormat _$gScoreFormatPOINT_10_DECIMAL =
-    const GScoreFormat._('POINT_10_DECIMAL');
-const GScoreFormat _$gScoreFormatPOINT_10 = const GScoreFormat._('POINT_10');
-const GScoreFormat _$gScoreFormatPOINT_5 = const GScoreFormat._('POINT_5');
-const GScoreFormat _$gScoreFormatPOINT_3 = const GScoreFormat._('POINT_3');
-
-GScoreFormat _$gScoreFormatValueOf(String name) {
-  switch (name) {
-    case 'POINT_100':
-      return _$gScoreFormatPOINT_100;
-    case 'POINT_10_DECIMAL':
-      return _$gScoreFormatPOINT_10_DECIMAL;
-    case 'POINT_10':
-      return _$gScoreFormatPOINT_10;
-    case 'POINT_5':
-      return _$gScoreFormatPOINT_5;
-    case 'POINT_3':
-      return _$gScoreFormatPOINT_3;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GScoreFormat> _$gScoreFormatValues =
-    new BuiltSet<GScoreFormat>(const <GScoreFormat>[
-  _$gScoreFormatPOINT_100,
-  _$gScoreFormatPOINT_10_DECIMAL,
-  _$gScoreFormatPOINT_10,
-  _$gScoreFormatPOINT_5,
-  _$gScoreFormatPOINT_3,
-]);
-
-const GSiteTrendSort _$gSiteTrendSortDATE = const GSiteTrendSort._('DATE');
-const GSiteTrendSort _$gSiteTrendSortDATE_DESC =
-    const GSiteTrendSort._('DATE_DESC');
-const GSiteTrendSort _$gSiteTrendSortCOUNT = const GSiteTrendSort._('COUNT');
-const GSiteTrendSort _$gSiteTrendSortCOUNT_DESC =
-    const GSiteTrendSort._('COUNT_DESC');
-const GSiteTrendSort _$gSiteTrendSortCHANGE = const GSiteTrendSort._('CHANGE');
-const GSiteTrendSort _$gSiteTrendSortCHANGE_DESC =
-    const GSiteTrendSort._('CHANGE_DESC');
-
-GSiteTrendSort _$gSiteTrendSortValueOf(String name) {
-  switch (name) {
-    case 'DATE':
-      return _$gSiteTrendSortDATE;
-    case 'DATE_DESC':
-      return _$gSiteTrendSortDATE_DESC;
-    case 'COUNT':
-      return _$gSiteTrendSortCOUNT;
-    case 'COUNT_DESC':
-      return _$gSiteTrendSortCOUNT_DESC;
-    case 'CHANGE':
-      return _$gSiteTrendSortCHANGE;
-    case 'CHANGE_DESC':
-      return _$gSiteTrendSortCHANGE_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GSiteTrendSort> _$gSiteTrendSortValues =
-    new BuiltSet<GSiteTrendSort>(const <GSiteTrendSort>[
-  _$gSiteTrendSortDATE,
-  _$gSiteTrendSortDATE_DESC,
-  _$gSiteTrendSortCOUNT,
-  _$gSiteTrendSortCOUNT_DESC,
-  _$gSiteTrendSortCHANGE,
-  _$gSiteTrendSortCHANGE_DESC,
-]);
-
-const GStaffLanguage _$gStaffLanguageJAPANESE =
-    const GStaffLanguage._('JAPANESE');
-const GStaffLanguage _$gStaffLanguageENGLISH =
-    const GStaffLanguage._('ENGLISH');
-const GStaffLanguage _$gStaffLanguageKOREAN = const GStaffLanguage._('KOREAN');
-const GStaffLanguage _$gStaffLanguageITALIAN =
-    const GStaffLanguage._('ITALIAN');
-const GStaffLanguage _$gStaffLanguageSPANISH =
-    const GStaffLanguage._('SPANISH');
-const GStaffLanguage _$gStaffLanguagePORTUGUESE =
-    const GStaffLanguage._('PORTUGUESE');
-const GStaffLanguage _$gStaffLanguageFRENCH = const GStaffLanguage._('FRENCH');
-const GStaffLanguage _$gStaffLanguageGERMAN = const GStaffLanguage._('GERMAN');
-const GStaffLanguage _$gStaffLanguageHEBREW = const GStaffLanguage._('HEBREW');
-const GStaffLanguage _$gStaffLanguageHUNGARIAN =
-    const GStaffLanguage._('HUNGARIAN');
-
-GStaffLanguage _$gStaffLanguageValueOf(String name) {
-  switch (name) {
-    case 'JAPANESE':
-      return _$gStaffLanguageJAPANESE;
-    case 'ENGLISH':
-      return _$gStaffLanguageENGLISH;
-    case 'KOREAN':
-      return _$gStaffLanguageKOREAN;
-    case 'ITALIAN':
-      return _$gStaffLanguageITALIAN;
-    case 'SPANISH':
-      return _$gStaffLanguageSPANISH;
-    case 'PORTUGUESE':
-      return _$gStaffLanguagePORTUGUESE;
-    case 'FRENCH':
-      return _$gStaffLanguageFRENCH;
-    case 'GERMAN':
-      return _$gStaffLanguageGERMAN;
-    case 'HEBREW':
-      return _$gStaffLanguageHEBREW;
-    case 'HUNGARIAN':
-      return _$gStaffLanguageHUNGARIAN;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GStaffLanguage> _$gStaffLanguageValues =
-    new BuiltSet<GStaffLanguage>(const <GStaffLanguage>[
-  _$gStaffLanguageJAPANESE,
-  _$gStaffLanguageENGLISH,
-  _$gStaffLanguageKOREAN,
-  _$gStaffLanguageITALIAN,
-  _$gStaffLanguageSPANISH,
-  _$gStaffLanguagePORTUGUESE,
-  _$gStaffLanguageFRENCH,
-  _$gStaffLanguageGERMAN,
-  _$gStaffLanguageHEBREW,
-  _$gStaffLanguageHUNGARIAN,
-]);
-
-const GStaffSort _$gStaffSortID = const GStaffSort._('ID');
-const GStaffSort _$gStaffSortID_DESC = const GStaffSort._('ID_DESC');
-const GStaffSort _$gStaffSortROLE = const GStaffSort._('ROLE');
-const GStaffSort _$gStaffSortROLE_DESC = const GStaffSort._('ROLE_DESC');
-const GStaffSort _$gStaffSortLANGUAGE = const GStaffSort._('LANGUAGE');
-const GStaffSort _$gStaffSortLANGUAGE_DESC =
-    const GStaffSort._('LANGUAGE_DESC');
-const GStaffSort _$gStaffSortSEARCH_MATCH = const GStaffSort._('SEARCH_MATCH');
-const GStaffSort _$gStaffSortFAVOURITES = const GStaffSort._('FAVOURITES');
-const GStaffSort _$gStaffSortFAVOURITES_DESC =
-    const GStaffSort._('FAVOURITES_DESC');
-const GStaffSort _$gStaffSortRELEVANCE = const GStaffSort._('RELEVANCE');
-
-GStaffSort _$gStaffSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gStaffSortID;
-    case 'ID_DESC':
-      return _$gStaffSortID_DESC;
-    case 'ROLE':
-      return _$gStaffSortROLE;
-    case 'ROLE_DESC':
-      return _$gStaffSortROLE_DESC;
-    case 'LANGUAGE':
-      return _$gStaffSortLANGUAGE;
-    case 'LANGUAGE_DESC':
-      return _$gStaffSortLANGUAGE_DESC;
-    case 'SEARCH_MATCH':
-      return _$gStaffSortSEARCH_MATCH;
-    case 'FAVOURITES':
-      return _$gStaffSortFAVOURITES;
-    case 'FAVOURITES_DESC':
-      return _$gStaffSortFAVOURITES_DESC;
-    case 'RELEVANCE':
-      return _$gStaffSortRELEVANCE;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GStaffSort> _$gStaffSortValues =
-    new BuiltSet<GStaffSort>(const <GStaffSort>[
-  _$gStaffSortID,
-  _$gStaffSortID_DESC,
-  _$gStaffSortROLE,
-  _$gStaffSortROLE_DESC,
-  _$gStaffSortLANGUAGE,
-  _$gStaffSortLANGUAGE_DESC,
-  _$gStaffSortSEARCH_MATCH,
-  _$gStaffSortFAVOURITES,
-  _$gStaffSortFAVOURITES_DESC,
-  _$gStaffSortRELEVANCE,
-]);
-
-const GStudioSort _$gStudioSortID = const GStudioSort._('ID');
-const GStudioSort _$gStudioSortID_DESC = const GStudioSort._('ID_DESC');
-const GStudioSort _$gStudioSortNAME = const GStudioSort._('NAME');
-const GStudioSort _$gStudioSortNAME_DESC = const GStudioSort._('NAME_DESC');
-const GStudioSort _$gStudioSortSEARCH_MATCH =
-    const GStudioSort._('SEARCH_MATCH');
-const GStudioSort _$gStudioSortFAVOURITES = const GStudioSort._('FAVOURITES');
-const GStudioSort _$gStudioSortFAVOURITES_DESC =
-    const GStudioSort._('FAVOURITES_DESC');
-
-GStudioSort _$gStudioSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gStudioSortID;
-    case 'ID_DESC':
-      return _$gStudioSortID_DESC;
-    case 'NAME':
-      return _$gStudioSortNAME;
-    case 'NAME_DESC':
-      return _$gStudioSortNAME_DESC;
-    case 'SEARCH_MATCH':
-      return _$gStudioSortSEARCH_MATCH;
-    case 'FAVOURITES':
-      return _$gStudioSortFAVOURITES;
-    case 'FAVOURITES_DESC':
-      return _$gStudioSortFAVOURITES_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GStudioSort> _$gStudioSortValues =
-    new BuiltSet<GStudioSort>(const <GStudioSort>[
-  _$gStudioSortID,
-  _$gStudioSortID_DESC,
-  _$gStudioSortNAME,
-  _$gStudioSortNAME_DESC,
-  _$gStudioSortSEARCH_MATCH,
-  _$gStudioSortFAVOURITES,
-  _$gStudioSortFAVOURITES_DESC,
-]);
-
-const GSubmissionSort _$gSubmissionSortID = const GSubmissionSort._('ID');
-const GSubmissionSort _$gSubmissionSortID_DESC =
-    const GSubmissionSort._('ID_DESC');
-
-GSubmissionSort _$gSubmissionSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gSubmissionSortID;
-    case 'ID_DESC':
-      return _$gSubmissionSortID_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GSubmissionSort> _$gSubmissionSortValues =
-    new BuiltSet<GSubmissionSort>(const <GSubmissionSort>[
-  _$gSubmissionSortID,
-  _$gSubmissionSortID_DESC,
-]);
-
-const GSubmissionStatus _$gSubmissionStatusPENDING =
-    const GSubmissionStatus._('PENDING');
-const GSubmissionStatus _$gSubmissionStatusREJECTED =
-    const GSubmissionStatus._('REJECTED');
-const GSubmissionStatus _$gSubmissionStatusPARTIALLY_ACCEPTED =
-    const GSubmissionStatus._('PARTIALLY_ACCEPTED');
-const GSubmissionStatus _$gSubmissionStatusACCEPTED =
-    const GSubmissionStatus._('ACCEPTED');
-
-GSubmissionStatus _$gSubmissionStatusValueOf(String name) {
-  switch (name) {
-    case 'PENDING':
-      return _$gSubmissionStatusPENDING;
-    case 'REJECTED':
-      return _$gSubmissionStatusREJECTED;
-    case 'PARTIALLY_ACCEPTED':
-      return _$gSubmissionStatusPARTIALLY_ACCEPTED;
-    case 'ACCEPTED':
-      return _$gSubmissionStatusACCEPTED;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GSubmissionStatus> _$gSubmissionStatusValues =
-    new BuiltSet<GSubmissionStatus>(const <GSubmissionStatus>[
-  _$gSubmissionStatusPENDING,
-  _$gSubmissionStatusREJECTED,
-  _$gSubmissionStatusPARTIALLY_ACCEPTED,
-  _$gSubmissionStatusACCEPTED,
-]);
-
-const GThreadCommentSort _$gThreadCommentSortID =
-    const GThreadCommentSort._('ID');
-const GThreadCommentSort _$gThreadCommentSortID_DESC =
-    const GThreadCommentSort._('ID_DESC');
-
-GThreadCommentSort _$gThreadCommentSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gThreadCommentSortID;
-    case 'ID_DESC':
-      return _$gThreadCommentSortID_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GThreadCommentSort> _$gThreadCommentSortValues =
-    new BuiltSet<GThreadCommentSort>(const <GThreadCommentSort>[
-  _$gThreadCommentSortID,
-  _$gThreadCommentSortID_DESC,
-]);
-
-const GThreadSort _$gThreadSortID = const GThreadSort._('ID');
-const GThreadSort _$gThreadSortID_DESC = const GThreadSort._('ID_DESC');
-const GThreadSort _$gThreadSortTITLE = const GThreadSort._('TITLE');
-const GThreadSort _$gThreadSortTITLE_DESC = const GThreadSort._('TITLE_DESC');
-const GThreadSort _$gThreadSortCREATED_AT = const GThreadSort._('CREATED_AT');
-const GThreadSort _$gThreadSortCREATED_AT_DESC =
-    const GThreadSort._('CREATED_AT_DESC');
-const GThreadSort _$gThreadSortUPDATED_AT = const GThreadSort._('UPDATED_AT');
-const GThreadSort _$gThreadSortUPDATED_AT_DESC =
-    const GThreadSort._('UPDATED_AT_DESC');
-const GThreadSort _$gThreadSortREPLIED_AT = const GThreadSort._('REPLIED_AT');
-const GThreadSort _$gThreadSortREPLIED_AT_DESC =
-    const GThreadSort._('REPLIED_AT_DESC');
-const GThreadSort _$gThreadSortREPLY_COUNT = const GThreadSort._('REPLY_COUNT');
-const GThreadSort _$gThreadSortREPLY_COUNT_DESC =
-    const GThreadSort._('REPLY_COUNT_DESC');
-const GThreadSort _$gThreadSortVIEW_COUNT = const GThreadSort._('VIEW_COUNT');
-const GThreadSort _$gThreadSortVIEW_COUNT_DESC =
-    const GThreadSort._('VIEW_COUNT_DESC');
-const GThreadSort _$gThreadSortIS_STICKY = const GThreadSort._('IS_STICKY');
-const GThreadSort _$gThreadSortSEARCH_MATCH =
-    const GThreadSort._('SEARCH_MATCH');
-
-GThreadSort _$gThreadSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gThreadSortID;
-    case 'ID_DESC':
-      return _$gThreadSortID_DESC;
-    case 'TITLE':
-      return _$gThreadSortTITLE;
-    case 'TITLE_DESC':
-      return _$gThreadSortTITLE_DESC;
-    case 'CREATED_AT':
-      return _$gThreadSortCREATED_AT;
-    case 'CREATED_AT_DESC':
-      return _$gThreadSortCREATED_AT_DESC;
-    case 'UPDATED_AT':
-      return _$gThreadSortUPDATED_AT;
-    case 'UPDATED_AT_DESC':
-      return _$gThreadSortUPDATED_AT_DESC;
-    case 'REPLIED_AT':
-      return _$gThreadSortREPLIED_AT;
-    case 'REPLIED_AT_DESC':
-      return _$gThreadSortREPLIED_AT_DESC;
-    case 'REPLY_COUNT':
-      return _$gThreadSortREPLY_COUNT;
-    case 'REPLY_COUNT_DESC':
-      return _$gThreadSortREPLY_COUNT_DESC;
-    case 'VIEW_COUNT':
-      return _$gThreadSortVIEW_COUNT;
-    case 'VIEW_COUNT_DESC':
-      return _$gThreadSortVIEW_COUNT_DESC;
-    case 'IS_STICKY':
-      return _$gThreadSortIS_STICKY;
-    case 'SEARCH_MATCH':
-      return _$gThreadSortSEARCH_MATCH;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GThreadSort> _$gThreadSortValues =
-    new BuiltSet<GThreadSort>(const <GThreadSort>[
-  _$gThreadSortID,
-  _$gThreadSortID_DESC,
-  _$gThreadSortTITLE,
-  _$gThreadSortTITLE_DESC,
-  _$gThreadSortCREATED_AT,
-  _$gThreadSortCREATED_AT_DESC,
-  _$gThreadSortUPDATED_AT,
-  _$gThreadSortUPDATED_AT_DESC,
-  _$gThreadSortREPLIED_AT,
-  _$gThreadSortREPLIED_AT_DESC,
-  _$gThreadSortREPLY_COUNT,
-  _$gThreadSortREPLY_COUNT_DESC,
-  _$gThreadSortVIEW_COUNT,
-  _$gThreadSortVIEW_COUNT_DESC,
-  _$gThreadSortIS_STICKY,
-  _$gThreadSortSEARCH_MATCH,
-]);
-
-const GUserSort _$gUserSortID = const GUserSort._('ID');
-const GUserSort _$gUserSortID_DESC = const GUserSort._('ID_DESC');
-const GUserSort _$gUserSortUSERNAME = const GUserSort._('USERNAME');
-const GUserSort _$gUserSortUSERNAME_DESC = const GUserSort._('USERNAME_DESC');
-const GUserSort _$gUserSortWATCHED_TIME = const GUserSort._('WATCHED_TIME');
-const GUserSort _$gUserSortWATCHED_TIME_DESC =
-    const GUserSort._('WATCHED_TIME_DESC');
-const GUserSort _$gUserSortCHAPTERS_READ = const GUserSort._('CHAPTERS_READ');
-const GUserSort _$gUserSortCHAPTERS_READ_DESC =
-    const GUserSort._('CHAPTERS_READ_DESC');
-const GUserSort _$gUserSortSEARCH_MATCH = const GUserSort._('SEARCH_MATCH');
-
-GUserSort _$gUserSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gUserSortID;
-    case 'ID_DESC':
-      return _$gUserSortID_DESC;
-    case 'USERNAME':
-      return _$gUserSortUSERNAME;
-    case 'USERNAME_DESC':
-      return _$gUserSortUSERNAME_DESC;
-    case 'WATCHED_TIME':
-      return _$gUserSortWATCHED_TIME;
-    case 'WATCHED_TIME_DESC':
-      return _$gUserSortWATCHED_TIME_DESC;
-    case 'CHAPTERS_READ':
-      return _$gUserSortCHAPTERS_READ;
-    case 'CHAPTERS_READ_DESC':
-      return _$gUserSortCHAPTERS_READ_DESC;
-    case 'SEARCH_MATCH':
-      return _$gUserSortSEARCH_MATCH;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GUserSort> _$gUserSortValues =
-    new BuiltSet<GUserSort>(const <GUserSort>[
-  _$gUserSortID,
-  _$gUserSortID_DESC,
-  _$gUserSortUSERNAME,
-  _$gUserSortUSERNAME_DESC,
-  _$gUserSortWATCHED_TIME,
-  _$gUserSortWATCHED_TIME_DESC,
-  _$gUserSortCHAPTERS_READ,
-  _$gUserSortCHAPTERS_READ_DESC,
-  _$gUserSortSEARCH_MATCH,
-]);
-
-const GUserStaffNameLanguage _$gUserStaffNameLanguageROMAJI_WESTERN =
-    const GUserStaffNameLanguage._('ROMAJI_WESTERN');
-const GUserStaffNameLanguage _$gUserStaffNameLanguageROMAJI =
-    const GUserStaffNameLanguage._('ROMAJI');
-const GUserStaffNameLanguage _$gUserStaffNameLanguageNATIVE =
-    const GUserStaffNameLanguage._('NATIVE');
-
-GUserStaffNameLanguage _$gUserStaffNameLanguageValueOf(String name) {
-  switch (name) {
-    case 'ROMAJI_WESTERN':
-      return _$gUserStaffNameLanguageROMAJI_WESTERN;
-    case 'ROMAJI':
-      return _$gUserStaffNameLanguageROMAJI;
-    case 'NATIVE':
-      return _$gUserStaffNameLanguageNATIVE;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GUserStaffNameLanguage> _$gUserStaffNameLanguageValues =
-    new BuiltSet<GUserStaffNameLanguage>(const <GUserStaffNameLanguage>[
-  _$gUserStaffNameLanguageROMAJI_WESTERN,
-  _$gUserStaffNameLanguageROMAJI,
-  _$gUserStaffNameLanguageNATIVE,
-]);
-
-const GUserStatisticsSort _$gUserStatisticsSortID =
-    const GUserStatisticsSort._('ID');
-const GUserStatisticsSort _$gUserStatisticsSortID_DESC =
-    const GUserStatisticsSort._('ID_DESC');
-const GUserStatisticsSort _$gUserStatisticsSortCOUNT =
-    const GUserStatisticsSort._('COUNT');
-const GUserStatisticsSort _$gUserStatisticsSortCOUNT_DESC =
-    const GUserStatisticsSort._('COUNT_DESC');
-const GUserStatisticsSort _$gUserStatisticsSortPROGRESS =
-    const GUserStatisticsSort._('PROGRESS');
-const GUserStatisticsSort _$gUserStatisticsSortPROGRESS_DESC =
-    const GUserStatisticsSort._('PROGRESS_DESC');
-const GUserStatisticsSort _$gUserStatisticsSortMEAN_SCORE =
-    const GUserStatisticsSort._('MEAN_SCORE');
-const GUserStatisticsSort _$gUserStatisticsSortMEAN_SCORE_DESC =
-    const GUserStatisticsSort._('MEAN_SCORE_DESC');
-
-GUserStatisticsSort _$gUserStatisticsSortValueOf(String name) {
-  switch (name) {
-    case 'ID':
-      return _$gUserStatisticsSortID;
-    case 'ID_DESC':
-      return _$gUserStatisticsSortID_DESC;
-    case 'COUNT':
-      return _$gUserStatisticsSortCOUNT;
-    case 'COUNT_DESC':
-      return _$gUserStatisticsSortCOUNT_DESC;
-    case 'PROGRESS':
-      return _$gUserStatisticsSortPROGRESS;
-    case 'PROGRESS_DESC':
-      return _$gUserStatisticsSortPROGRESS_DESC;
-    case 'MEAN_SCORE':
-      return _$gUserStatisticsSortMEAN_SCORE;
-    case 'MEAN_SCORE_DESC':
-      return _$gUserStatisticsSortMEAN_SCORE_DESC;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GUserStatisticsSort> _$gUserStatisticsSortValues =
-    new BuiltSet<GUserStatisticsSort>(const <GUserStatisticsSort>[
-  _$gUserStatisticsSortID,
-  _$gUserStatisticsSortID_DESC,
-  _$gUserStatisticsSortCOUNT,
-  _$gUserStatisticsSortCOUNT_DESC,
-  _$gUserStatisticsSortPROGRESS,
-  _$gUserStatisticsSortPROGRESS_DESC,
-  _$gUserStatisticsSortMEAN_SCORE,
-  _$gUserStatisticsSortMEAN_SCORE_DESC,
-]);
-
-const GUserTitleLanguage _$gUserTitleLanguageROMAJI =
-    const GUserTitleLanguage._('ROMAJI');
-const GUserTitleLanguage _$gUserTitleLanguageENGLISH =
-    const GUserTitleLanguage._('ENGLISH');
-const GUserTitleLanguage _$gUserTitleLanguageNATIVE =
-    const GUserTitleLanguage._('NATIVE');
-const GUserTitleLanguage _$gUserTitleLanguageROMAJI_STYLISED =
-    const GUserTitleLanguage._('ROMAJI_STYLISED');
-const GUserTitleLanguage _$gUserTitleLanguageENGLISH_STYLISED =
-    const GUserTitleLanguage._('ENGLISH_STYLISED');
-const GUserTitleLanguage _$gUserTitleLanguageNATIVE_STYLISED =
-    const GUserTitleLanguage._('NATIVE_STYLISED');
-
-GUserTitleLanguage _$gUserTitleLanguageValueOf(String name) {
-  switch (name) {
-    case 'ROMAJI':
-      return _$gUserTitleLanguageROMAJI;
-    case 'ENGLISH':
-      return _$gUserTitleLanguageENGLISH;
-    case 'NATIVE':
-      return _$gUserTitleLanguageNATIVE;
-    case 'ROMAJI_STYLISED':
-      return _$gUserTitleLanguageROMAJI_STYLISED;
-    case 'ENGLISH_STYLISED':
-      return _$gUserTitleLanguageENGLISH_STYLISED;
-    case 'NATIVE_STYLISED':
-      return _$gUserTitleLanguageNATIVE_STYLISED;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<GUserTitleLanguage> _$gUserTitleLanguageValues =
-    new BuiltSet<GUserTitleLanguage>(const <GUserTitleLanguage>[
-  _$gUserTitleLanguageROMAJI,
-  _$gUserTitleLanguageENGLISH,
-  _$gUserTitleLanguageNATIVE,
-  _$gUserTitleLanguageROMAJI_STYLISED,
-  _$gUserTitleLanguageENGLISH_STYLISED,
-  _$gUserTitleLanguageNATIVE_STYLISED,
-]);
-
-Serializer<GActivitySort> _$gActivitySortSerializer =
-    new _$GActivitySortSerializer();
-Serializer<GActivityType> _$gActivityTypeSerializer =
-    new _$GActivityTypeSerializer();
-Serializer<GAiringScheduleInput> _$gAiringScheduleInputSerializer =
-    new _$GAiringScheduleInputSerializer();
-Serializer<GAiringSort> _$gAiringSortSerializer = new _$GAiringSortSerializer();
-Serializer<GAniChartHighlightInput> _$gAniChartHighlightInputSerializer =
-    new _$GAniChartHighlightInputSerializer();
-Serializer<GCharacterNameInput> _$gCharacterNameInputSerializer =
-    new _$GCharacterNameInputSerializer();
-Serializer<GCharacterRole> _$gCharacterRoleSerializer =
-    new _$GCharacterRoleSerializer();
-Serializer<GCharacterSort> _$gCharacterSortSerializer =
-    new _$GCharacterSortSerializer();
-Serializer<GExternalLinkMediaType> _$gExternalLinkMediaTypeSerializer =
-    new _$GExternalLinkMediaTypeSerializer();
-Serializer<GExternalLinkType> _$gExternalLinkTypeSerializer =
-    new _$GExternalLinkTypeSerializer();
-Serializer<GFuzzyDateInput> _$gFuzzyDateInputSerializer =
-    new _$GFuzzyDateInputSerializer();
-Serializer<GLikeableType> _$gLikeableTypeSerializer =
-    new _$GLikeableTypeSerializer();
-Serializer<GListActivityOptionInput> _$gListActivityOptionInputSerializer =
-    new _$GListActivityOptionInputSerializer();
-Serializer<GMediaExternalLinkInput> _$gMediaExternalLinkInputSerializer =
-    new _$GMediaExternalLinkInputSerializer();
-Serializer<GMediaFormat> _$gMediaFormatSerializer =
-    new _$GMediaFormatSerializer();
-Serializer<GMediaListOptionsInput> _$gMediaListOptionsInputSerializer =
-    new _$GMediaListOptionsInputSerializer();
-Serializer<GMediaListSort> _$gMediaListSortSerializer =
-    new _$GMediaListSortSerializer();
-Serializer<GMediaListStatus> _$gMediaListStatusSerializer =
-    new _$GMediaListStatusSerializer();
-Serializer<GMediaRankType> _$gMediaRankTypeSerializer =
-    new _$GMediaRankTypeSerializer();
-Serializer<GMediaRelation> _$gMediaRelationSerializer =
-    new _$GMediaRelationSerializer();
-Serializer<GMediaSeason> _$gMediaSeasonSerializer =
-    new _$GMediaSeasonSerializer();
-Serializer<GMediaSort> _$gMediaSortSerializer = new _$GMediaSortSerializer();
-Serializer<GMediaSource> _$gMediaSourceSerializer =
-    new _$GMediaSourceSerializer();
-Serializer<GMediaStatus> _$gMediaStatusSerializer =
-    new _$GMediaStatusSerializer();
-Serializer<GMediaTitleInput> _$gMediaTitleInputSerializer =
-    new _$GMediaTitleInputSerializer();
-Serializer<GMediaTrendSort> _$gMediaTrendSortSerializer =
-    new _$GMediaTrendSortSerializer();
-Serializer<GMediaType> _$gMediaTypeSerializer = new _$GMediaTypeSerializer();
-Serializer<GModActionType> _$gModActionTypeSerializer =
-    new _$GModActionTypeSerializer();
-Serializer<GModRole> _$gModRoleSerializer = new _$GModRoleSerializer();
-Serializer<GNotificationOptionInput> _$gNotificationOptionInputSerializer =
-    new _$GNotificationOptionInputSerializer();
-Serializer<GNotificationType> _$gNotificationTypeSerializer =
-    new _$GNotificationTypeSerializer();
-Serializer<GRecommendationRating> _$gRecommendationRatingSerializer =
-    new _$GRecommendationRatingSerializer();
-Serializer<GRecommendationSort> _$gRecommendationSortSerializer =
-    new _$GRecommendationSortSerializer();
-Serializer<GReviewRating> _$gReviewRatingSerializer =
-    new _$GReviewRatingSerializer();
-Serializer<GReviewSort> _$gReviewSortSerializer = new _$GReviewSortSerializer();
-Serializer<GRevisionHistoryAction> _$gRevisionHistoryActionSerializer =
-    new _$GRevisionHistoryActionSerializer();
-Serializer<GScoreFormat> _$gScoreFormatSerializer =
-    new _$GScoreFormatSerializer();
-Serializer<GSiteTrendSort> _$gSiteTrendSortSerializer =
-    new _$GSiteTrendSortSerializer();
-Serializer<GStaffLanguage> _$gStaffLanguageSerializer =
-    new _$GStaffLanguageSerializer();
-Serializer<GStaffNameInput> _$gStaffNameInputSerializer =
-    new _$GStaffNameInputSerializer();
-Serializer<GStaffSort> _$gStaffSortSerializer = new _$GStaffSortSerializer();
-Serializer<GStudioSort> _$gStudioSortSerializer = new _$GStudioSortSerializer();
-Serializer<GSubmissionSort> _$gSubmissionSortSerializer =
-    new _$GSubmissionSortSerializer();
-Serializer<GSubmissionStatus> _$gSubmissionStatusSerializer =
-    new _$GSubmissionStatusSerializer();
-Serializer<GThreadCommentSort> _$gThreadCommentSortSerializer =
-    new _$GThreadCommentSortSerializer();
-Serializer<GThreadSort> _$gThreadSortSerializer = new _$GThreadSortSerializer();
-Serializer<GUserSort> _$gUserSortSerializer = new _$GUserSortSerializer();
-Serializer<GUserStaffNameLanguage> _$gUserStaffNameLanguageSerializer =
-    new _$GUserStaffNameLanguageSerializer();
-Serializer<GUserStatisticsSort> _$gUserStatisticsSortSerializer =
-    new _$GUserStatisticsSortSerializer();
-Serializer<GUserTitleLanguage> _$gUserTitleLanguageSerializer =
-    new _$GUserTitleLanguageSerializer();
-
-class _$GActivitySortSerializer implements PrimitiveSerializer<GActivitySort> {
+Serializer<GAddressInput> _$gAddressInputSerializer =
+    new _$GAddressInputSerializer();
+Serializer<GCompanyInput> _$gCompanyInputSerializer =
+    new _$GCompanyInputSerializer();
+Serializer<GCreateAlbumInput> _$gCreateAlbumInputSerializer =
+    new _$GCreateAlbumInputSerializer();
+Serializer<GCreateCommentInput> _$gCreateCommentInputSerializer =
+    new _$GCreateCommentInputSerializer();
+Serializer<GCreatePhotoInput> _$gCreatePhotoInputSerializer =
+    new _$GCreatePhotoInputSerializer();
+Serializer<GCreatePostInput> _$gCreatePostInputSerializer =
+    new _$GCreatePostInputSerializer();
+Serializer<GCreateTodoInput> _$gCreateTodoInputSerializer =
+    new _$GCreateTodoInputSerializer();
+Serializer<GCreateUserInput> _$gCreateUserInputSerializer =
+    new _$GCreateUserInputSerializer();
+Serializer<GGeoInput> _$gGeoInputSerializer = new _$GGeoInputSerializer();
+Serializer<GOperatorKindEnum> _$gOperatorKindEnumSerializer =
+    new _$GOperatorKindEnumSerializer();
+Serializer<GOperatorOptions> _$gOperatorOptionsSerializer =
+    new _$GOperatorOptionsSerializer();
+Serializer<GPageQueryOptions> _$gPageQueryOptionsSerializer =
+    new _$GPageQueryOptionsSerializer();
+Serializer<GPaginateOptions> _$gPaginateOptionsSerializer =
+    new _$GPaginateOptionsSerializer();
+Serializer<GSearchOptions> _$gSearchOptionsSerializer =
+    new _$GSearchOptionsSerializer();
+Serializer<GSliceOptions> _$gSliceOptionsSerializer =
+    new _$GSliceOptionsSerializer();
+Serializer<GSortOptions> _$gSortOptionsSerializer =
+    new _$GSortOptionsSerializer();
+Serializer<GSortOrderEnum> _$gSortOrderEnumSerializer =
+    new _$GSortOrderEnumSerializer();
+Serializer<GUpdateAlbumInput> _$gUpdateAlbumInputSerializer =
+    new _$GUpdateAlbumInputSerializer();
+Serializer<GUpdateCommentInput> _$gUpdateCommentInputSerializer =
+    new _$GUpdateCommentInputSerializer();
+Serializer<GUpdatePhotoInput> _$gUpdatePhotoInputSerializer =
+    new _$GUpdatePhotoInputSerializer();
+Serializer<GUpdatePostInput> _$gUpdatePostInputSerializer =
+    new _$GUpdatePostInputSerializer();
+Serializer<GUpdateTodoInput> _$gUpdateTodoInputSerializer =
+    new _$GUpdateTodoInputSerializer();
+Serializer<GUpdateUserInput> _$gUpdateUserInputSerializer =
+    new _$GUpdateUserInputSerializer();
+
+class _$GAddressInputSerializer implements StructuredSerializer<GAddressInput> {
   @override
-  final Iterable<Type> types = const <Type>[GActivitySort];
+  final Iterable<Type> types = const [GAddressInput, _$GAddressInput];
   @override
-  final String wireName = 'GActivitySort';
+  final String wireName = 'GAddressInput';
 
   @override
-  Object serialize(Serializers serializers, GActivitySort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GActivitySort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GActivitySort.valueOf(serialized as String);
-}
-
-class _$GActivityTypeSerializer implements PrimitiveSerializer<GActivityType> {
-  @override
-  final Iterable<Type> types = const <Type>[GActivityType];
-  @override
-  final String wireName = 'GActivityType';
-
-  @override
-  Object serialize(Serializers serializers, GActivityType object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GActivityType deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GActivityType.valueOf(serialized as String);
-}
-
-class _$GAiringScheduleInputSerializer
-    implements StructuredSerializer<GAiringScheduleInput> {
-  @override
-  final Iterable<Type> types = const [
-    GAiringScheduleInput,
-    _$GAiringScheduleInput
-  ];
-  @override
-  final String wireName = 'GAiringScheduleInput';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GAiringScheduleInput object,
+  Iterable<Object?> serialize(Serializers serializers, GAddressInput object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[];
     Object? value;
-    value = object.airingAt;
+    value = object.street;
     if (value != null) {
       result
-        ..add('airingAt')
-        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+        ..add('street')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
     }
-    value = object.episode;
+    value = object.suite;
     if (value != null) {
       result
-        ..add('episode')
-        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+        ..add('suite')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
     }
-    value = object.timeUntilAiring;
+    value = object.city;
     if (value != null) {
       result
-        ..add('timeUntilAiring')
-        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+        ..add('city')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.zipcode;
+    if (value != null) {
+      result
+        ..add('zipcode')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.geo;
+    if (value != null) {
+      result
+        ..add('geo')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GGeoInput)));
     }
     return result;
   }
 
   @override
-  GAiringScheduleInput deserialize(
+  GAddressInput deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GAiringScheduleInputBuilder();
+    final result = new GAddressInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2133,17 +164,25 @@ class _$GAiringScheduleInputSerializer
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
-        case 'airingAt':
-          result.airingAt = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+        case 'street':
+          result.street = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
           break;
-        case 'episode':
-          result.episode = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+        case 'suite':
+          result.suite = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
           break;
-        case 'timeUntilAiring':
-          result.timeUntilAiring = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+        case 'city':
+          result.city = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'zipcode':
+          result.zipcode = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'geo':
+          result.geo.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GGeoInput))! as GGeoInput);
           break;
       }
     }
@@ -2152,49 +191,35 @@ class _$GAiringScheduleInputSerializer
   }
 }
 
-class _$GAiringSortSerializer implements PrimitiveSerializer<GAiringSort> {
+class _$GCompanyInputSerializer implements StructuredSerializer<GCompanyInput> {
   @override
-  final Iterable<Type> types = const <Type>[GAiringSort];
+  final Iterable<Type> types = const [GCompanyInput, _$GCompanyInput];
   @override
-  final String wireName = 'GAiringSort';
+  final String wireName = 'GCompanyInput';
 
   @override
-  Object serialize(Serializers serializers, GAiringSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GAiringSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GAiringSort.valueOf(serialized as String);
-}
-
-class _$GAniChartHighlightInputSerializer
-    implements StructuredSerializer<GAniChartHighlightInput> {
-  @override
-  final Iterable<Type> types = const [
-    GAniChartHighlightInput,
-    _$GAniChartHighlightInput
-  ];
-  @override
-  final String wireName = 'GAniChartHighlightInput';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GAniChartHighlightInput object,
+  Iterable<Object?> serialize(Serializers serializers, GCompanyInput object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[];
     Object? value;
-    value = object.mediaId;
+    value = object.name;
     if (value != null) {
       result
-        ..add('mediaId')
-        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+        ..add('name')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
     }
-    value = object.highlight;
+    value = object.catchPhrase;
     if (value != null) {
       result
-        ..add('highlight')
+        ..add('catchPhrase')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.bs;
+    if (value != null) {
+      result
+        ..add('bs')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
@@ -2202,10 +227,10 @@ class _$GAniChartHighlightInputSerializer
   }
 
   @override
-  GAniChartHighlightInput deserialize(
+  GCompanyInput deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GAniChartHighlightInputBuilder();
+    final result = new GCompanyInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2213,12 +238,16 @@ class _$GAniChartHighlightInputSerializer
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
-        case 'mediaId':
-          result.mediaId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
           break;
-        case 'highlight':
-          result.highlight = serializers.deserialize(value,
+        case 'catchPhrase':
+          result.catchPhrase = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'bs':
+          result.bs = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -2228,361 +257,33 @@ class _$GAniChartHighlightInputSerializer
   }
 }
 
-class _$GCharacterNameInputSerializer
-    implements StructuredSerializer<GCharacterNameInput> {
+class _$GCreateAlbumInputSerializer
+    implements StructuredSerializer<GCreateAlbumInput> {
   @override
-  final Iterable<Type> types = const [
-    GCharacterNameInput,
-    _$GCharacterNameInput
-  ];
+  final Iterable<Type> types = const [GCreateAlbumInput, _$GCreateAlbumInput];
   @override
-  final String wireName = 'GCharacterNameInput';
+  final String wireName = 'GCreateAlbumInput';
 
   @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GCharacterNameInput object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[];
-    Object? value;
-    value = object.first;
-    if (value != null) {
-      result
-        ..add('first')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.middle;
-    if (value != null) {
-      result
-        ..add('middle')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.last;
-    if (value != null) {
-      result
-        ..add('last')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.native;
-    if (value != null) {
-      result
-        ..add('native')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.alternative;
-    if (value != null) {
-      result
-        ..add('alternative')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType.nullable(String)])));
-    }
-    value = object.alternativeSpoiler;
-    if (value != null) {
-      result
-        ..add('alternativeSpoiler')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType.nullable(String)])));
-    }
-    return result;
-  }
-
-  @override
-  GCharacterNameInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GCharacterNameInputBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case 'first':
-          result.first = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'middle':
-          result.middle = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'last':
-          result.last = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'native':
-          result.native = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'alternative':
-          result.alternative.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType.nullable(String)]))!
-              as BuiltList<Object?>);
-          break;
-        case 'alternativeSpoiler':
-          result.alternativeSpoiler.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType.nullable(String)]))!
-              as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GCharacterRoleSerializer
-    implements PrimitiveSerializer<GCharacterRole> {
-  @override
-  final Iterable<Type> types = const <Type>[GCharacterRole];
-  @override
-  final String wireName = 'GCharacterRole';
-
-  @override
-  Object serialize(Serializers serializers, GCharacterRole object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GCharacterRole deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GCharacterRole.valueOf(serialized as String);
-}
-
-class _$GCharacterSortSerializer
-    implements PrimitiveSerializer<GCharacterSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GCharacterSort];
-  @override
-  final String wireName = 'GCharacterSort';
-
-  @override
-  Object serialize(Serializers serializers, GCharacterSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GCharacterSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GCharacterSort.valueOf(serialized as String);
-}
-
-class _$GExternalLinkMediaTypeSerializer
-    implements PrimitiveSerializer<GExternalLinkMediaType> {
-  @override
-  final Iterable<Type> types = const <Type>[GExternalLinkMediaType];
-  @override
-  final String wireName = 'GExternalLinkMediaType';
-
-  @override
-  Object serialize(Serializers serializers, GExternalLinkMediaType object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GExternalLinkMediaType deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GExternalLinkMediaType.valueOf(serialized as String);
-}
-
-class _$GExternalLinkTypeSerializer
-    implements PrimitiveSerializer<GExternalLinkType> {
-  @override
-  final Iterable<Type> types = const <Type>[GExternalLinkType];
-  @override
-  final String wireName = 'GExternalLinkType';
-
-  @override
-  Object serialize(Serializers serializers, GExternalLinkType object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GExternalLinkType deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GExternalLinkType.valueOf(serialized as String);
-}
-
-class _$GFuzzyDateInputSerializer
-    implements StructuredSerializer<GFuzzyDateInput> {
-  @override
-  final Iterable<Type> types = const [GFuzzyDateInput, _$GFuzzyDateInput];
-  @override
-  final String wireName = 'GFuzzyDateInput';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers, GFuzzyDateInput object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[];
-    Object? value;
-    value = object.year;
-    if (value != null) {
-      result
-        ..add('year')
-        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
-    }
-    value = object.month;
-    if (value != null) {
-      result
-        ..add('month')
-        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
-    }
-    value = object.day;
-    if (value != null) {
-      result
-        ..add('day')
-        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  GFuzzyDateInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GFuzzyDateInputBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case 'year':
-          result.year = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
-          break;
-        case 'month':
-          result.month = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
-          break;
-        case 'day':
-          result.day = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GLikeableTypeSerializer implements PrimitiveSerializer<GLikeableType> {
-  @override
-  final Iterable<Type> types = const <Type>[GLikeableType];
-  @override
-  final String wireName = 'GLikeableType';
-
-  @override
-  Object serialize(Serializers serializers, GLikeableType object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GLikeableType deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GLikeableType.valueOf(serialized as String);
-}
-
-class _$GListActivityOptionInputSerializer
-    implements StructuredSerializer<GListActivityOptionInput> {
-  @override
-  final Iterable<Type> types = const [
-    GListActivityOptionInput,
-    _$GListActivityOptionInput
-  ];
-  @override
-  final String wireName = 'GListActivityOptionInput';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GListActivityOptionInput object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[];
-    Object? value;
-    value = object.disabled;
-    if (value != null) {
-      result
-        ..add('disabled')
-        ..add(
-            serializers.serialize(value, specifiedType: const FullType(bool)));
-    }
-    value = object.type;
-    if (value != null) {
-      result
-        ..add('type')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GMediaListStatus)));
-    }
-    return result;
-  }
-
-  @override
-  GListActivityOptionInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GListActivityOptionInputBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case 'disabled':
-          result.disabled = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool?;
-          break;
-        case 'type':
-          result.type = serializers.deserialize(value,
-                  specifiedType: const FullType(GMediaListStatus))
-              as GMediaListStatus?;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GMediaExternalLinkInputSerializer
-    implements StructuredSerializer<GMediaExternalLinkInput> {
-  @override
-  final Iterable<Type> types = const [
-    GMediaExternalLinkInput,
-    _$GMediaExternalLinkInput
-  ];
-  @override
-  final String wireName = 'GMediaExternalLinkInput';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GMediaExternalLinkInput object,
+  Iterable<Object?> serialize(Serializers serializers, GCreateAlbumInput object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
-      'id',
-      serializers.serialize(object.id, specifiedType: const FullType(int)),
-      'url',
-      serializers.serialize(object.url, specifiedType: const FullType(String)),
-      'site',
-      serializers.serialize(object.site, specifiedType: const FullType(String)),
+      'title',
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
+      'userId',
+      serializers.serialize(object.userId,
+          specifiedType: const FullType(String)),
     ];
 
     return result;
   }
 
   @override
-  GMediaExternalLinkInput deserialize(
+  GCreateAlbumInput deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GMediaExternalLinkInputBuilder();
+    final result = new GCreateAlbumInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2590,16 +291,125 @@ class _$GMediaExternalLinkInputSerializer
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int))! as int;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'userId':
+          result.userId = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCreateCommentInputSerializer
+    implements StructuredSerializer<GCreateCommentInput> {
+  @override
+  final Iterable<Type> types = const [
+    GCreateCommentInput,
+    _$GCreateCommentInput
+  ];
+  @override
+  final String wireName = 'GCreateCommentInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCreateCommentInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'name',
+      serializers.serialize(object.name, specifiedType: const FullType(String)),
+      'email',
+      serializers.serialize(object.email,
+          specifiedType: const FullType(String)),
+      'body',
+      serializers.serialize(object.body, specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GCreateCommentInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreateCommentInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'email':
+          result.email = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'body':
+          result.body = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCreatePhotoInputSerializer
+    implements StructuredSerializer<GCreatePhotoInput> {
+  @override
+  final Iterable<Type> types = const [GCreatePhotoInput, _$GCreatePhotoInput];
+  @override
+  final String wireName = 'GCreatePhotoInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GCreatePhotoInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'title',
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
+      'url',
+      serializers.serialize(object.url, specifiedType: const FullType(String)),
+      'thumbnailUrl',
+      serializers.serialize(object.thumbnailUrl,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GCreatePhotoInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreatePhotoInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
           break;
         case 'url':
           result.url = serializers.deserialize(value,
               specifiedType: const FullType(String))! as String;
           break;
-        case 'site':
-          result.site = serializers.deserialize(value,
+        case 'thumbnailUrl':
+          result.thumbnailUrl = serializers.deserialize(value,
               specifiedType: const FullType(String))! as String;
           break;
       }
@@ -2609,81 +419,764 @@ class _$GMediaExternalLinkInputSerializer
   }
 }
 
-class _$GMediaFormatSerializer implements PrimitiveSerializer<GMediaFormat> {
+class _$GCreatePostInputSerializer
+    implements StructuredSerializer<GCreatePostInput> {
   @override
-  final Iterable<Type> types = const <Type>[GMediaFormat];
+  final Iterable<Type> types = const [GCreatePostInput, _$GCreatePostInput];
   @override
-  final String wireName = 'GMediaFormat';
+  final String wireName = 'GCreatePostInput';
 
   @override
-  Object serialize(Serializers serializers, GMediaFormat object,
+  Iterable<Object?> serialize(Serializers serializers, GCreatePostInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'title',
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
+      'body',
+      serializers.serialize(object.body, specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GCreatePostInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreatePostInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'body':
+          result.body = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCreateTodoInputSerializer
+    implements StructuredSerializer<GCreateTodoInput> {
+  @override
+  final Iterable<Type> types = const [GCreateTodoInput, _$GCreateTodoInput];
+  @override
+  final String wireName = 'GCreateTodoInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GCreateTodoInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'title',
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
+      'completed',
+      serializers.serialize(object.completed,
+          specifiedType: const FullType(bool)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GCreateTodoInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreateTodoInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'completed':
+          result.completed = serializers.deserialize(value,
+              specifiedType: const FullType(bool))! as bool;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCreateUserInputSerializer
+    implements StructuredSerializer<GCreateUserInput> {
+  @override
+  final Iterable<Type> types = const [GCreateUserInput, _$GCreateUserInput];
+  @override
+  final String wireName = 'GCreateUserInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GCreateUserInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'name',
+      serializers.serialize(object.name, specifiedType: const FullType(String)),
+      'username',
+      serializers.serialize(object.username,
+          specifiedType: const FullType(String)),
+      'email',
+      serializers.serialize(object.email,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.address;
+    if (value != null) {
+      result
+        ..add('address')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GAddressInput)));
+    }
+    value = object.phone;
+    if (value != null) {
+      result
+        ..add('phone')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.website;
+    if (value != null) {
+      result
+        ..add('website')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.company;
+    if (value != null) {
+      result
+        ..add('company')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GCompanyInput)));
+    }
+    return result;
+  }
+
+  @override
+  GCreateUserInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreateUserInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'username':
+          result.username = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'email':
+          result.email = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'address':
+          result.address.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GAddressInput))! as GAddressInput);
+          break;
+        case 'phone':
+          result.phone = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'website':
+          result.website = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'company':
+          result.company.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GCompanyInput))! as GCompanyInput);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGeoInputSerializer implements StructuredSerializer<GGeoInput> {
+  @override
+  final Iterable<Type> types = const [GGeoInput, _$GGeoInput];
+  @override
+  final String wireName = 'GGeoInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GGeoInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.lat;
+    if (value != null) {
+      result
+        ..add('lat')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(double)));
+    }
+    value = object.lng;
+    if (value != null) {
+      result
+        ..add('lng')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(double)));
+    }
+    return result;
+  }
+
+  @override
+  GGeoInput deserialize(Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGeoInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'lat':
+          result.lat = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double?;
+          break;
+        case 'lng':
+          result.lng = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOperatorKindEnumSerializer
+    implements PrimitiveSerializer<GOperatorKindEnum> {
+  @override
+  final Iterable<Type> types = const <Type>[GOperatorKindEnum];
+  @override
+  final String wireName = 'GOperatorKindEnum';
+
+  @override
+  Object serialize(Serializers serializers, GOperatorKindEnum object,
           {FullType specifiedType = FullType.unspecified}) =>
       object.name;
 
   @override
-  GMediaFormat deserialize(Serializers serializers, Object serialized,
+  GOperatorKindEnum deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      GMediaFormat.valueOf(serialized as String);
+      GOperatorKindEnum.valueOf(serialized as String);
 }
 
-class _$GMediaListOptionsInputSerializer
-    implements StructuredSerializer<GMediaListOptionsInput> {
+class _$GOperatorOptionsSerializer
+    implements StructuredSerializer<GOperatorOptions> {
+  @override
+  final Iterable<Type> types = const [GOperatorOptions, _$GOperatorOptions];
+  @override
+  final String wireName = 'GOperatorOptions';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GOperatorOptions object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.kind;
+    if (value != null) {
+      result
+        ..add('kind')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOperatorKindEnum)));
+    }
+    value = object.field;
+    if (value != null) {
+      result
+        ..add('field')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.value;
+    if (value != null) {
+      result
+        ..add('value')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOperatorOptions deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOperatorOptionsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'kind':
+          result.kind = serializers.deserialize(value,
+                  specifiedType: const FullType(GOperatorKindEnum))
+              as GOperatorKindEnum?;
+          break;
+        case 'field':
+          result.field = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'value':
+          result.value = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GPageQueryOptionsSerializer
+    implements StructuredSerializer<GPageQueryOptions> {
+  @override
+  final Iterable<Type> types = const [GPageQueryOptions, _$GPageQueryOptions];
+  @override
+  final String wireName = 'GPageQueryOptions';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GPageQueryOptions object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.paginate;
+    if (value != null) {
+      result
+        ..add('paginate')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GPaginateOptions)));
+    }
+    value = object.slice;
+    if (value != null) {
+      result
+        ..add('slice')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GSliceOptions)));
+    }
+    value = object.sort;
+    if (value != null) {
+      result
+        ..add('sort')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(GSortOptions)])));
+    }
+    value = object.operators;
+    if (value != null) {
+      result
+        ..add('operators')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(GOperatorOptions)])));
+    }
+    value = object.search;
+    if (value != null) {
+      result
+        ..add('search')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GSearchOptions)));
+    }
+    return result;
+  }
+
+  @override
+  GPageQueryOptions deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GPageQueryOptionsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'paginate':
+          result.paginate.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(GPaginateOptions))!
+              as GPaginateOptions);
+          break;
+        case 'slice':
+          result.slice.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GSliceOptions))! as GSliceOptions);
+          break;
+        case 'sort':
+          result.sort.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType.nullable(GSortOptions)
+              ]))! as BuiltList<Object?>);
+          break;
+        case 'operators':
+          result.operators.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType.nullable(GOperatorOptions)
+              ]))! as BuiltList<Object?>);
+          break;
+        case 'search':
+          result.search.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(GSearchOptions))!
+              as GSearchOptions);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GPaginateOptionsSerializer
+    implements StructuredSerializer<GPaginateOptions> {
+  @override
+  final Iterable<Type> types = const [GPaginateOptions, _$GPaginateOptions];
+  @override
+  final String wireName = 'GPaginateOptions';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GPaginateOptions object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.page;
+    if (value != null) {
+      result
+        ..add('page')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.limit;
+    if (value != null) {
+      result
+        ..add('limit')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GPaginateOptions deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GPaginateOptionsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'page':
+          result.page = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'limit':
+          result.limit = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSearchOptionsSerializer
+    implements StructuredSerializer<GSearchOptions> {
+  @override
+  final Iterable<Type> types = const [GSearchOptions, _$GSearchOptions];
+  @override
+  final String wireName = 'GSearchOptions';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GSearchOptions object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.q;
+    if (value != null) {
+      result
+        ..add('q')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GSearchOptions deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GSearchOptionsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'q':
+          result.q = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSliceOptionsSerializer implements StructuredSerializer<GSliceOptions> {
+  @override
+  final Iterable<Type> types = const [GSliceOptions, _$GSliceOptions];
+  @override
+  final String wireName = 'GSliceOptions';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GSliceOptions object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.start;
+    if (value != null) {
+      result
+        ..add('start')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.end;
+    if (value != null) {
+      result
+        ..add('end')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.limit;
+    if (value != null) {
+      result
+        ..add('limit')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GSliceOptions deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GSliceOptionsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'start':
+          result.start = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'end':
+          result.end = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'limit':
+          result.limit = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSortOptionsSerializer implements StructuredSerializer<GSortOptions> {
+  @override
+  final Iterable<Type> types = const [GSortOptions, _$GSortOptions];
+  @override
+  final String wireName = 'GSortOptions';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GSortOptions object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.field;
+    if (value != null) {
+      result
+        ..add('field')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.order;
+    if (value != null) {
+      result
+        ..add('order')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GSortOrderEnum)));
+    }
+    return result;
+  }
+
+  @override
+  GSortOptions deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GSortOptionsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'field':
+          result.field = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'order':
+          result.order = serializers.deserialize(value,
+              specifiedType: const FullType(GSortOrderEnum)) as GSortOrderEnum?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSortOrderEnumSerializer
+    implements PrimitiveSerializer<GSortOrderEnum> {
+  @override
+  final Iterable<Type> types = const <Type>[GSortOrderEnum];
+  @override
+  final String wireName = 'GSortOrderEnum';
+
+  @override
+  Object serialize(Serializers serializers, GSortOrderEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GSortOrderEnum deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GSortOrderEnum.valueOf(serialized as String);
+}
+
+class _$GUpdateAlbumInputSerializer
+    implements StructuredSerializer<GUpdateAlbumInput> {
+  @override
+  final Iterable<Type> types = const [GUpdateAlbumInput, _$GUpdateAlbumInput];
+  @override
+  final String wireName = 'GUpdateAlbumInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GUpdateAlbumInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.title;
+    if (value != null) {
+      result
+        ..add('title')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.userId;
+    if (value != null) {
+      result
+        ..add('userId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateAlbumInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateAlbumInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'userId':
+          result.userId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateCommentInputSerializer
+    implements StructuredSerializer<GUpdateCommentInput> {
   @override
   final Iterable<Type> types = const [
-    GMediaListOptionsInput,
-    _$GMediaListOptionsInput
+    GUpdateCommentInput,
+    _$GUpdateCommentInput
   ];
   @override
-  final String wireName = 'GMediaListOptionsInput';
+  final String wireName = 'GUpdateCommentInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GMediaListOptionsInput object,
+      Serializers serializers, GUpdateCommentInput object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[];
     Object? value;
-    value = object.sectionOrder;
+    value = object.name;
     if (value != null) {
       result
-        ..add('sectionOrder')
+        ..add('name')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType.nullable(String)])));
+            specifiedType: const FullType(String)));
     }
-    value = object.splitCompletedSectionByFormat;
+    value = object.email;
     if (value != null) {
       result
-        ..add('splitCompletedSectionByFormat')
-        ..add(
-            serializers.serialize(value, specifiedType: const FullType(bool)));
-    }
-    value = object.customLists;
-    if (value != null) {
-      result
-        ..add('customLists')
+        ..add('email')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType.nullable(String)])));
+            specifiedType: const FullType(String)));
     }
-    value = object.advancedScoring;
+    value = object.body;
     if (value != null) {
       result
-        ..add('advancedScoring')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType.nullable(String)])));
-    }
-    value = object.advancedScoringEnabled;
-    if (value != null) {
-      result
-        ..add('advancedScoringEnabled')
-        ..add(
-            serializers.serialize(value, specifiedType: const FullType(bool)));
-    }
-    value = object.theme;
-    if (value != null) {
-      result
-        ..add('theme')
+        ..add('body')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
@@ -2691,10 +1184,10 @@ class _$GMediaListOptionsInputSerializer
   }
 
   @override
-  GMediaListOptionsInput deserialize(
+  GUpdateCommentInput deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GMediaListOptionsInputBuilder();
+    final result = new GUpdateCommentInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2702,34 +1195,16 @@ class _$GMediaListOptionsInputSerializer
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
-        case 'sectionOrder':
-          result.sectionOrder.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType.nullable(String)]))!
-              as BuiltList<Object?>);
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
           break;
-        case 'splitCompletedSectionByFormat':
-          result.splitCompletedSectionByFormat = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool?;
+        case 'email':
+          result.email = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
           break;
-        case 'customLists':
-          result.customLists.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType.nullable(String)]))!
-              as BuiltList<Object?>);
-          break;
-        case 'advancedScoring':
-          result.advancedScoring.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType.nullable(String)]))!
-              as BuiltList<Object?>);
-          break;
-        case 'advancedScoringEnabled':
-          result.advancedScoringEnabled = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool?;
-          break;
-        case 'theme':
-          result.theme = serializers.deserialize(value,
+        case 'body':
+          result.body = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -2739,176 +1214,36 @@ class _$GMediaListOptionsInputSerializer
   }
 }
 
-class _$GMediaListSortSerializer
-    implements PrimitiveSerializer<GMediaListSort> {
+class _$GUpdatePhotoInputSerializer
+    implements StructuredSerializer<GUpdatePhotoInput> {
   @override
-  final Iterable<Type> types = const <Type>[GMediaListSort];
+  final Iterable<Type> types = const [GUpdatePhotoInput, _$GUpdatePhotoInput];
   @override
-  final String wireName = 'GMediaListSort';
+  final String wireName = 'GUpdatePhotoInput';
 
   @override
-  Object serialize(Serializers serializers, GMediaListSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaListSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaListSort.valueOf(serialized as String);
-}
-
-class _$GMediaListStatusSerializer
-    implements PrimitiveSerializer<GMediaListStatus> {
-  @override
-  final Iterable<Type> types = const <Type>[GMediaListStatus];
-  @override
-  final String wireName = 'GMediaListStatus';
-
-  @override
-  Object serialize(Serializers serializers, GMediaListStatus object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaListStatus deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaListStatus.valueOf(serialized as String);
-}
-
-class _$GMediaRankTypeSerializer
-    implements PrimitiveSerializer<GMediaRankType> {
-  @override
-  final Iterable<Type> types = const <Type>[GMediaRankType];
-  @override
-  final String wireName = 'GMediaRankType';
-
-  @override
-  Object serialize(Serializers serializers, GMediaRankType object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaRankType deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaRankType.valueOf(serialized as String);
-}
-
-class _$GMediaRelationSerializer
-    implements PrimitiveSerializer<GMediaRelation> {
-  @override
-  final Iterable<Type> types = const <Type>[GMediaRelation];
-  @override
-  final String wireName = 'GMediaRelation';
-
-  @override
-  Object serialize(Serializers serializers, GMediaRelation object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaRelation deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaRelation.valueOf(serialized as String);
-}
-
-class _$GMediaSeasonSerializer implements PrimitiveSerializer<GMediaSeason> {
-  @override
-  final Iterable<Type> types = const <Type>[GMediaSeason];
-  @override
-  final String wireName = 'GMediaSeason';
-
-  @override
-  Object serialize(Serializers serializers, GMediaSeason object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaSeason deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaSeason.valueOf(serialized as String);
-}
-
-class _$GMediaSortSerializer implements PrimitiveSerializer<GMediaSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GMediaSort];
-  @override
-  final String wireName = 'GMediaSort';
-
-  @override
-  Object serialize(Serializers serializers, GMediaSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaSort.valueOf(serialized as String);
-}
-
-class _$GMediaSourceSerializer implements PrimitiveSerializer<GMediaSource> {
-  @override
-  final Iterable<Type> types = const <Type>[GMediaSource];
-  @override
-  final String wireName = 'GMediaSource';
-
-  @override
-  Object serialize(Serializers serializers, GMediaSource object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaSource deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaSource.valueOf(serialized as String);
-}
-
-class _$GMediaStatusSerializer implements PrimitiveSerializer<GMediaStatus> {
-  @override
-  final Iterable<Type> types = const <Type>[GMediaStatus];
-  @override
-  final String wireName = 'GMediaStatus';
-
-  @override
-  Object serialize(Serializers serializers, GMediaStatus object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaStatus deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaStatus.valueOf(serialized as String);
-}
-
-class _$GMediaTitleInputSerializer
-    implements StructuredSerializer<GMediaTitleInput> {
-  @override
-  final Iterable<Type> types = const [GMediaTitleInput, _$GMediaTitleInput];
-  @override
-  final String wireName = 'GMediaTitleInput';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers, GMediaTitleInput object,
+  Iterable<Object?> serialize(Serializers serializers, GUpdatePhotoInput object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[];
     Object? value;
-    value = object.romaji;
+    value = object.title;
     if (value != null) {
       result
-        ..add('romaji')
+        ..add('title')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.english;
+    value = object.url;
     if (value != null) {
       result
-        ..add('english')
+        ..add('url')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.native;
+    value = object.thumbnailUrl;
     if (value != null) {
       result
-        ..add('native')
+        ..add('thumbnailUrl')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
@@ -2916,10 +1251,10 @@ class _$GMediaTitleInputSerializer
   }
 
   @override
-  GMediaTitleInput deserialize(
+  GUpdatePhotoInput deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GMediaTitleInputBuilder();
+    final result = new GUpdatePhotoInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2927,16 +1262,16 @@ class _$GMediaTitleInputSerializer
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
-        case 'romaji':
-          result.romaji = serializers.deserialize(value,
+        case 'title':
+          result.title = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
-        case 'english':
-          result.english = serializers.deserialize(value,
+        case 'url':
+          result.url = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
-        case 'native':
-          result.native = serializers.deserialize(value,
+        case 'thumbnailUrl':
+          result.thumbnailUrl = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -2946,114 +1281,40 @@ class _$GMediaTitleInputSerializer
   }
 }
 
-class _$GMediaTrendSortSerializer
-    implements PrimitiveSerializer<GMediaTrendSort> {
+class _$GUpdatePostInputSerializer
+    implements StructuredSerializer<GUpdatePostInput> {
   @override
-  final Iterable<Type> types = const <Type>[GMediaTrendSort];
+  final Iterable<Type> types = const [GUpdatePostInput, _$GUpdatePostInput];
   @override
-  final String wireName = 'GMediaTrendSort';
+  final String wireName = 'GUpdatePostInput';
 
   @override
-  Object serialize(Serializers serializers, GMediaTrendSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaTrendSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaTrendSort.valueOf(serialized as String);
-}
-
-class _$GMediaTypeSerializer implements PrimitiveSerializer<GMediaType> {
-  @override
-  final Iterable<Type> types = const <Type>[GMediaType];
-  @override
-  final String wireName = 'GMediaType';
-
-  @override
-  Object serialize(Serializers serializers, GMediaType object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GMediaType deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GMediaType.valueOf(serialized as String);
-}
-
-class _$GModActionTypeSerializer
-    implements PrimitiveSerializer<GModActionType> {
-  @override
-  final Iterable<Type> types = const <Type>[GModActionType];
-  @override
-  final String wireName = 'GModActionType';
-
-  @override
-  Object serialize(Serializers serializers, GModActionType object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GModActionType deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GModActionType.valueOf(serialized as String);
-}
-
-class _$GModRoleSerializer implements PrimitiveSerializer<GModRole> {
-  @override
-  final Iterable<Type> types = const <Type>[GModRole];
-  @override
-  final String wireName = 'GModRole';
-
-  @override
-  Object serialize(Serializers serializers, GModRole object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GModRole deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GModRole.valueOf(serialized as String);
-}
-
-class _$GNotificationOptionInputSerializer
-    implements StructuredSerializer<GNotificationOptionInput> {
-  @override
-  final Iterable<Type> types = const [
-    GNotificationOptionInput,
-    _$GNotificationOptionInput
-  ];
-  @override
-  final String wireName = 'GNotificationOptionInput';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GNotificationOptionInput object,
+  Iterable<Object?> serialize(Serializers serializers, GUpdatePostInput object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[];
     Object? value;
-    value = object.type;
+    value = object.title;
     if (value != null) {
       result
-        ..add('type')
+        ..add('title')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(GNotificationType)));
+            specifiedType: const FullType(String)));
     }
-    value = object.enabled;
+    value = object.body;
     if (value != null) {
       result
-        ..add('enabled')
-        ..add(
-            serializers.serialize(value, specifiedType: const FullType(bool)));
+        ..add('body')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
     }
     return result;
   }
 
   @override
-  GNotificationOptionInput deserialize(
+  GUpdatePostInput deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GNotificationOptionInputBuilder();
+    final result = new GUpdatePostInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3061,13 +1322,68 @@ class _$GNotificationOptionInputSerializer
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
-        case 'type':
-          result.type = serializers.deserialize(value,
-                  specifiedType: const FullType(GNotificationType))
-              as GNotificationType?;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
           break;
-        case 'enabled':
-          result.enabled = serializers.deserialize(value,
+        case 'body':
+          result.body = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateTodoInputSerializer
+    implements StructuredSerializer<GUpdateTodoInput> {
+  @override
+  final Iterable<Type> types = const [GUpdateTodoInput, _$GUpdateTodoInput];
+  @override
+  final String wireName = 'GUpdateTodoInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GUpdateTodoInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.title;
+    if (value != null) {
+      result
+        ..add('title')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.completed;
+    if (value != null) {
+      result
+        ..add('completed')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateTodoInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateTodoInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'completed':
+          result.completed = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool?;
           break;
       }
@@ -3077,221 +1393,75 @@ class _$GNotificationOptionInputSerializer
   }
 }
 
-class _$GNotificationTypeSerializer
-    implements PrimitiveSerializer<GNotificationType> {
+class _$GUpdateUserInputSerializer
+    implements StructuredSerializer<GUpdateUserInput> {
   @override
-  final Iterable<Type> types = const <Type>[GNotificationType];
+  final Iterable<Type> types = const [GUpdateUserInput, _$GUpdateUserInput];
   @override
-  final String wireName = 'GNotificationType';
+  final String wireName = 'GUpdateUserInput';
 
   @override
-  Object serialize(Serializers serializers, GNotificationType object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GNotificationType deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GNotificationType.valueOf(serialized as String);
-}
-
-class _$GRecommendationRatingSerializer
-    implements PrimitiveSerializer<GRecommendationRating> {
-  @override
-  final Iterable<Type> types = const <Type>[GRecommendationRating];
-  @override
-  final String wireName = 'GRecommendationRating';
-
-  @override
-  Object serialize(Serializers serializers, GRecommendationRating object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GRecommendationRating deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GRecommendationRating.valueOf(serialized as String);
-}
-
-class _$GRecommendationSortSerializer
-    implements PrimitiveSerializer<GRecommendationSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GRecommendationSort];
-  @override
-  final String wireName = 'GRecommendationSort';
-
-  @override
-  Object serialize(Serializers serializers, GRecommendationSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GRecommendationSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GRecommendationSort.valueOf(serialized as String);
-}
-
-class _$GReviewRatingSerializer implements PrimitiveSerializer<GReviewRating> {
-  @override
-  final Iterable<Type> types = const <Type>[GReviewRating];
-  @override
-  final String wireName = 'GReviewRating';
-
-  @override
-  Object serialize(Serializers serializers, GReviewRating object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GReviewRating deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GReviewRating.valueOf(serialized as String);
-}
-
-class _$GReviewSortSerializer implements PrimitiveSerializer<GReviewSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GReviewSort];
-  @override
-  final String wireName = 'GReviewSort';
-
-  @override
-  Object serialize(Serializers serializers, GReviewSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GReviewSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GReviewSort.valueOf(serialized as String);
-}
-
-class _$GRevisionHistoryActionSerializer
-    implements PrimitiveSerializer<GRevisionHistoryAction> {
-  @override
-  final Iterable<Type> types = const <Type>[GRevisionHistoryAction];
-  @override
-  final String wireName = 'GRevisionHistoryAction';
-
-  @override
-  Object serialize(Serializers serializers, GRevisionHistoryAction object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GRevisionHistoryAction deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GRevisionHistoryAction.valueOf(serialized as String);
-}
-
-class _$GScoreFormatSerializer implements PrimitiveSerializer<GScoreFormat> {
-  @override
-  final Iterable<Type> types = const <Type>[GScoreFormat];
-  @override
-  final String wireName = 'GScoreFormat';
-
-  @override
-  Object serialize(Serializers serializers, GScoreFormat object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GScoreFormat deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GScoreFormat.valueOf(serialized as String);
-}
-
-class _$GSiteTrendSortSerializer
-    implements PrimitiveSerializer<GSiteTrendSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GSiteTrendSort];
-  @override
-  final String wireName = 'GSiteTrendSort';
-
-  @override
-  Object serialize(Serializers serializers, GSiteTrendSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GSiteTrendSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GSiteTrendSort.valueOf(serialized as String);
-}
-
-class _$GStaffLanguageSerializer
-    implements PrimitiveSerializer<GStaffLanguage> {
-  @override
-  final Iterable<Type> types = const <Type>[GStaffLanguage];
-  @override
-  final String wireName = 'GStaffLanguage';
-
-  @override
-  Object serialize(Serializers serializers, GStaffLanguage object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GStaffLanguage deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GStaffLanguage.valueOf(serialized as String);
-}
-
-class _$GStaffNameInputSerializer
-    implements StructuredSerializer<GStaffNameInput> {
-  @override
-  final Iterable<Type> types = const [GStaffNameInput, _$GStaffNameInput];
-  @override
-  final String wireName = 'GStaffNameInput';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers, GStaffNameInput object,
+  Iterable<Object?> serialize(Serializers serializers, GUpdateUserInput object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[];
     Object? value;
-    value = object.first;
+    value = object.name;
     if (value != null) {
       result
-        ..add('first')
+        ..add('name')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.middle;
+    value = object.username;
     if (value != null) {
       result
-        ..add('middle')
+        ..add('username')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.last;
+    value = object.email;
     if (value != null) {
       result
-        ..add('last')
+        ..add('email')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.native;
+    value = object.address;
     if (value != null) {
       result
-        ..add('native')
+        ..add('address')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GAddressInput)));
+    }
+    value = object.phone;
+    if (value != null) {
+      result
+        ..add('phone')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.alternative;
+    value = object.website;
     if (value != null) {
       result
-        ..add('alternative')
+        ..add('website')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType.nullable(String)])));
+            specifiedType: const FullType(String)));
+    }
+    value = object.company;
+    if (value != null) {
+      result
+        ..add('company')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GCompanyInput)));
     }
     return result;
   }
 
   @override
-  GStaffNameInput deserialize(
+  GUpdateUserInput deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GStaffNameInputBuilder();
+    final result = new GUpdateUserInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3299,27 +1469,33 @@ class _$GStaffNameInputSerializer
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
-        case 'first':
-          result.first = serializers.deserialize(value,
+        case 'name':
+          result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
-        case 'middle':
-          result.middle = serializers.deserialize(value,
+        case 'username':
+          result.username = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
-        case 'last':
-          result.last = serializers.deserialize(value,
+        case 'email':
+          result.email = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
-        case 'native':
-          result.native = serializers.deserialize(value,
+        case 'address':
+          result.address.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GAddressInput))! as GAddressInput);
+          break;
+        case 'phone':
+          result.phone = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
-        case 'alternative':
-          result.alternative.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType.nullable(String)]))!
-              as BuiltList<Object?>);
+        case 'website':
+          result.website = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'company':
+          result.company.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GCompanyInput))! as GCompanyInput);
           break;
       }
     }
@@ -3328,541 +1504,138 @@ class _$GStaffNameInputSerializer
   }
 }
 
-class _$GStaffSortSerializer implements PrimitiveSerializer<GStaffSort> {
+class _$GAddressInput extends GAddressInput {
   @override
-  final Iterable<Type> types = const <Type>[GStaffSort];
+  final String? street;
   @override
-  final String wireName = 'GStaffSort';
+  final String? suite;
+  @override
+  final String? city;
+  @override
+  final String? zipcode;
+  @override
+  final GGeoInput? geo;
 
-  @override
-  Object serialize(Serializers serializers, GStaffSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
+  factory _$GAddressInput([void Function(GAddressInputBuilder)? updates]) =>
+      (new GAddressInputBuilder()..update(updates))._build();
 
-  @override
-  GStaffSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GStaffSort.valueOf(serialized as String);
-}
-
-class _$GStudioSortSerializer implements PrimitiveSerializer<GStudioSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GStudioSort];
-  @override
-  final String wireName = 'GStudioSort';
-
-  @override
-  Object serialize(Serializers serializers, GStudioSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GStudioSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GStudioSort.valueOf(serialized as String);
-}
-
-class _$GSubmissionSortSerializer
-    implements PrimitiveSerializer<GSubmissionSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GSubmissionSort];
-  @override
-  final String wireName = 'GSubmissionSort';
-
-  @override
-  Object serialize(Serializers serializers, GSubmissionSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GSubmissionSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GSubmissionSort.valueOf(serialized as String);
-}
-
-class _$GSubmissionStatusSerializer
-    implements PrimitiveSerializer<GSubmissionStatus> {
-  @override
-  final Iterable<Type> types = const <Type>[GSubmissionStatus];
-  @override
-  final String wireName = 'GSubmissionStatus';
-
-  @override
-  Object serialize(Serializers serializers, GSubmissionStatus object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GSubmissionStatus deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GSubmissionStatus.valueOf(serialized as String);
-}
-
-class _$GThreadCommentSortSerializer
-    implements PrimitiveSerializer<GThreadCommentSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GThreadCommentSort];
-  @override
-  final String wireName = 'GThreadCommentSort';
-
-  @override
-  Object serialize(Serializers serializers, GThreadCommentSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GThreadCommentSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GThreadCommentSort.valueOf(serialized as String);
-}
-
-class _$GThreadSortSerializer implements PrimitiveSerializer<GThreadSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GThreadSort];
-  @override
-  final String wireName = 'GThreadSort';
-
-  @override
-  Object serialize(Serializers serializers, GThreadSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GThreadSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GThreadSort.valueOf(serialized as String);
-}
-
-class _$GUserSortSerializer implements PrimitiveSerializer<GUserSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GUserSort];
-  @override
-  final String wireName = 'GUserSort';
-
-  @override
-  Object serialize(Serializers serializers, GUserSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GUserSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GUserSort.valueOf(serialized as String);
-}
-
-class _$GUserStaffNameLanguageSerializer
-    implements PrimitiveSerializer<GUserStaffNameLanguage> {
-  @override
-  final Iterable<Type> types = const <Type>[GUserStaffNameLanguage];
-  @override
-  final String wireName = 'GUserStaffNameLanguage';
-
-  @override
-  Object serialize(Serializers serializers, GUserStaffNameLanguage object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GUserStaffNameLanguage deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GUserStaffNameLanguage.valueOf(serialized as String);
-}
-
-class _$GUserStatisticsSortSerializer
-    implements PrimitiveSerializer<GUserStatisticsSort> {
-  @override
-  final Iterable<Type> types = const <Type>[GUserStatisticsSort];
-  @override
-  final String wireName = 'GUserStatisticsSort';
-
-  @override
-  Object serialize(Serializers serializers, GUserStatisticsSort object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GUserStatisticsSort deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GUserStatisticsSort.valueOf(serialized as String);
-}
-
-class _$GUserTitleLanguageSerializer
-    implements PrimitiveSerializer<GUserTitleLanguage> {
-  @override
-  final Iterable<Type> types = const <Type>[GUserTitleLanguage];
-  @override
-  final String wireName = 'GUserTitleLanguage';
-
-  @override
-  Object serialize(Serializers serializers, GUserTitleLanguage object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
-
-  @override
-  GUserTitleLanguage deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GUserTitleLanguage.valueOf(serialized as String);
-}
-
-class _$GAiringScheduleInput extends GAiringScheduleInput {
-  @override
-  final int? airingAt;
-  @override
-  final int? episode;
-  @override
-  final int? timeUntilAiring;
-
-  factory _$GAiringScheduleInput(
-          [void Function(GAiringScheduleInputBuilder)? updates]) =>
-      (new GAiringScheduleInputBuilder()..update(updates))._build();
-
-  _$GAiringScheduleInput._({this.airingAt, this.episode, this.timeUntilAiring})
+  _$GAddressInput._(
+      {this.street, this.suite, this.city, this.zipcode, this.geo})
       : super._();
 
   @override
-  GAiringScheduleInput rebuild(
-          void Function(GAiringScheduleInputBuilder) updates) =>
+  GAddressInput rebuild(void Function(GAddressInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GAiringScheduleInputBuilder toBuilder() =>
-      new GAiringScheduleInputBuilder()..replace(this);
+  GAddressInputBuilder toBuilder() => new GAddressInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GAiringScheduleInput &&
-        airingAt == other.airingAt &&
-        episode == other.episode &&
-        timeUntilAiring == other.timeUntilAiring;
+    return other is GAddressInput &&
+        street == other.street &&
+        suite == other.suite &&
+        city == other.city &&
+        zipcode == other.zipcode &&
+        geo == other.geo;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, airingAt.hashCode);
-    _$hash = $jc(_$hash, episode.hashCode);
-    _$hash = $jc(_$hash, timeUntilAiring.hashCode);
+    _$hash = $jc(_$hash, street.hashCode);
+    _$hash = $jc(_$hash, suite.hashCode);
+    _$hash = $jc(_$hash, city.hashCode);
+    _$hash = $jc(_$hash, zipcode.hashCode);
+    _$hash = $jc(_$hash, geo.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GAiringScheduleInput')
-          ..add('airingAt', airingAt)
-          ..add('episode', episode)
-          ..add('timeUntilAiring', timeUntilAiring))
+    return (newBuiltValueToStringHelper(r'GAddressInput')
+          ..add('street', street)
+          ..add('suite', suite)
+          ..add('city', city)
+          ..add('zipcode', zipcode)
+          ..add('geo', geo))
         .toString();
   }
 }
 
-class GAiringScheduleInputBuilder
-    implements Builder<GAiringScheduleInput, GAiringScheduleInputBuilder> {
-  _$GAiringScheduleInput? _$v;
+class GAddressInputBuilder
+    implements Builder<GAddressInput, GAddressInputBuilder> {
+  _$GAddressInput? _$v;
 
-  int? _airingAt;
-  int? get airingAt => _$this._airingAt;
-  set airingAt(int? airingAt) => _$this._airingAt = airingAt;
+  String? _street;
+  String? get street => _$this._street;
+  set street(String? street) => _$this._street = street;
 
-  int? _episode;
-  int? get episode => _$this._episode;
-  set episode(int? episode) => _$this._episode = episode;
+  String? _suite;
+  String? get suite => _$this._suite;
+  set suite(String? suite) => _$this._suite = suite;
 
-  int? _timeUntilAiring;
-  int? get timeUntilAiring => _$this._timeUntilAiring;
-  set timeUntilAiring(int? timeUntilAiring) =>
-      _$this._timeUntilAiring = timeUntilAiring;
+  String? _city;
+  String? get city => _$this._city;
+  set city(String? city) => _$this._city = city;
 
-  GAiringScheduleInputBuilder();
+  String? _zipcode;
+  String? get zipcode => _$this._zipcode;
+  set zipcode(String? zipcode) => _$this._zipcode = zipcode;
 
-  GAiringScheduleInputBuilder get _$this {
+  GGeoInputBuilder? _geo;
+  GGeoInputBuilder get geo => _$this._geo ??= new GGeoInputBuilder();
+  set geo(GGeoInputBuilder? geo) => _$this._geo = geo;
+
+  GAddressInputBuilder();
+
+  GAddressInputBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _airingAt = $v.airingAt;
-      _episode = $v.episode;
-      _timeUntilAiring = $v.timeUntilAiring;
+      _street = $v.street;
+      _suite = $v.suite;
+      _city = $v.city;
+      _zipcode = $v.zipcode;
+      _geo = $v.geo?.toBuilder();
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GAiringScheduleInput other) {
+  void replace(GAddressInput other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GAiringScheduleInput;
+    _$v = other as _$GAddressInput;
   }
 
   @override
-  void update(void Function(GAiringScheduleInputBuilder)? updates) {
+  void update(void Function(GAddressInputBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GAiringScheduleInput build() => _build();
+  GAddressInput build() => _build();
 
-  _$GAiringScheduleInput _build() {
-    final _$result = _$v ??
-        new _$GAiringScheduleInput._(
-            airingAt: airingAt,
-            episode: episode,
-            timeUntilAiring: timeUntilAiring);
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GAniChartHighlightInput extends GAniChartHighlightInput {
-  @override
-  final int? mediaId;
-  @override
-  final String? highlight;
-
-  factory _$GAniChartHighlightInput(
-          [void Function(GAniChartHighlightInputBuilder)? updates]) =>
-      (new GAniChartHighlightInputBuilder()..update(updates))._build();
-
-  _$GAniChartHighlightInput._({this.mediaId, this.highlight}) : super._();
-
-  @override
-  GAniChartHighlightInput rebuild(
-          void Function(GAniChartHighlightInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GAniChartHighlightInputBuilder toBuilder() =>
-      new GAniChartHighlightInputBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GAniChartHighlightInput &&
-        mediaId == other.mediaId &&
-        highlight == other.highlight;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, mediaId.hashCode);
-    _$hash = $jc(_$hash, highlight.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GAniChartHighlightInput')
-          ..add('mediaId', mediaId)
-          ..add('highlight', highlight))
-        .toString();
-  }
-}
-
-class GAniChartHighlightInputBuilder
-    implements
-        Builder<GAniChartHighlightInput, GAniChartHighlightInputBuilder> {
-  _$GAniChartHighlightInput? _$v;
-
-  int? _mediaId;
-  int? get mediaId => _$this._mediaId;
-  set mediaId(int? mediaId) => _$this._mediaId = mediaId;
-
-  String? _highlight;
-  String? get highlight => _$this._highlight;
-  set highlight(String? highlight) => _$this._highlight = highlight;
-
-  GAniChartHighlightInputBuilder();
-
-  GAniChartHighlightInputBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _mediaId = $v.mediaId;
-      _highlight = $v.highlight;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GAniChartHighlightInput other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GAniChartHighlightInput;
-  }
-
-  @override
-  void update(void Function(GAniChartHighlightInputBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GAniChartHighlightInput build() => _build();
-
-  _$GAniChartHighlightInput _build() {
-    final _$result = _$v ??
-        new _$GAniChartHighlightInput._(mediaId: mediaId, highlight: highlight);
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GCharacterNameInput extends GCharacterNameInput {
-  @override
-  final String? first;
-  @override
-  final String? middle;
-  @override
-  final String? last;
-  @override
-  final String? native;
-  @override
-  final BuiltList<String?>? alternative;
-  @override
-  final BuiltList<String?>? alternativeSpoiler;
-
-  factory _$GCharacterNameInput(
-          [void Function(GCharacterNameInputBuilder)? updates]) =>
-      (new GCharacterNameInputBuilder()..update(updates))._build();
-
-  _$GCharacterNameInput._(
-      {this.first,
-      this.middle,
-      this.last,
-      this.native,
-      this.alternative,
-      this.alternativeSpoiler})
-      : super._();
-
-  @override
-  GCharacterNameInput rebuild(
-          void Function(GCharacterNameInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GCharacterNameInputBuilder toBuilder() =>
-      new GCharacterNameInputBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GCharacterNameInput &&
-        first == other.first &&
-        middle == other.middle &&
-        last == other.last &&
-        native == other.native &&
-        alternative == other.alternative &&
-        alternativeSpoiler == other.alternativeSpoiler;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, first.hashCode);
-    _$hash = $jc(_$hash, middle.hashCode);
-    _$hash = $jc(_$hash, last.hashCode);
-    _$hash = $jc(_$hash, native.hashCode);
-    _$hash = $jc(_$hash, alternative.hashCode);
-    _$hash = $jc(_$hash, alternativeSpoiler.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GCharacterNameInput')
-          ..add('first', first)
-          ..add('middle', middle)
-          ..add('last', last)
-          ..add('native', native)
-          ..add('alternative', alternative)
-          ..add('alternativeSpoiler', alternativeSpoiler))
-        .toString();
-  }
-}
-
-class GCharacterNameInputBuilder
-    implements Builder<GCharacterNameInput, GCharacterNameInputBuilder> {
-  _$GCharacterNameInput? _$v;
-
-  String? _first;
-  String? get first => _$this._first;
-  set first(String? first) => _$this._first = first;
-
-  String? _middle;
-  String? get middle => _$this._middle;
-  set middle(String? middle) => _$this._middle = middle;
-
-  String? _last;
-  String? get last => _$this._last;
-  set last(String? last) => _$this._last = last;
-
-  String? _native;
-  String? get native => _$this._native;
-  set native(String? native) => _$this._native = native;
-
-  ListBuilder<String?>? _alternative;
-  ListBuilder<String?> get alternative =>
-      _$this._alternative ??= new ListBuilder<String?>();
-  set alternative(ListBuilder<String?>? alternative) =>
-      _$this._alternative = alternative;
-
-  ListBuilder<String?>? _alternativeSpoiler;
-  ListBuilder<String?> get alternativeSpoiler =>
-      _$this._alternativeSpoiler ??= new ListBuilder<String?>();
-  set alternativeSpoiler(ListBuilder<String?>? alternativeSpoiler) =>
-      _$this._alternativeSpoiler = alternativeSpoiler;
-
-  GCharacterNameInputBuilder();
-
-  GCharacterNameInputBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _first = $v.first;
-      _middle = $v.middle;
-      _last = $v.last;
-      _native = $v.native;
-      _alternative = $v.alternative?.toBuilder();
-      _alternativeSpoiler = $v.alternativeSpoiler?.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GCharacterNameInput other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GCharacterNameInput;
-  }
-
-  @override
-  void update(void Function(GCharacterNameInputBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GCharacterNameInput build() => _build();
-
-  _$GCharacterNameInput _build() {
-    _$GCharacterNameInput _$result;
+  _$GAddressInput _build() {
+    _$GAddressInput _$result;
     try {
       _$result = _$v ??
-          new _$GCharacterNameInput._(
-              first: first,
-              middle: middle,
-              last: last,
-              native: native,
-              alternative: _alternative?.build(),
-              alternativeSpoiler: _alternativeSpoiler?.build());
+          new _$GAddressInput._(
+              street: street,
+              suite: suite,
+              city: city,
+              zipcode: zipcode,
+              geo: _geo?.build());
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'alternative';
-        _alternative?.build();
-        _$failedField = 'alternativeSpoiler';
-        _alternativeSpoiler?.build();
+        _$failedField = 'geo';
+        _geo?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'GCharacterNameInput', _$failedField, e.toString());
+            r'GAddressInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -3871,729 +1644,813 @@ class GCharacterNameInputBuilder
   }
 }
 
-class _$GCountryCode extends GCountryCode {
+class _$GCompanyInput extends GCompanyInput {
   @override
-  final String value;
+  final String? name;
+  @override
+  final String? catchPhrase;
+  @override
+  final String? bs;
 
-  factory _$GCountryCode([void Function(GCountryCodeBuilder)? updates]) =>
-      (new GCountryCodeBuilder()..update(updates))._build();
+  factory _$GCompanyInput([void Function(GCompanyInputBuilder)? updates]) =>
+      (new GCompanyInputBuilder()..update(updates))._build();
 
-  _$GCountryCode._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GCountryCode', 'value');
-  }
+  _$GCompanyInput._({this.name, this.catchPhrase, this.bs}) : super._();
 
   @override
-  GCountryCode rebuild(void Function(GCountryCodeBuilder) updates) =>
+  GCompanyInput rebuild(void Function(GCompanyInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GCountryCodeBuilder toBuilder() => new GCountryCodeBuilder()..replace(this);
+  GCompanyInputBuilder toBuilder() => new GCompanyInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GCountryCode && value == other.value;
+    return other is GCompanyInput &&
+        name == other.name &&
+        catchPhrase == other.catchPhrase &&
+        bs == other.bs;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, value.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, catchPhrase.hashCode);
+    _$hash = $jc(_$hash, bs.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GCountryCode')..add('value', value))
+    return (newBuiltValueToStringHelper(r'GCompanyInput')
+          ..add('name', name)
+          ..add('catchPhrase', catchPhrase)
+          ..add('bs', bs))
         .toString();
   }
 }
 
-class GCountryCodeBuilder
-    implements Builder<GCountryCode, GCountryCodeBuilder> {
-  _$GCountryCode? _$v;
+class GCompanyInputBuilder
+    implements Builder<GCompanyInput, GCompanyInputBuilder> {
+  _$GCompanyInput? _$v;
 
-  String? _value;
-  String? get value => _$this._value;
-  set value(String? value) => _$this._value = value;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
-  GCountryCodeBuilder();
+  String? _catchPhrase;
+  String? get catchPhrase => _$this._catchPhrase;
+  set catchPhrase(String? catchPhrase) => _$this._catchPhrase = catchPhrase;
 
-  GCountryCodeBuilder get _$this {
+  String? _bs;
+  String? get bs => _$this._bs;
+  set bs(String? bs) => _$this._bs = bs;
+
+  GCompanyInputBuilder();
+
+  GCompanyInputBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _value = $v.value;
+      _name = $v.name;
+      _catchPhrase = $v.catchPhrase;
+      _bs = $v.bs;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GCountryCode other) {
+  void replace(GCompanyInput other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GCountryCode;
+    _$v = other as _$GCompanyInput;
   }
 
   @override
-  void update(void Function(GCountryCodeBuilder)? updates) {
+  void update(void Function(GCompanyInputBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GCountryCode build() => _build();
+  GCompanyInput build() => _build();
 
-  _$GCountryCode _build() {
+  _$GCompanyInput _build() {
     final _$result = _$v ??
-        new _$GCountryCode._(
-            value: BuiltValueNullFieldError.checkNotNull(
-                value, r'GCountryCode', 'value'));
+        new _$GCompanyInput._(name: name, catchPhrase: catchPhrase, bs: bs);
     replace(_$result);
     return _$result;
   }
 }
 
-class _$GFuzzyDateInput extends GFuzzyDateInput {
+class _$GCreateAlbumInput extends GCreateAlbumInput {
   @override
-  final int? year;
+  final String title;
   @override
-  final int? month;
-  @override
-  final int? day;
+  final String userId;
 
-  factory _$GFuzzyDateInput([void Function(GFuzzyDateInputBuilder)? updates]) =>
-      (new GFuzzyDateInputBuilder()..update(updates))._build();
+  factory _$GCreateAlbumInput(
+          [void Function(GCreateAlbumInputBuilder)? updates]) =>
+      (new GCreateAlbumInputBuilder()..update(updates))._build();
 
-  _$GFuzzyDateInput._({this.year, this.month, this.day}) : super._();
+  _$GCreateAlbumInput._({required this.title, required this.userId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(title, r'GCreateAlbumInput', 'title');
+    BuiltValueNullFieldError.checkNotNull(
+        userId, r'GCreateAlbumInput', 'userId');
+  }
 
   @override
-  GFuzzyDateInput rebuild(void Function(GFuzzyDateInputBuilder) updates) =>
+  GCreateAlbumInput rebuild(void Function(GCreateAlbumInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GFuzzyDateInputBuilder toBuilder() =>
-      new GFuzzyDateInputBuilder()..replace(this);
+  GCreateAlbumInputBuilder toBuilder() =>
+      new GCreateAlbumInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GFuzzyDateInput &&
-        year == other.year &&
-        month == other.month &&
-        day == other.day;
+    return other is GCreateAlbumInput &&
+        title == other.title &&
+        userId == other.userId;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, year.hashCode);
-    _$hash = $jc(_$hash, month.hashCode);
-    _$hash = $jc(_$hash, day.hashCode);
+    _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, userId.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GFuzzyDateInput')
-          ..add('year', year)
-          ..add('month', month)
-          ..add('day', day))
+    return (newBuiltValueToStringHelper(r'GCreateAlbumInput')
+          ..add('title', title)
+          ..add('userId', userId))
         .toString();
   }
 }
 
-class GFuzzyDateInputBuilder
-    implements Builder<GFuzzyDateInput, GFuzzyDateInputBuilder> {
-  _$GFuzzyDateInput? _$v;
+class GCreateAlbumInputBuilder
+    implements Builder<GCreateAlbumInput, GCreateAlbumInputBuilder> {
+  _$GCreateAlbumInput? _$v;
 
-  int? _year;
-  int? get year => _$this._year;
-  set year(int? year) => _$this._year = year;
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
 
-  int? _month;
-  int? get month => _$this._month;
-  set month(int? month) => _$this._month = month;
+  String? _userId;
+  String? get userId => _$this._userId;
+  set userId(String? userId) => _$this._userId = userId;
 
-  int? _day;
-  int? get day => _$this._day;
-  set day(int? day) => _$this._day = day;
+  GCreateAlbumInputBuilder();
 
-  GFuzzyDateInputBuilder();
-
-  GFuzzyDateInputBuilder get _$this {
+  GCreateAlbumInputBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _year = $v.year;
-      _month = $v.month;
-      _day = $v.day;
+      _title = $v.title;
+      _userId = $v.userId;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GFuzzyDateInput other) {
+  void replace(GCreateAlbumInput other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GFuzzyDateInput;
+    _$v = other as _$GCreateAlbumInput;
   }
 
   @override
-  void update(void Function(GFuzzyDateInputBuilder)? updates) {
+  void update(void Function(GCreateAlbumInputBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GFuzzyDateInput build() => _build();
+  GCreateAlbumInput build() => _build();
 
-  _$GFuzzyDateInput _build() {
-    final _$result =
-        _$v ?? new _$GFuzzyDateInput._(year: year, month: month, day: day);
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GFuzzyDateInt extends GFuzzyDateInt {
-  @override
-  final String value;
-
-  factory _$GFuzzyDateInt([void Function(GFuzzyDateIntBuilder)? updates]) =>
-      (new GFuzzyDateIntBuilder()..update(updates))._build();
-
-  _$GFuzzyDateInt._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GFuzzyDateInt', 'value');
-  }
-
-  @override
-  GFuzzyDateInt rebuild(void Function(GFuzzyDateIntBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GFuzzyDateIntBuilder toBuilder() => new GFuzzyDateIntBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GFuzzyDateInt && value == other.value;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, value.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GFuzzyDateInt')..add('value', value))
-        .toString();
-  }
-}
-
-class GFuzzyDateIntBuilder
-    implements Builder<GFuzzyDateInt, GFuzzyDateIntBuilder> {
-  _$GFuzzyDateInt? _$v;
-
-  String? _value;
-  String? get value => _$this._value;
-  set value(String? value) => _$this._value = value;
-
-  GFuzzyDateIntBuilder();
-
-  GFuzzyDateIntBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _value = $v.value;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GFuzzyDateInt other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GFuzzyDateInt;
-  }
-
-  @override
-  void update(void Function(GFuzzyDateIntBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GFuzzyDateInt build() => _build();
-
-  _$GFuzzyDateInt _build() {
+  _$GCreateAlbumInput _build() {
     final _$result = _$v ??
-        new _$GFuzzyDateInt._(
-            value: BuiltValueNullFieldError.checkNotNull(
-                value, r'GFuzzyDateInt', 'value'));
+        new _$GCreateAlbumInput._(
+            title: BuiltValueNullFieldError.checkNotNull(
+                title, r'GCreateAlbumInput', 'title'),
+            userId: BuiltValueNullFieldError.checkNotNull(
+                userId, r'GCreateAlbumInput', 'userId'));
     replace(_$result);
     return _$result;
   }
 }
 
-class _$GJson extends GJson {
+class _$GCreateCommentInput extends GCreateCommentInput {
   @override
-  final String value;
+  final String name;
+  @override
+  final String email;
+  @override
+  final String body;
 
-  factory _$GJson([void Function(GJsonBuilder)? updates]) =>
-      (new GJsonBuilder()..update(updates))._build();
+  factory _$GCreateCommentInput(
+          [void Function(GCreateCommentInputBuilder)? updates]) =>
+      (new GCreateCommentInputBuilder()..update(updates))._build();
 
-  _$GJson._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GJson', 'value');
+  _$GCreateCommentInput._(
+      {required this.name, required this.email, required this.body})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(name, r'GCreateCommentInput', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        email, r'GCreateCommentInput', 'email');
+    BuiltValueNullFieldError.checkNotNull(body, r'GCreateCommentInput', 'body');
   }
 
   @override
-  GJson rebuild(void Function(GJsonBuilder) updates) =>
+  GCreateCommentInput rebuild(
+          void Function(GCreateCommentInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GJsonBuilder toBuilder() => new GJsonBuilder()..replace(this);
+  GCreateCommentInputBuilder toBuilder() =>
+      new GCreateCommentInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GJson && value == other.value;
+    return other is GCreateCommentInput &&
+        name == other.name &&
+        email == other.email &&
+        body == other.body;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, value.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GJson')..add('value', value))
+    return (newBuiltValueToStringHelper(r'GCreateCommentInput')
+          ..add('name', name)
+          ..add('email', email)
+          ..add('body', body))
         .toString();
   }
 }
 
-class GJsonBuilder implements Builder<GJson, GJsonBuilder> {
-  _$GJson? _$v;
+class GCreateCommentInputBuilder
+    implements Builder<GCreateCommentInput, GCreateCommentInputBuilder> {
+  _$GCreateCommentInput? _$v;
 
-  String? _value;
-  String? get value => _$this._value;
-  set value(String? value) => _$this._value = value;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
-  GJsonBuilder();
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
 
-  GJsonBuilder get _$this {
+  String? _body;
+  String? get body => _$this._body;
+  set body(String? body) => _$this._body = body;
+
+  GCreateCommentInputBuilder();
+
+  GCreateCommentInputBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _value = $v.value;
+      _name = $v.name;
+      _email = $v.email;
+      _body = $v.body;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GJson other) {
+  void replace(GCreateCommentInput other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GJson;
+    _$v = other as _$GCreateCommentInput;
   }
 
   @override
-  void update(void Function(GJsonBuilder)? updates) {
+  void update(void Function(GCreateCommentInputBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GJson build() => _build();
+  GCreateCommentInput build() => _build();
 
-  _$GJson _build() {
+  _$GCreateCommentInput _build() {
     final _$result = _$v ??
-        new _$GJson._(
-            value: BuiltValueNullFieldError.checkNotNull(
-                value, r'GJson', 'value'));
+        new _$GCreateCommentInput._(
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, r'GCreateCommentInput', 'name'),
+            email: BuiltValueNullFieldError.checkNotNull(
+                email, r'GCreateCommentInput', 'email'),
+            body: BuiltValueNullFieldError.checkNotNull(
+                body, r'GCreateCommentInput', 'body'));
     replace(_$result);
     return _$result;
   }
 }
 
-class _$GListActivityOptionInput extends GListActivityOptionInput {
+class _$GCreatePhotoInput extends GCreatePhotoInput {
   @override
-  final bool? disabled;
-  @override
-  final GMediaListStatus? type;
-
-  factory _$GListActivityOptionInput(
-          [void Function(GListActivityOptionInputBuilder)? updates]) =>
-      (new GListActivityOptionInputBuilder()..update(updates))._build();
-
-  _$GListActivityOptionInput._({this.disabled, this.type}) : super._();
-
-  @override
-  GListActivityOptionInput rebuild(
-          void Function(GListActivityOptionInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GListActivityOptionInputBuilder toBuilder() =>
-      new GListActivityOptionInputBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GListActivityOptionInput &&
-        disabled == other.disabled &&
-        type == other.type;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, disabled.hashCode);
-    _$hash = $jc(_$hash, type.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GListActivityOptionInput')
-          ..add('disabled', disabled)
-          ..add('type', type))
-        .toString();
-  }
-}
-
-class GListActivityOptionInputBuilder
-    implements
-        Builder<GListActivityOptionInput, GListActivityOptionInputBuilder> {
-  _$GListActivityOptionInput? _$v;
-
-  bool? _disabled;
-  bool? get disabled => _$this._disabled;
-  set disabled(bool? disabled) => _$this._disabled = disabled;
-
-  GMediaListStatus? _type;
-  GMediaListStatus? get type => _$this._type;
-  set type(GMediaListStatus? type) => _$this._type = type;
-
-  GListActivityOptionInputBuilder();
-
-  GListActivityOptionInputBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _disabled = $v.disabled;
-      _type = $v.type;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GListActivityOptionInput other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GListActivityOptionInput;
-  }
-
-  @override
-  void update(void Function(GListActivityOptionInputBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GListActivityOptionInput build() => _build();
-
-  _$GListActivityOptionInput _build() {
-    final _$result =
-        _$v ?? new _$GListActivityOptionInput._(disabled: disabled, type: type);
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GMediaExternalLinkInput extends GMediaExternalLinkInput {
-  @override
-  final int id;
+  final String title;
   @override
   final String url;
   @override
-  final String site;
+  final String thumbnailUrl;
 
-  factory _$GMediaExternalLinkInput(
-          [void Function(GMediaExternalLinkInputBuilder)? updates]) =>
-      (new GMediaExternalLinkInputBuilder()..update(updates))._build();
+  factory _$GCreatePhotoInput(
+          [void Function(GCreatePhotoInputBuilder)? updates]) =>
+      (new GCreatePhotoInputBuilder()..update(updates))._build();
 
-  _$GMediaExternalLinkInput._(
-      {required this.id, required this.url, required this.site})
+  _$GCreatePhotoInput._(
+      {required this.title, required this.url, required this.thumbnailUrl})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'GMediaExternalLinkInput', 'id');
+    BuiltValueNullFieldError.checkNotNull(title, r'GCreatePhotoInput', 'title');
+    BuiltValueNullFieldError.checkNotNull(url, r'GCreatePhotoInput', 'url');
     BuiltValueNullFieldError.checkNotNull(
-        url, r'GMediaExternalLinkInput', 'url');
-    BuiltValueNullFieldError.checkNotNull(
-        site, r'GMediaExternalLinkInput', 'site');
+        thumbnailUrl, r'GCreatePhotoInput', 'thumbnailUrl');
   }
 
   @override
-  GMediaExternalLinkInput rebuild(
-          void Function(GMediaExternalLinkInputBuilder) updates) =>
+  GCreatePhotoInput rebuild(void Function(GCreatePhotoInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GMediaExternalLinkInputBuilder toBuilder() =>
-      new GMediaExternalLinkInputBuilder()..replace(this);
+  GCreatePhotoInputBuilder toBuilder() =>
+      new GCreatePhotoInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GMediaExternalLinkInput &&
-        id == other.id &&
+    return other is GCreatePhotoInput &&
+        title == other.title &&
         url == other.url &&
-        site == other.site;
+        thumbnailUrl == other.thumbnailUrl;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, title.hashCode);
     _$hash = $jc(_$hash, url.hashCode);
-    _$hash = $jc(_$hash, site.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GMediaExternalLinkInput')
-          ..add('id', id)
+    return (newBuiltValueToStringHelper(r'GCreatePhotoInput')
+          ..add('title', title)
           ..add('url', url)
-          ..add('site', site))
+          ..add('thumbnailUrl', thumbnailUrl))
         .toString();
   }
 }
 
-class GMediaExternalLinkInputBuilder
-    implements
-        Builder<GMediaExternalLinkInput, GMediaExternalLinkInputBuilder> {
-  _$GMediaExternalLinkInput? _$v;
+class GCreatePhotoInputBuilder
+    implements Builder<GCreatePhotoInput, GCreatePhotoInputBuilder> {
+  _$GCreatePhotoInput? _$v;
 
-  int? _id;
-  int? get id => _$this._id;
-  set id(int? id) => _$this._id = id;
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
 
   String? _url;
   String? get url => _$this._url;
   set url(String? url) => _$this._url = url;
 
-  String? _site;
-  String? get site => _$this._site;
-  set site(String? site) => _$this._site = site;
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
-  GMediaExternalLinkInputBuilder();
+  GCreatePhotoInputBuilder();
 
-  GMediaExternalLinkInputBuilder get _$this {
+  GCreatePhotoInputBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _id = $v.id;
+      _title = $v.title;
       _url = $v.url;
-      _site = $v.site;
+      _thumbnailUrl = $v.thumbnailUrl;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GMediaExternalLinkInput other) {
+  void replace(GCreatePhotoInput other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GMediaExternalLinkInput;
+    _$v = other as _$GCreatePhotoInput;
   }
 
   @override
-  void update(void Function(GMediaExternalLinkInputBuilder)? updates) {
+  void update(void Function(GCreatePhotoInputBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GMediaExternalLinkInput build() => _build();
+  GCreatePhotoInput build() => _build();
 
-  _$GMediaExternalLinkInput _build() {
+  _$GCreatePhotoInput _build() {
     final _$result = _$v ??
-        new _$GMediaExternalLinkInput._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'GMediaExternalLinkInput', 'id'),
+        new _$GCreatePhotoInput._(
+            title: BuiltValueNullFieldError.checkNotNull(
+                title, r'GCreatePhotoInput', 'title'),
             url: BuiltValueNullFieldError.checkNotNull(
-                url, r'GMediaExternalLinkInput', 'url'),
-            site: BuiltValueNullFieldError.checkNotNull(
-                site, r'GMediaExternalLinkInput', 'site'));
+                url, r'GCreatePhotoInput', 'url'),
+            thumbnailUrl: BuiltValueNullFieldError.checkNotNull(
+                thumbnailUrl, r'GCreatePhotoInput', 'thumbnailUrl'));
     replace(_$result);
     return _$result;
   }
 }
 
-class _$GMediaListOptionsInput extends GMediaListOptionsInput {
+class _$GCreatePostInput extends GCreatePostInput {
   @override
-  final BuiltList<String?>? sectionOrder;
+  final String title;
   @override
-  final bool? splitCompletedSectionByFormat;
-  @override
-  final BuiltList<String?>? customLists;
-  @override
-  final BuiltList<String?>? advancedScoring;
-  @override
-  final bool? advancedScoringEnabled;
-  @override
-  final String? theme;
+  final String body;
 
-  factory _$GMediaListOptionsInput(
-          [void Function(GMediaListOptionsInputBuilder)? updates]) =>
-      (new GMediaListOptionsInputBuilder()..update(updates))._build();
+  factory _$GCreatePostInput(
+          [void Function(GCreatePostInputBuilder)? updates]) =>
+      (new GCreatePostInputBuilder()..update(updates))._build();
 
-  _$GMediaListOptionsInput._(
-      {this.sectionOrder,
-      this.splitCompletedSectionByFormat,
-      this.customLists,
-      this.advancedScoring,
-      this.advancedScoringEnabled,
-      this.theme})
-      : super._();
+  _$GCreatePostInput._({required this.title, required this.body}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(title, r'GCreatePostInput', 'title');
+    BuiltValueNullFieldError.checkNotNull(body, r'GCreatePostInput', 'body');
+  }
 
   @override
-  GMediaListOptionsInput rebuild(
-          void Function(GMediaListOptionsInputBuilder) updates) =>
+  GCreatePostInput rebuild(void Function(GCreatePostInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GMediaListOptionsInputBuilder toBuilder() =>
-      new GMediaListOptionsInputBuilder()..replace(this);
+  GCreatePostInputBuilder toBuilder() =>
+      new GCreatePostInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GMediaListOptionsInput &&
-        sectionOrder == other.sectionOrder &&
-        splitCompletedSectionByFormat == other.splitCompletedSectionByFormat &&
-        customLists == other.customLists &&
-        advancedScoring == other.advancedScoring &&
-        advancedScoringEnabled == other.advancedScoringEnabled &&
-        theme == other.theme;
+    return other is GCreatePostInput &&
+        title == other.title &&
+        body == other.body;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, sectionOrder.hashCode);
-    _$hash = $jc(_$hash, splitCompletedSectionByFormat.hashCode);
-    _$hash = $jc(_$hash, customLists.hashCode);
-    _$hash = $jc(_$hash, advancedScoring.hashCode);
-    _$hash = $jc(_$hash, advancedScoringEnabled.hashCode);
-    _$hash = $jc(_$hash, theme.hashCode);
+    _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GMediaListOptionsInput')
-          ..add('sectionOrder', sectionOrder)
-          ..add('splitCompletedSectionByFormat', splitCompletedSectionByFormat)
-          ..add('customLists', customLists)
-          ..add('advancedScoring', advancedScoring)
-          ..add('advancedScoringEnabled', advancedScoringEnabled)
-          ..add('theme', theme))
+    return (newBuiltValueToStringHelper(r'GCreatePostInput')
+          ..add('title', title)
+          ..add('body', body))
         .toString();
   }
 }
 
-class GMediaListOptionsInputBuilder
-    implements Builder<GMediaListOptionsInput, GMediaListOptionsInputBuilder> {
-  _$GMediaListOptionsInput? _$v;
+class GCreatePostInputBuilder
+    implements Builder<GCreatePostInput, GCreatePostInputBuilder> {
+  _$GCreatePostInput? _$v;
 
-  ListBuilder<String?>? _sectionOrder;
-  ListBuilder<String?> get sectionOrder =>
-      _$this._sectionOrder ??= new ListBuilder<String?>();
-  set sectionOrder(ListBuilder<String?>? sectionOrder) =>
-      _$this._sectionOrder = sectionOrder;
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
 
-  bool? _splitCompletedSectionByFormat;
-  bool? get splitCompletedSectionByFormat =>
-      _$this._splitCompletedSectionByFormat;
-  set splitCompletedSectionByFormat(bool? splitCompletedSectionByFormat) =>
-      _$this._splitCompletedSectionByFormat = splitCompletedSectionByFormat;
+  String? _body;
+  String? get body => _$this._body;
+  set body(String? body) => _$this._body = body;
 
-  ListBuilder<String?>? _customLists;
-  ListBuilder<String?> get customLists =>
-      _$this._customLists ??= new ListBuilder<String?>();
-  set customLists(ListBuilder<String?>? customLists) =>
-      _$this._customLists = customLists;
+  GCreatePostInputBuilder();
 
-  ListBuilder<String?>? _advancedScoring;
-  ListBuilder<String?> get advancedScoring =>
-      _$this._advancedScoring ??= new ListBuilder<String?>();
-  set advancedScoring(ListBuilder<String?>? advancedScoring) =>
-      _$this._advancedScoring = advancedScoring;
-
-  bool? _advancedScoringEnabled;
-  bool? get advancedScoringEnabled => _$this._advancedScoringEnabled;
-  set advancedScoringEnabled(bool? advancedScoringEnabled) =>
-      _$this._advancedScoringEnabled = advancedScoringEnabled;
-
-  String? _theme;
-  String? get theme => _$this._theme;
-  set theme(String? theme) => _$this._theme = theme;
-
-  GMediaListOptionsInputBuilder();
-
-  GMediaListOptionsInputBuilder get _$this {
+  GCreatePostInputBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _sectionOrder = $v.sectionOrder?.toBuilder();
-      _splitCompletedSectionByFormat = $v.splitCompletedSectionByFormat;
-      _customLists = $v.customLists?.toBuilder();
-      _advancedScoring = $v.advancedScoring?.toBuilder();
-      _advancedScoringEnabled = $v.advancedScoringEnabled;
-      _theme = $v.theme;
+      _title = $v.title;
+      _body = $v.body;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GMediaListOptionsInput other) {
+  void replace(GCreatePostInput other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GMediaListOptionsInput;
+    _$v = other as _$GCreatePostInput;
   }
 
   @override
-  void update(void Function(GMediaListOptionsInputBuilder)? updates) {
+  void update(void Function(GCreatePostInputBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GMediaListOptionsInput build() => _build();
+  GCreatePostInput build() => _build();
 
-  _$GMediaListOptionsInput _build() {
-    _$GMediaListOptionsInput _$result;
+  _$GCreatePostInput _build() {
+    final _$result = _$v ??
+        new _$GCreatePostInput._(
+            title: BuiltValueNullFieldError.checkNotNull(
+                title, r'GCreatePostInput', 'title'),
+            body: BuiltValueNullFieldError.checkNotNull(
+                body, r'GCreatePostInput', 'body'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCreateTodoInput extends GCreateTodoInput {
+  @override
+  final String title;
+  @override
+  final bool completed;
+
+  factory _$GCreateTodoInput(
+          [void Function(GCreateTodoInputBuilder)? updates]) =>
+      (new GCreateTodoInputBuilder()..update(updates))._build();
+
+  _$GCreateTodoInput._({required this.title, required this.completed})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(title, r'GCreateTodoInput', 'title');
+    BuiltValueNullFieldError.checkNotNull(
+        completed, r'GCreateTodoInput', 'completed');
+  }
+
+  @override
+  GCreateTodoInput rebuild(void Function(GCreateTodoInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCreateTodoInputBuilder toBuilder() =>
+      new GCreateTodoInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCreateTodoInput &&
+        title == other.title &&
+        completed == other.completed;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, completed.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GCreateTodoInput')
+          ..add('title', title)
+          ..add('completed', completed))
+        .toString();
+  }
+}
+
+class GCreateTodoInputBuilder
+    implements Builder<GCreateTodoInput, GCreateTodoInputBuilder> {
+  _$GCreateTodoInput? _$v;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  bool? _completed;
+  bool? get completed => _$this._completed;
+  set completed(bool? completed) => _$this._completed = completed;
+
+  GCreateTodoInputBuilder();
+
+  GCreateTodoInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _title = $v.title;
+      _completed = $v.completed;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCreateTodoInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCreateTodoInput;
+  }
+
+  @override
+  void update(void Function(GCreateTodoInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GCreateTodoInput build() => _build();
+
+  _$GCreateTodoInput _build() {
+    final _$result = _$v ??
+        new _$GCreateTodoInput._(
+            title: BuiltValueNullFieldError.checkNotNull(
+                title, r'GCreateTodoInput', 'title'),
+            completed: BuiltValueNullFieldError.checkNotNull(
+                completed, r'GCreateTodoInput', 'completed'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCreateUserInput extends GCreateUserInput {
+  @override
+  final String name;
+  @override
+  final String username;
+  @override
+  final String email;
+  @override
+  final GAddressInput? address;
+  @override
+  final String? phone;
+  @override
+  final String? website;
+  @override
+  final GCompanyInput? company;
+
+  factory _$GCreateUserInput(
+          [void Function(GCreateUserInputBuilder)? updates]) =>
+      (new GCreateUserInputBuilder()..update(updates))._build();
+
+  _$GCreateUserInput._(
+      {required this.name,
+      required this.username,
+      required this.email,
+      this.address,
+      this.phone,
+      this.website,
+      this.company})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(name, r'GCreateUserInput', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        username, r'GCreateUserInput', 'username');
+    BuiltValueNullFieldError.checkNotNull(email, r'GCreateUserInput', 'email');
+  }
+
+  @override
+  GCreateUserInput rebuild(void Function(GCreateUserInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCreateUserInputBuilder toBuilder() =>
+      new GCreateUserInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCreateUserInput &&
+        name == other.name &&
+        username == other.username &&
+        email == other.email &&
+        address == other.address &&
+        phone == other.phone &&
+        website == other.website &&
+        company == other.company;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, username.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, address.hashCode);
+    _$hash = $jc(_$hash, phone.hashCode);
+    _$hash = $jc(_$hash, website.hashCode);
+    _$hash = $jc(_$hash, company.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GCreateUserInput')
+          ..add('name', name)
+          ..add('username', username)
+          ..add('email', email)
+          ..add('address', address)
+          ..add('phone', phone)
+          ..add('website', website)
+          ..add('company', company))
+        .toString();
+  }
+}
+
+class GCreateUserInputBuilder
+    implements Builder<GCreateUserInput, GCreateUserInputBuilder> {
+  _$GCreateUserInput? _$v;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  String? _username;
+  String? get username => _$this._username;
+  set username(String? username) => _$this._username = username;
+
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
+
+  GAddressInputBuilder? _address;
+  GAddressInputBuilder get address =>
+      _$this._address ??= new GAddressInputBuilder();
+  set address(GAddressInputBuilder? address) => _$this._address = address;
+
+  String? _phone;
+  String? get phone => _$this._phone;
+  set phone(String? phone) => _$this._phone = phone;
+
+  String? _website;
+  String? get website => _$this._website;
+  set website(String? website) => _$this._website = website;
+
+  GCompanyInputBuilder? _company;
+  GCompanyInputBuilder get company =>
+      _$this._company ??= new GCompanyInputBuilder();
+  set company(GCompanyInputBuilder? company) => _$this._company = company;
+
+  GCreateUserInputBuilder();
+
+  GCreateUserInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _name = $v.name;
+      _username = $v.username;
+      _email = $v.email;
+      _address = $v.address?.toBuilder();
+      _phone = $v.phone;
+      _website = $v.website;
+      _company = $v.company?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCreateUserInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCreateUserInput;
+  }
+
+  @override
+  void update(void Function(GCreateUserInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GCreateUserInput build() => _build();
+
+  _$GCreateUserInput _build() {
+    _$GCreateUserInput _$result;
     try {
       _$result = _$v ??
-          new _$GMediaListOptionsInput._(
-              sectionOrder: _sectionOrder?.build(),
-              splitCompletedSectionByFormat: splitCompletedSectionByFormat,
-              customLists: _customLists?.build(),
-              advancedScoring: _advancedScoring?.build(),
-              advancedScoringEnabled: advancedScoringEnabled,
-              theme: theme);
+          new _$GCreateUserInput._(
+              name: BuiltValueNullFieldError.checkNotNull(
+                  name, r'GCreateUserInput', 'name'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username, r'GCreateUserInput', 'username'),
+              email: BuiltValueNullFieldError.checkNotNull(
+                  email, r'GCreateUserInput', 'email'),
+              address: _address?.build(),
+              phone: phone,
+              website: website,
+              company: _company?.build());
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'sectionOrder';
-        _sectionOrder?.build();
+        _$failedField = 'address';
+        _address?.build();
 
-        _$failedField = 'customLists';
-        _customLists?.build();
-        _$failedField = 'advancedScoring';
-        _advancedScoring?.build();
+        _$failedField = 'company';
+        _company?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'GMediaListOptionsInput', _$failedField, e.toString());
+            r'GCreateUserInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -4602,338 +2459,1357 @@ class GMediaListOptionsInputBuilder
   }
 }
 
-class _$GMediaTitleInput extends GMediaTitleInput {
+class _$GGeoInput extends GGeoInput {
   @override
-  final String? romaji;
+  final double? lat;
   @override
-  final String? english;
-  @override
-  final String? native;
+  final double? lng;
 
-  factory _$GMediaTitleInput(
-          [void Function(GMediaTitleInputBuilder)? updates]) =>
-      (new GMediaTitleInputBuilder()..update(updates))._build();
+  factory _$GGeoInput([void Function(GGeoInputBuilder)? updates]) =>
+      (new GGeoInputBuilder()..update(updates))._build();
 
-  _$GMediaTitleInput._({this.romaji, this.english, this.native}) : super._();
+  _$GGeoInput._({this.lat, this.lng}) : super._();
 
   @override
-  GMediaTitleInput rebuild(void Function(GMediaTitleInputBuilder) updates) =>
+  GGeoInput rebuild(void Function(GGeoInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GMediaTitleInputBuilder toBuilder() =>
-      new GMediaTitleInputBuilder()..replace(this);
+  GGeoInputBuilder toBuilder() => new GGeoInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GMediaTitleInput &&
-        romaji == other.romaji &&
-        english == other.english &&
-        native == other.native;
+    return other is GGeoInput && lat == other.lat && lng == other.lng;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, romaji.hashCode);
-    _$hash = $jc(_$hash, english.hashCode);
-    _$hash = $jc(_$hash, native.hashCode);
+    _$hash = $jc(_$hash, lat.hashCode);
+    _$hash = $jc(_$hash, lng.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GMediaTitleInput')
-          ..add('romaji', romaji)
-          ..add('english', english)
-          ..add('native', native))
+    return (newBuiltValueToStringHelper(r'GGeoInput')
+          ..add('lat', lat)
+          ..add('lng', lng))
         .toString();
   }
 }
 
-class GMediaTitleInputBuilder
-    implements Builder<GMediaTitleInput, GMediaTitleInputBuilder> {
-  _$GMediaTitleInput? _$v;
+class GGeoInputBuilder implements Builder<GGeoInput, GGeoInputBuilder> {
+  _$GGeoInput? _$v;
 
-  String? _romaji;
-  String? get romaji => _$this._romaji;
-  set romaji(String? romaji) => _$this._romaji = romaji;
+  double? _lat;
+  double? get lat => _$this._lat;
+  set lat(double? lat) => _$this._lat = lat;
 
-  String? _english;
-  String? get english => _$this._english;
-  set english(String? english) => _$this._english = english;
+  double? _lng;
+  double? get lng => _$this._lng;
+  set lng(double? lng) => _$this._lng = lng;
 
-  String? _native;
-  String? get native => _$this._native;
-  set native(String? native) => _$this._native = native;
+  GGeoInputBuilder();
 
-  GMediaTitleInputBuilder();
-
-  GMediaTitleInputBuilder get _$this {
+  GGeoInputBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _romaji = $v.romaji;
-      _english = $v.english;
-      _native = $v.native;
+      _lat = $v.lat;
+      _lng = $v.lng;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GMediaTitleInput other) {
+  void replace(GGeoInput other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GMediaTitleInput;
+    _$v = other as _$GGeoInput;
   }
 
   @override
-  void update(void Function(GMediaTitleInputBuilder)? updates) {
+  void update(void Function(GGeoInputBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GMediaTitleInput build() => _build();
+  GGeoInput build() => _build();
 
-  _$GMediaTitleInput _build() {
-    final _$result = _$v ??
-        new _$GMediaTitleInput._(
-            romaji: romaji, english: english, native: native);
+  _$GGeoInput _build() {
+    final _$result = _$v ?? new _$GGeoInput._(lat: lat, lng: lng);
     replace(_$result);
     return _$result;
   }
 }
 
-class _$GNotificationOptionInput extends GNotificationOptionInput {
+class _$GOperatorOptions extends GOperatorOptions {
   @override
-  final GNotificationType? type;
+  final GOperatorKindEnum? kind;
   @override
-  final bool? enabled;
+  final String? field;
+  @override
+  final String? value;
 
-  factory _$GNotificationOptionInput(
-          [void Function(GNotificationOptionInputBuilder)? updates]) =>
-      (new GNotificationOptionInputBuilder()..update(updates))._build();
+  factory _$GOperatorOptions(
+          [void Function(GOperatorOptionsBuilder)? updates]) =>
+      (new GOperatorOptionsBuilder()..update(updates))._build();
 
-  _$GNotificationOptionInput._({this.type, this.enabled}) : super._();
+  _$GOperatorOptions._({this.kind, this.field, this.value}) : super._();
 
   @override
-  GNotificationOptionInput rebuild(
-          void Function(GNotificationOptionInputBuilder) updates) =>
+  GOperatorOptions rebuild(void Function(GOperatorOptionsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GNotificationOptionInputBuilder toBuilder() =>
-      new GNotificationOptionInputBuilder()..replace(this);
+  GOperatorOptionsBuilder toBuilder() =>
+      new GOperatorOptionsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GNotificationOptionInput &&
-        type == other.type &&
-        enabled == other.enabled;
+    return other is GOperatorOptions &&
+        kind == other.kind &&
+        field == other.field &&
+        value == other.value;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, type.hashCode);
-    _$hash = $jc(_$hash, enabled.hashCode);
+    _$hash = $jc(_$hash, kind.hashCode);
+    _$hash = $jc(_$hash, field.hashCode);
+    _$hash = $jc(_$hash, value.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GNotificationOptionInput')
-          ..add('type', type)
-          ..add('enabled', enabled))
+    return (newBuiltValueToStringHelper(r'GOperatorOptions')
+          ..add('kind', kind)
+          ..add('field', field)
+          ..add('value', value))
         .toString();
   }
 }
 
-class GNotificationOptionInputBuilder
-    implements
-        Builder<GNotificationOptionInput, GNotificationOptionInputBuilder> {
-  _$GNotificationOptionInput? _$v;
+class GOperatorOptionsBuilder
+    implements Builder<GOperatorOptions, GOperatorOptionsBuilder> {
+  _$GOperatorOptions? _$v;
 
-  GNotificationType? _type;
-  GNotificationType? get type => _$this._type;
-  set type(GNotificationType? type) => _$this._type = type;
+  GOperatorKindEnum? _kind;
+  GOperatorKindEnum? get kind => _$this._kind;
+  set kind(GOperatorKindEnum? kind) => _$this._kind = kind;
 
-  bool? _enabled;
-  bool? get enabled => _$this._enabled;
-  set enabled(bool? enabled) => _$this._enabled = enabled;
+  String? _field;
+  String? get field => _$this._field;
+  set field(String? field) => _$this._field = field;
 
-  GNotificationOptionInputBuilder();
+  String? _value;
+  String? get value => _$this._value;
+  set value(String? value) => _$this._value = value;
 
-  GNotificationOptionInputBuilder get _$this {
+  GOperatorOptionsBuilder();
+
+  GOperatorOptionsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _type = $v.type;
-      _enabled = $v.enabled;
+      _kind = $v.kind;
+      _field = $v.field;
+      _value = $v.value;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GNotificationOptionInput other) {
+  void replace(GOperatorOptions other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GNotificationOptionInput;
+    _$v = other as _$GOperatorOptions;
   }
 
   @override
-  void update(void Function(GNotificationOptionInputBuilder)? updates) {
+  void update(void Function(GOperatorOptionsBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GNotificationOptionInput build() => _build();
+  GOperatorOptions build() => _build();
 
-  _$GNotificationOptionInput _build() {
+  _$GOperatorOptions _build() {
     final _$result =
-        _$v ?? new _$GNotificationOptionInput._(type: type, enabled: enabled);
+        _$v ?? new _$GOperatorOptions._(kind: kind, field: field, value: value);
     replace(_$result);
     return _$result;
   }
 }
 
-class _$GStaffNameInput extends GStaffNameInput {
+class _$GPageQueryOptions extends GPageQueryOptions {
   @override
-  final String? first;
+  final GPaginateOptions? paginate;
   @override
-  final String? middle;
+  final GSliceOptions? slice;
   @override
-  final String? last;
+  final BuiltList<GSortOptions?>? sort;
   @override
-  final String? native;
+  final BuiltList<GOperatorOptions?>? operators;
   @override
-  final BuiltList<String?>? alternative;
+  final GSearchOptions? search;
 
-  factory _$GStaffNameInput([void Function(GStaffNameInputBuilder)? updates]) =>
-      (new GStaffNameInputBuilder()..update(updates))._build();
+  factory _$GPageQueryOptions(
+          [void Function(GPageQueryOptionsBuilder)? updates]) =>
+      (new GPageQueryOptionsBuilder()..update(updates))._build();
 
-  _$GStaffNameInput._(
-      {this.first, this.middle, this.last, this.native, this.alternative})
+  _$GPageQueryOptions._(
+      {this.paginate, this.slice, this.sort, this.operators, this.search})
       : super._();
 
   @override
-  GStaffNameInput rebuild(void Function(GStaffNameInputBuilder) updates) =>
+  GPageQueryOptions rebuild(void Function(GPageQueryOptionsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GStaffNameInputBuilder toBuilder() =>
-      new GStaffNameInputBuilder()..replace(this);
+  GPageQueryOptionsBuilder toBuilder() =>
+      new GPageQueryOptionsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GStaffNameInput &&
-        first == other.first &&
-        middle == other.middle &&
-        last == other.last &&
-        native == other.native &&
-        alternative == other.alternative;
+    return other is GPageQueryOptions &&
+        paginate == other.paginate &&
+        slice == other.slice &&
+        sort == other.sort &&
+        operators == other.operators &&
+        search == other.search;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, first.hashCode);
-    _$hash = $jc(_$hash, middle.hashCode);
-    _$hash = $jc(_$hash, last.hashCode);
-    _$hash = $jc(_$hash, native.hashCode);
-    _$hash = $jc(_$hash, alternative.hashCode);
+    _$hash = $jc(_$hash, paginate.hashCode);
+    _$hash = $jc(_$hash, slice.hashCode);
+    _$hash = $jc(_$hash, sort.hashCode);
+    _$hash = $jc(_$hash, operators.hashCode);
+    _$hash = $jc(_$hash, search.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GStaffNameInput')
-          ..add('first', first)
-          ..add('middle', middle)
-          ..add('last', last)
-          ..add('native', native)
-          ..add('alternative', alternative))
+    return (newBuiltValueToStringHelper(r'GPageQueryOptions')
+          ..add('paginate', paginate)
+          ..add('slice', slice)
+          ..add('sort', sort)
+          ..add('operators', operators)
+          ..add('search', search))
         .toString();
   }
 }
 
-class GStaffNameInputBuilder
-    implements Builder<GStaffNameInput, GStaffNameInputBuilder> {
-  _$GStaffNameInput? _$v;
+class GPageQueryOptionsBuilder
+    implements Builder<GPageQueryOptions, GPageQueryOptionsBuilder> {
+  _$GPageQueryOptions? _$v;
 
-  String? _first;
-  String? get first => _$this._first;
-  set first(String? first) => _$this._first = first;
+  GPaginateOptionsBuilder? _paginate;
+  GPaginateOptionsBuilder get paginate =>
+      _$this._paginate ??= new GPaginateOptionsBuilder();
+  set paginate(GPaginateOptionsBuilder? paginate) =>
+      _$this._paginate = paginate;
 
-  String? _middle;
-  String? get middle => _$this._middle;
-  set middle(String? middle) => _$this._middle = middle;
+  GSliceOptionsBuilder? _slice;
+  GSliceOptionsBuilder get slice =>
+      _$this._slice ??= new GSliceOptionsBuilder();
+  set slice(GSliceOptionsBuilder? slice) => _$this._slice = slice;
 
-  String? _last;
-  String? get last => _$this._last;
-  set last(String? last) => _$this._last = last;
+  ListBuilder<GSortOptions?>? _sort;
+  ListBuilder<GSortOptions?> get sort =>
+      _$this._sort ??= new ListBuilder<GSortOptions?>();
+  set sort(ListBuilder<GSortOptions?>? sort) => _$this._sort = sort;
 
-  String? _native;
-  String? get native => _$this._native;
-  set native(String? native) => _$this._native = native;
+  ListBuilder<GOperatorOptions?>? _operators;
+  ListBuilder<GOperatorOptions?> get operators =>
+      _$this._operators ??= new ListBuilder<GOperatorOptions?>();
+  set operators(ListBuilder<GOperatorOptions?>? operators) =>
+      _$this._operators = operators;
 
-  ListBuilder<String?>? _alternative;
-  ListBuilder<String?> get alternative =>
-      _$this._alternative ??= new ListBuilder<String?>();
-  set alternative(ListBuilder<String?>? alternative) =>
-      _$this._alternative = alternative;
+  GSearchOptionsBuilder? _search;
+  GSearchOptionsBuilder get search =>
+      _$this._search ??= new GSearchOptionsBuilder();
+  set search(GSearchOptionsBuilder? search) => _$this._search = search;
 
-  GStaffNameInputBuilder();
+  GPageQueryOptionsBuilder();
 
-  GStaffNameInputBuilder get _$this {
+  GPageQueryOptionsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _first = $v.first;
-      _middle = $v.middle;
-      _last = $v.last;
-      _native = $v.native;
-      _alternative = $v.alternative?.toBuilder();
+      _paginate = $v.paginate?.toBuilder();
+      _slice = $v.slice?.toBuilder();
+      _sort = $v.sort?.toBuilder();
+      _operators = $v.operators?.toBuilder();
+      _search = $v.search?.toBuilder();
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GStaffNameInput other) {
+  void replace(GPageQueryOptions other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GStaffNameInput;
+    _$v = other as _$GPageQueryOptions;
   }
 
   @override
-  void update(void Function(GStaffNameInputBuilder)? updates) {
+  void update(void Function(GPageQueryOptionsBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GStaffNameInput build() => _build();
+  GPageQueryOptions build() => _build();
 
-  _$GStaffNameInput _build() {
-    _$GStaffNameInput _$result;
+  _$GPageQueryOptions _build() {
+    _$GPageQueryOptions _$result;
     try {
       _$result = _$v ??
-          new _$GStaffNameInput._(
-              first: first,
-              middle: middle,
-              last: last,
-              native: native,
-              alternative: _alternative?.build());
+          new _$GPageQueryOptions._(
+              paginate: _paginate?.build(),
+              slice: _slice?.build(),
+              sort: _sort?.build(),
+              operators: _operators?.build(),
+              search: _search?.build());
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'alternative';
-        _alternative?.build();
+        _$failedField = 'paginate';
+        _paginate?.build();
+        _$failedField = 'slice';
+        _slice?.build();
+        _$failedField = 'sort';
+        _sort?.build();
+        _$failedField = 'operators';
+        _operators?.build();
+        _$failedField = 'search';
+        _search?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'GStaffNameInput', _$failedField, e.toString());
+            r'GPageQueryOptions', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GPaginateOptions extends GPaginateOptions {
+  @override
+  final int? page;
+  @override
+  final int? limit;
+
+  factory _$GPaginateOptions(
+          [void Function(GPaginateOptionsBuilder)? updates]) =>
+      (new GPaginateOptionsBuilder()..update(updates))._build();
+
+  _$GPaginateOptions._({this.page, this.limit}) : super._();
+
+  @override
+  GPaginateOptions rebuild(void Function(GPaginateOptionsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GPaginateOptionsBuilder toBuilder() =>
+      new GPaginateOptionsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GPaginateOptions &&
+        page == other.page &&
+        limit == other.limit;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, page.hashCode);
+    _$hash = $jc(_$hash, limit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GPaginateOptions')
+          ..add('page', page)
+          ..add('limit', limit))
+        .toString();
+  }
+}
+
+class GPaginateOptionsBuilder
+    implements Builder<GPaginateOptions, GPaginateOptionsBuilder> {
+  _$GPaginateOptions? _$v;
+
+  int? _page;
+  int? get page => _$this._page;
+  set page(int? page) => _$this._page = page;
+
+  int? _limit;
+  int? get limit => _$this._limit;
+  set limit(int? limit) => _$this._limit = limit;
+
+  GPaginateOptionsBuilder();
+
+  GPaginateOptionsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _page = $v.page;
+      _limit = $v.limit;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GPaginateOptions other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GPaginateOptions;
+  }
+
+  @override
+  void update(void Function(GPaginateOptionsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GPaginateOptions build() => _build();
+
+  _$GPaginateOptions _build() {
+    final _$result = _$v ?? new _$GPaginateOptions._(page: page, limit: limit);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GSearchOptions extends GSearchOptions {
+  @override
+  final String? q;
+
+  factory _$GSearchOptions([void Function(GSearchOptionsBuilder)? updates]) =>
+      (new GSearchOptionsBuilder()..update(updates))._build();
+
+  _$GSearchOptions._({this.q}) : super._();
+
+  @override
+  GSearchOptions rebuild(void Function(GSearchOptionsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSearchOptionsBuilder toBuilder() =>
+      new GSearchOptionsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GSearchOptions && q == other.q;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, q.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GSearchOptions')..add('q', q))
+        .toString();
+  }
+}
+
+class GSearchOptionsBuilder
+    implements Builder<GSearchOptions, GSearchOptionsBuilder> {
+  _$GSearchOptions? _$v;
+
+  String? _q;
+  String? get q => _$this._q;
+  set q(String? q) => _$this._q = q;
+
+  GSearchOptionsBuilder();
+
+  GSearchOptionsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _q = $v.q;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GSearchOptions other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GSearchOptions;
+  }
+
+  @override
+  void update(void Function(GSearchOptionsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GSearchOptions build() => _build();
+
+  _$GSearchOptions _build() {
+    final _$result = _$v ?? new _$GSearchOptions._(q: q);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GSliceOptions extends GSliceOptions {
+  @override
+  final int? start;
+  @override
+  final int? end;
+  @override
+  final int? limit;
+
+  factory _$GSliceOptions([void Function(GSliceOptionsBuilder)? updates]) =>
+      (new GSliceOptionsBuilder()..update(updates))._build();
+
+  _$GSliceOptions._({this.start, this.end, this.limit}) : super._();
+
+  @override
+  GSliceOptions rebuild(void Function(GSliceOptionsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSliceOptionsBuilder toBuilder() => new GSliceOptionsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GSliceOptions &&
+        start == other.start &&
+        end == other.end &&
+        limit == other.limit;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, start.hashCode);
+    _$hash = $jc(_$hash, end.hashCode);
+    _$hash = $jc(_$hash, limit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GSliceOptions')
+          ..add('start', start)
+          ..add('end', end)
+          ..add('limit', limit))
+        .toString();
+  }
+}
+
+class GSliceOptionsBuilder
+    implements Builder<GSliceOptions, GSliceOptionsBuilder> {
+  _$GSliceOptions? _$v;
+
+  int? _start;
+  int? get start => _$this._start;
+  set start(int? start) => _$this._start = start;
+
+  int? _end;
+  int? get end => _$this._end;
+  set end(int? end) => _$this._end = end;
+
+  int? _limit;
+  int? get limit => _$this._limit;
+  set limit(int? limit) => _$this._limit = limit;
+
+  GSliceOptionsBuilder();
+
+  GSliceOptionsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _start = $v.start;
+      _end = $v.end;
+      _limit = $v.limit;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GSliceOptions other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GSliceOptions;
+  }
+
+  @override
+  void update(void Function(GSliceOptionsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GSliceOptions build() => _build();
+
+  _$GSliceOptions _build() {
+    final _$result =
+        _$v ?? new _$GSliceOptions._(start: start, end: end, limit: limit);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GSortOptions extends GSortOptions {
+  @override
+  final String? field;
+  @override
+  final GSortOrderEnum? order;
+
+  factory _$GSortOptions([void Function(GSortOptionsBuilder)? updates]) =>
+      (new GSortOptionsBuilder()..update(updates))._build();
+
+  _$GSortOptions._({this.field, this.order}) : super._();
+
+  @override
+  GSortOptions rebuild(void Function(GSortOptionsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSortOptionsBuilder toBuilder() => new GSortOptionsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GSortOptions &&
+        field == other.field &&
+        order == other.order;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, field.hashCode);
+    _$hash = $jc(_$hash, order.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GSortOptions')
+          ..add('field', field)
+          ..add('order', order))
+        .toString();
+  }
+}
+
+class GSortOptionsBuilder
+    implements Builder<GSortOptions, GSortOptionsBuilder> {
+  _$GSortOptions? _$v;
+
+  String? _field;
+  String? get field => _$this._field;
+  set field(String? field) => _$this._field = field;
+
+  GSortOrderEnum? _order;
+  GSortOrderEnum? get order => _$this._order;
+  set order(GSortOrderEnum? order) => _$this._order = order;
+
+  GSortOptionsBuilder();
+
+  GSortOptionsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _field = $v.field;
+      _order = $v.order;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GSortOptions other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GSortOptions;
+  }
+
+  @override
+  void update(void Function(GSortOptionsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GSortOptions build() => _build();
+
+  _$GSortOptions _build() {
+    final _$result = _$v ?? new _$GSortOptions._(field: field, order: order);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateAlbumInput extends GUpdateAlbumInput {
+  @override
+  final String? title;
+  @override
+  final String? userId;
+
+  factory _$GUpdateAlbumInput(
+          [void Function(GUpdateAlbumInputBuilder)? updates]) =>
+      (new GUpdateAlbumInputBuilder()..update(updates))._build();
+
+  _$GUpdateAlbumInput._({this.title, this.userId}) : super._();
+
+  @override
+  GUpdateAlbumInput rebuild(void Function(GUpdateAlbumInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateAlbumInputBuilder toBuilder() =>
+      new GUpdateAlbumInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateAlbumInput &&
+        title == other.title &&
+        userId == other.userId;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, userId.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GUpdateAlbumInput')
+          ..add('title', title)
+          ..add('userId', userId))
+        .toString();
+  }
+}
+
+class GUpdateAlbumInputBuilder
+    implements Builder<GUpdateAlbumInput, GUpdateAlbumInputBuilder> {
+  _$GUpdateAlbumInput? _$v;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  String? _userId;
+  String? get userId => _$this._userId;
+  set userId(String? userId) => _$this._userId = userId;
+
+  GUpdateAlbumInputBuilder();
+
+  GUpdateAlbumInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _title = $v.title;
+      _userId = $v.userId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateAlbumInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateAlbumInput;
+  }
+
+  @override
+  void update(void Function(GUpdateAlbumInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GUpdateAlbumInput build() => _build();
+
+  _$GUpdateAlbumInput _build() {
+    final _$result =
+        _$v ?? new _$GUpdateAlbumInput._(title: title, userId: userId);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateCommentInput extends GUpdateCommentInput {
+  @override
+  final String? name;
+  @override
+  final String? email;
+  @override
+  final String? body;
+
+  factory _$GUpdateCommentInput(
+          [void Function(GUpdateCommentInputBuilder)? updates]) =>
+      (new GUpdateCommentInputBuilder()..update(updates))._build();
+
+  _$GUpdateCommentInput._({this.name, this.email, this.body}) : super._();
+
+  @override
+  GUpdateCommentInput rebuild(
+          void Function(GUpdateCommentInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateCommentInputBuilder toBuilder() =>
+      new GUpdateCommentInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateCommentInput &&
+        name == other.name &&
+        email == other.email &&
+        body == other.body;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GUpdateCommentInput')
+          ..add('name', name)
+          ..add('email', email)
+          ..add('body', body))
+        .toString();
+  }
+}
+
+class GUpdateCommentInputBuilder
+    implements Builder<GUpdateCommentInput, GUpdateCommentInputBuilder> {
+  _$GUpdateCommentInput? _$v;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
+
+  String? _body;
+  String? get body => _$this._body;
+  set body(String? body) => _$this._body = body;
+
+  GUpdateCommentInputBuilder();
+
+  GUpdateCommentInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _name = $v.name;
+      _email = $v.email;
+      _body = $v.body;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateCommentInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateCommentInput;
+  }
+
+  @override
+  void update(void Function(GUpdateCommentInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GUpdateCommentInput build() => _build();
+
+  _$GUpdateCommentInput _build() {
+    final _$result = _$v ??
+        new _$GUpdateCommentInput._(name: name, email: email, body: body);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdatePhotoInput extends GUpdatePhotoInput {
+  @override
+  final String? title;
+  @override
+  final String? url;
+  @override
+  final String? thumbnailUrl;
+
+  factory _$GUpdatePhotoInput(
+          [void Function(GUpdatePhotoInputBuilder)? updates]) =>
+      (new GUpdatePhotoInputBuilder()..update(updates))._build();
+
+  _$GUpdatePhotoInput._({this.title, this.url, this.thumbnailUrl}) : super._();
+
+  @override
+  GUpdatePhotoInput rebuild(void Function(GUpdatePhotoInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdatePhotoInputBuilder toBuilder() =>
+      new GUpdatePhotoInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdatePhotoInput &&
+        title == other.title &&
+        url == other.url &&
+        thumbnailUrl == other.thumbnailUrl;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GUpdatePhotoInput')
+          ..add('title', title)
+          ..add('url', url)
+          ..add('thumbnailUrl', thumbnailUrl))
+        .toString();
+  }
+}
+
+class GUpdatePhotoInputBuilder
+    implements Builder<GUpdatePhotoInput, GUpdatePhotoInputBuilder> {
+  _$GUpdatePhotoInput? _$v;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  String? _url;
+  String? get url => _$this._url;
+  set url(String? url) => _$this._url = url;
+
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
+
+  GUpdatePhotoInputBuilder();
+
+  GUpdatePhotoInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _title = $v.title;
+      _url = $v.url;
+      _thumbnailUrl = $v.thumbnailUrl;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdatePhotoInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdatePhotoInput;
+  }
+
+  @override
+  void update(void Function(GUpdatePhotoInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GUpdatePhotoInput build() => _build();
+
+  _$GUpdatePhotoInput _build() {
+    final _$result = _$v ??
+        new _$GUpdatePhotoInput._(
+            title: title, url: url, thumbnailUrl: thumbnailUrl);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdatePostInput extends GUpdatePostInput {
+  @override
+  final String? title;
+  @override
+  final String? body;
+
+  factory _$GUpdatePostInput(
+          [void Function(GUpdatePostInputBuilder)? updates]) =>
+      (new GUpdatePostInputBuilder()..update(updates))._build();
+
+  _$GUpdatePostInput._({this.title, this.body}) : super._();
+
+  @override
+  GUpdatePostInput rebuild(void Function(GUpdatePostInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdatePostInputBuilder toBuilder() =>
+      new GUpdatePostInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdatePostInput &&
+        title == other.title &&
+        body == other.body;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GUpdatePostInput')
+          ..add('title', title)
+          ..add('body', body))
+        .toString();
+  }
+}
+
+class GUpdatePostInputBuilder
+    implements Builder<GUpdatePostInput, GUpdatePostInputBuilder> {
+  _$GUpdatePostInput? _$v;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  String? _body;
+  String? get body => _$this._body;
+  set body(String? body) => _$this._body = body;
+
+  GUpdatePostInputBuilder();
+
+  GUpdatePostInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _title = $v.title;
+      _body = $v.body;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdatePostInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdatePostInput;
+  }
+
+  @override
+  void update(void Function(GUpdatePostInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GUpdatePostInput build() => _build();
+
+  _$GUpdatePostInput _build() {
+    final _$result = _$v ?? new _$GUpdatePostInput._(title: title, body: body);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateTodoInput extends GUpdateTodoInput {
+  @override
+  final String? title;
+  @override
+  final bool? completed;
+
+  factory _$GUpdateTodoInput(
+          [void Function(GUpdateTodoInputBuilder)? updates]) =>
+      (new GUpdateTodoInputBuilder()..update(updates))._build();
+
+  _$GUpdateTodoInput._({this.title, this.completed}) : super._();
+
+  @override
+  GUpdateTodoInput rebuild(void Function(GUpdateTodoInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateTodoInputBuilder toBuilder() =>
+      new GUpdateTodoInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateTodoInput &&
+        title == other.title &&
+        completed == other.completed;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, completed.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GUpdateTodoInput')
+          ..add('title', title)
+          ..add('completed', completed))
+        .toString();
+  }
+}
+
+class GUpdateTodoInputBuilder
+    implements Builder<GUpdateTodoInput, GUpdateTodoInputBuilder> {
+  _$GUpdateTodoInput? _$v;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  bool? _completed;
+  bool? get completed => _$this._completed;
+  set completed(bool? completed) => _$this._completed = completed;
+
+  GUpdateTodoInputBuilder();
+
+  GUpdateTodoInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _title = $v.title;
+      _completed = $v.completed;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateTodoInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateTodoInput;
+  }
+
+  @override
+  void update(void Function(GUpdateTodoInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GUpdateTodoInput build() => _build();
+
+  _$GUpdateTodoInput _build() {
+    final _$result =
+        _$v ?? new _$GUpdateTodoInput._(title: title, completed: completed);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateUserInput extends GUpdateUserInput {
+  @override
+  final String? name;
+  @override
+  final String? username;
+  @override
+  final String? email;
+  @override
+  final GAddressInput? address;
+  @override
+  final String? phone;
+  @override
+  final String? website;
+  @override
+  final GCompanyInput? company;
+
+  factory _$GUpdateUserInput(
+          [void Function(GUpdateUserInputBuilder)? updates]) =>
+      (new GUpdateUserInputBuilder()..update(updates))._build();
+
+  _$GUpdateUserInput._(
+      {this.name,
+      this.username,
+      this.email,
+      this.address,
+      this.phone,
+      this.website,
+      this.company})
+      : super._();
+
+  @override
+  GUpdateUserInput rebuild(void Function(GUpdateUserInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateUserInputBuilder toBuilder() =>
+      new GUpdateUserInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateUserInput &&
+        name == other.name &&
+        username == other.username &&
+        email == other.email &&
+        address == other.address &&
+        phone == other.phone &&
+        website == other.website &&
+        company == other.company;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, username.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, address.hashCode);
+    _$hash = $jc(_$hash, phone.hashCode);
+    _$hash = $jc(_$hash, website.hashCode);
+    _$hash = $jc(_$hash, company.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GUpdateUserInput')
+          ..add('name', name)
+          ..add('username', username)
+          ..add('email', email)
+          ..add('address', address)
+          ..add('phone', phone)
+          ..add('website', website)
+          ..add('company', company))
+        .toString();
+  }
+}
+
+class GUpdateUserInputBuilder
+    implements Builder<GUpdateUserInput, GUpdateUserInputBuilder> {
+  _$GUpdateUserInput? _$v;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  String? _username;
+  String? get username => _$this._username;
+  set username(String? username) => _$this._username = username;
+
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
+
+  GAddressInputBuilder? _address;
+  GAddressInputBuilder get address =>
+      _$this._address ??= new GAddressInputBuilder();
+  set address(GAddressInputBuilder? address) => _$this._address = address;
+
+  String? _phone;
+  String? get phone => _$this._phone;
+  set phone(String? phone) => _$this._phone = phone;
+
+  String? _website;
+  String? get website => _$this._website;
+  set website(String? website) => _$this._website = website;
+
+  GCompanyInputBuilder? _company;
+  GCompanyInputBuilder get company =>
+      _$this._company ??= new GCompanyInputBuilder();
+  set company(GCompanyInputBuilder? company) => _$this._company = company;
+
+  GUpdateUserInputBuilder();
+
+  GUpdateUserInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _name = $v.name;
+      _username = $v.username;
+      _email = $v.email;
+      _address = $v.address?.toBuilder();
+      _phone = $v.phone;
+      _website = $v.website;
+      _company = $v.company?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateUserInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateUserInput;
+  }
+
+  @override
+  void update(void Function(GUpdateUserInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GUpdateUserInput build() => _build();
+
+  _$GUpdateUserInput _build() {
+    _$GUpdateUserInput _$result;
+    try {
+      _$result = _$v ??
+          new _$GUpdateUserInput._(
+              name: name,
+              username: username,
+              email: email,
+              address: _address?.build(),
+              phone: phone,
+              website: website,
+              company: _company?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'address';
+        _address?.build();
+
+        _$failedField = 'company';
+        _company?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GUpdateUserInput', _$failedField, e.toString());
       }
       rethrow;
     }

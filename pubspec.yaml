@@ -39,6 +39,9 @@ dependencies:
   ferry_generator: ^0.10.0
   build_runner: ^2.4.9
   gql_http_link: ^1.0.1+1
+  hive_flutter: ^1.1.0
+  ferry_hive_store: ^0.5.2
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
