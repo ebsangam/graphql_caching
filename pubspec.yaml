@@ -42,6 +42,7 @@ dependencies:
   hive_flutter: ^1.1.0
   ferry_hive_store: ^0.5.2
   provider: ^6.1.2
+  rxdart: ^0.27.7
 
 dev_dependencies:
   flutter_test:
