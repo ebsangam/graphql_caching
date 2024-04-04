@@ -34,14 +34,16 @@ import 'package:graphql_caching/__generated__/schema.schema.gql.dart'
         GUpdateUserInput;
 import 'package:graphql_caching/gql/__generated__/posts.data.gql.dart'
     show
+        GPostFragmentData,
+        GPostFragmentData_user,
         GPostsData,
         GPostsData_posts,
         GPostsData_posts_data,
         GPostsData_posts_data_user;
 import 'package:graphql_caching/gql/__generated__/posts.req.gql.dart'
-    show GPostsReq;
+    show GPostFragmentReq, GPostsReq;
 import 'package:graphql_caching/gql/__generated__/posts.var.gql.dart'
-    show GPostsVars;
+    show GPostFragmentVars, GPostsVars;
 
 part 'serializers.gql.g.dart';
 
@@ -62,6 +64,10 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GOperatorOptions,
   GPageQueryOptions,
   GPaginateOptions,
+  GPostFragmentData,
+  GPostFragmentData_user,
+  GPostFragmentReq,
+  GPostFragmentVars,
   GPostsData,
   GPostsData_posts,
   GPostsData_posts_data,

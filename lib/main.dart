@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:ferry/ferry.dart';
 import 'package:flutter/material.dart';
 import 'package:graphql_caching/client.dart';
 import 'package:graphql_caching/ferry_builder/ferry_builder.dart';
+import 'package:graphql_caching/gql/__generated__/posts.data.gql.dart';
 import 'package:graphql_caching/gql/__generated__/posts.req.gql.dart';
 import 'package:provider/provider.dart';
 
@@ -27,6 +30,15 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('GraphQLZero'),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Provider.of<Client>(context, listen: false)
+                      .requestController
+                      .add(GPostsReq());
+                },
+                icon: const Icon(Icons.refresh))
+          ],
         ),
         body: FerryBuilder(
           client: context.read<Client>(),
@@ -43,28 +55,7 @@ class MyApp extends StatelessWidget {
                 itemCount: response.data!.posts?.data?.length ?? 0,
                 itemBuilder: (context, index) {
                   final post = response.data!.posts!.data![index]!;
-                  return Card(
-                    margin: const EdgeInsets.all(8.0),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            post.title!,
-                            style: Theme.of(context).textTheme.titleMedium,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          Text(
-                            '${post.user!.name!}, ${post.user!.email!.toLowerCase()}',
-                            style: Theme.of(context).textTheme.labelMedium,
-                          ),
-                          Text(post.body ?? ''),
-                        ],
-                      ),
-                    ),
-                  );
+                  return PostView(post: post);
                 },
               );
             }
@@ -76,6 +67,62 @@ class MyApp extends StatelessWidget {
             }
             return const Text('Wtf');
           },
+        ),
+      ),
+    );
+  }
+}
+
+class PostView extends StatelessWidget {
+  const PostView({
+    super.key,
+    required this.post,
+  });
+
+  final GPostsData_posts_data post;
+
+  @override
+  Widget build(BuildContext context) {
+    return Dismissible(
+      key: ValueKey(post.id!),
+      onDismissed: (direction) {
+        final cache = Provider.of<Client>(context, listen: false).cache;
+
+        final postFragmentReq = GPostFragmentReq(
+          (b) => b..idFields = {'id': post.id},
+        );
+
+        final data = cache.readFragment(postFragmentReq);
+
+        final entityId = cache.identify(data)!;
+        cache.evict(entityId);
+
+        log(entityId);
+        // cache.writeFragment(
+        //   postFragmentReq,
+        //   data.rebuild((b) => b..stars = 4),
+        // );
+      },
+      child: Card(
+        margin: const EdgeInsets.all(8.0),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                post.title!,
+                style: Theme.of(context).textTheme.titleMedium,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              Text(
+                '${post.user!.name!}, ${post.user!.email!.toLowerCase()}',
+                style: Theme.of(context).textTheme.labelMedium,
+              ),
+              Text(post.body ?? ''),
+            ],
+          ),
         ),
       ),
     );

@@ -51,10 +51,12 @@ class _FerryBuilderState<TData, TVars>
         dataSource: DataSource.None,
       ),
       stream: _stream,
-      builder: (context, snapshot) => widget.builder(
-        context,
-        snapshot.data!,
-      ),
+      builder: (context, snapshot) {
+        return widget.builder(
+          context,
+          snapshot.data!,
+        );
+      },
     );
   }
 }

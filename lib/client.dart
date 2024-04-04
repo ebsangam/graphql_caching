@@ -12,8 +12,11 @@ Future<Client> initClient() async {
   final link = HttpLink('https://graphqlzero.almansi.me/api');
   final client = Client(
     link: link,
-    // cache: cache,
+    cache: cache,
+    defaultFetchPolicies: {
+      OperationType.query: FetchPolicy.CacheAndNetwork,
+    },
   );
 
-  return client;
+  return client..cache.gc();
 }
