@@ -2,18 +2,23 @@ import 'dart:developer';
 
 import 'package:ferry/ferry.dart';
 import 'package:flutter/material.dart';
-import 'package:graphql_caching/client.dart';
-import 'package:graphql_caching/ferry_builder/ferry_builder.dart';
-import 'package:graphql_caching/gql/__generated__/posts.data.gql.dart';
+import 'package:graphql_caching/core/gql_client_extension.dart';
+import 'package:graphql_caching/core/injector.dart';
 import 'package:graphql_caching/gql/__generated__/posts.req.gql.dart';
+import 'package:graphql_caching/model/post.dart';
+import 'package:graphql_caching/repo/zero_repo.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
-  final client = await initClient();
-  runApp(Provider(
-    create: (context) => client,
-    child: const MyApp(),
-  ));
+  await Hive.initFlutter();
+  await configureInjection();
+  runApp(
+    Provider(
+      create: (context) => getIt<Client>(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -32,40 +37,36 @@ class MyApp extends StatelessWidget {
           title: const Text('GraphQLZero'),
           actions: [
             IconButton(
-                onPressed: () {
-                  Provider.of<Client>(context, listen: false)
-                      .requestController
-                      .add(GPostsReq());
-                },
-                icon: const Icon(Icons.refresh))
+              onPressed: () {
+                Provider.of<Client>(context, listen: false)
+                    .requestController
+                    .add(GPostsReq());
+              },
+              icon: const Icon(Icons.refresh),
+            ),
           ],
         ),
-        body: FerryBuilder(
-          client: context.read<Client>(),
-          operationRequest: GPostsReq(),
-          builder: (context, response) {
-            if (response.loading) {
-              return const Center(
-                child: CircularProgressIndicator.adaptive(),
-              );
-            }
-
-            if (response.data != null) {
+        body: StreamBuilder(
+          stream: context.read<Client>().requestMaped(
+                request: GPostsReq(),
+                mapper: gPostsMapPost,
+              )..listen((event) {
+              log('${event.data.hashCode}: ${event.data?.length ?? 0}');
+            }),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
               return ListView.builder(
-                itemCount: response.data!.posts?.data?.length ?? 0,
+                itemCount: snapshot.data?.data?.length ?? 0,
                 itemBuilder: (context, index) {
-                  final post = response.data!.posts!.data![index]!;
-                  return PostView(post: post);
+                  final post = snapshot.data?.data![index];
+                  return PostView(post: post!);
                 },
               );
             }
-
-            if (response.hasErrors) {
-              return Center(
-                child: Text(response.linkException.toString()),
-              );
+            if (snapshot.hasError) {
+              return Text(snapshot.error!.toString());
             }
-            return const Text('Wtf');
+            return const CircularProgressIndicator();
           },
         ),
       ),
@@ -75,16 +76,16 @@ class MyApp extends StatelessWidget {
 
 class PostView extends StatelessWidget {
   const PostView({
-    super.key,
     required this.post,
+    super.key,
   });
 
-  final GPostsData_posts_data post;
+  final Post post;
 
   @override
   Widget build(BuildContext context) {
     return Dismissible(
-      key: ValueKey(post.id!),
+      key: ValueKey(post.id),
       onDismissed: (direction) {
         final cache = Provider.of<Client>(context, listen: false).cache;
 
@@ -104,20 +105,20 @@ class PostView extends StatelessWidget {
         // );
       },
       child: Card(
-        margin: const EdgeInsets.all(8.0),
+        margin: const EdgeInsets.all(8),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                post.title!,
+                '${post.id}. ${post.title}',
                 style: Theme.of(context).textTheme.titleMedium,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
               Text(
-                '${post.user!.name!}, ${post.user!.email!.toLowerCase()}',
+                '${post.userName}, ${post.userEmail.toLowerCase()}',
                 style: Theme.of(context).textTheme.labelMedium,
               ),
               Text(post.body ?? ''),

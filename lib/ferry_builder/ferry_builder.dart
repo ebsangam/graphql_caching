@@ -7,16 +7,15 @@ typedef OperationResponseBuilder<TData, TVars> = Widget Function(
 );
 
 class FerryBuilder<TData, TVars> extends StatefulWidget {
-  final OperationRequest<TData, TVars> operationRequest;
-  final OperationResponseBuilder<TData, TVars> builder;
-  final TypedLink client;
-
   const FerryBuilder({
-    super.key,
     required this.operationRequest,
     required this.builder,
     required this.client,
+    super.key,
   });
+  final OperationRequest<TData, TVars> operationRequest;
+  final OperationResponseBuilder<TData, TVars> builder;
+  final TypedLink client;
 
   @override
   State<FerryBuilder<TData, TVars>> createState() => _FerryBuilderState();
@@ -48,7 +47,6 @@ class _FerryBuilderState<TData, TVars>
     return StreamBuilder<OperationResponse<TData, TVars>>(
       initialData: OperationResponse<TData, TVars>(
         operationRequest: widget.operationRequest,
-        dataSource: DataSource.None,
       ),
       stream: _stream,
       builder: (context, snapshot) {
