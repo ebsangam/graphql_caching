@@ -4,8 +4,8 @@ targets:
       ferry_generator|graphql_builder:
         enabled: true
         options:
-          schema: graphql_caching|lib/schema.graphql
+          schema: graphql_caching|lib/gql/schema.graphql
       ferry_generator|serializer_builder:
         enabled: true
         options:
-          schema: graphql_caching|lib/schema.graphql
+          schema: graphql_caching|lib/gql/schema.graphql

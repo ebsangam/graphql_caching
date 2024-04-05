@@ -41,12 +41,13 @@ dependencies:
   gql_http_link: ^1.0.1+1
   hive_flutter: ^1.1.0
   ferry_hive_store: ^0.5.2
-  provider: ^6.1.2
   rxdart: ^0.27.7
   flutter_bloc: ^8.1.5
   freezed_annotation: ^2.4.1
   get_it: ^7.6.8
   injectable: ^2.4.1
+  go_router: ^13.2.2
+  bloc_concurrency: ^0.2.5
 
 dev_dependencies:
   flutter_test:

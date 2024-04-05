@@ -1,7 +1,7 @@
 import 'package:ferry/ferry.dart';
 import 'package:graphql_caching/core/gql_client_extension.dart';
-import 'package:graphql_caching/gql/__generated__/posts.data.gql.dart';
-import 'package:graphql_caching/gql/__generated__/posts.req.gql.dart';
+import 'package:graphql_caching/gql/query/__generated__/posts.data.gql.dart';
+import 'package:graphql_caching/gql/query/__generated__/posts.req.gql.dart';
 import 'package:graphql_caching/model/post.dart';
 import 'package:graphql_caching/model/result.dart';
 import 'package:injectable/injectable.dart';
@@ -11,11 +11,22 @@ class ZeroRepo {
   ZeroRepo(this.client);
   final Client client;
 
-  ResultStream<List<Post>> getPost() {
-    return client.requestMaped(
+  ResultStream<List<Post>> get posts {
+    return client.run(
       request: GPostsReq(),
       mapper: gPostsMapPost,
     );
+  }
+
+  void refresh() {
+    client.requestController.add(GPostsReq());
+  }
+
+  void delete() {
+    // client.run(
+    //   request: GDe,
+    //   mapper: mapper,
+    // );
   }
 }
 

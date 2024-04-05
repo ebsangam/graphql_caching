@@ -16,7 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$PostsState {
-  List<Post> get posts => throw _privateConstructorUsedError;
+  List<Post>? get posts => throw _privateConstructorUsedError;
+  Object? get error => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PostsStateCopyWith<PostsState> get copyWith =>
@@ -29,7 +30,7 @@ abstract class $PostsStateCopyWith<$Res> {
           PostsState value, $Res Function(PostsState) then) =
       _$PostsStateCopyWithImpl<$Res, PostsState>;
   @useResult
-  $Res call({List<Post> posts});
+  $Res call({List<Post>? posts, Object? error});
 }
 
 /// @nodoc
@@ -45,13 +46,15 @@ class _$PostsStateCopyWithImpl<$Res, $Val extends PostsState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? posts = null,
+    Object? posts = freezed,
+    Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      posts: null == posts
+      posts: freezed == posts
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
-              as List<Post>,
+              as List<Post>?,
+      error: freezed == error ? _value.error : error,
     ) as $Val);
   }
 }
@@ -64,7 +67,7 @@ abstract class _$$PostsStateImplCopyWith<$Res>
       __$$PostsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Post> posts});
+  $Res call({List<Post>? posts, Object? error});
 }
 
 /// @nodoc
@@ -78,33 +81,42 @@ class __$$PostsStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? posts = null,
+    Object? posts = freezed,
+    Object? error = freezed,
   }) {
     return _then(_$PostsStateImpl(
-      posts: null == posts
+      posts: freezed == posts
           ? _value._posts
           : posts // ignore: cast_nullable_to_non_nullable
-              as List<Post>,
+              as List<Post>?,
+      error: freezed == error ? _value.error : error,
     ));
   }
 }
 
 /// @nodoc
 
-class _$PostsStateImpl implements _PostsState {
-  const _$PostsStateImpl({required final List<Post> posts}) : _posts = posts;
+class _$PostsStateImpl extends _PostsState {
+  const _$PostsStateImpl({final List<Post>? posts, this.error})
+      : _posts = posts,
+        super._();
 
-  final List<Post> _posts;
+  final List<Post>? _posts;
   @override
-  List<Post> get posts {
+  List<Post>? get posts {
+    final value = _posts;
+    if (value == null) return null;
     if (_posts is EqualUnmodifiableListView) return _posts;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_posts);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
+  final Object? error;
+
+  @override
   String toString() {
-    return 'PostsState(posts: $posts)';
+    return 'PostsState(posts: $posts, error: $error)';
   }
 
   @override
@@ -112,12 +124,15 @@ class _$PostsStateImpl implements _PostsState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PostsStateImpl &&
-            const DeepCollectionEquality().equals(other._posts, _posts));
+            const DeepCollectionEquality().equals(other._posts, _posts) &&
+            const DeepCollectionEquality().equals(other.error, error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_posts));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_posts),
+      const DeepCollectionEquality().hash(error));
 
   @JsonKey(ignore: true)
   @override
@@ -126,12 +141,15 @@ class _$PostsStateImpl implements _PostsState {
       __$$PostsStateImplCopyWithImpl<_$PostsStateImpl>(this, _$identity);
 }
 
-abstract class _PostsState implements PostsState {
-  const factory _PostsState({required final List<Post> posts}) =
+abstract class _PostsState extends PostsState {
+  const factory _PostsState({final List<Post>? posts, final Object? error}) =
       _$PostsStateImpl;
+  const _PostsState._() : super._();
 
   @override
-  List<Post> get posts;
+  List<Post>? get posts;
+  @override
+  Object? get error;
   @override
   @JsonKey(ignore: true)
   _$$PostsStateImplCopyWith<_$PostsStateImpl> get copyWith =>

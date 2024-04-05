@@ -7,7 +7,7 @@ import 'package:built_value/standard_json_plugin.dart' show StandardJsonPlugin;
 import 'package:ferry_exec/ferry_exec.dart';
 import 'package:gql_code_builder/src/serializers/operation_serializer.dart'
     show OperationSerializer;
-import 'package:graphql_caching/__generated__/schema.schema.gql.dart'
+import 'package:graphql_caching/gql/__generated__/schema.schema.gql.dart'
     show
         GAddressInput,
         GCompanyInput,
@@ -32,7 +32,13 @@ import 'package:graphql_caching/__generated__/schema.schema.gql.dart'
         GUpdatePostInput,
         GUpdateTodoInput,
         GUpdateUserInput;
-import 'package:graphql_caching/gql/__generated__/posts.data.gql.dart'
+import 'package:graphql_caching/gql/mutation/__generated__/delete_post.data.gql.dart'
+    show GDeletePostData;
+import 'package:graphql_caching/gql/mutation/__generated__/delete_post.req.gql.dart'
+    show GDeletePostReq;
+import 'package:graphql_caching/gql/mutation/__generated__/delete_post.var.gql.dart'
+    show GDeletePostVars;
+import 'package:graphql_caching/gql/query/__generated__/posts.data.gql.dart'
     show
         GPostFragmentData,
         GPostFragmentData_user,
@@ -40,9 +46,9 @@ import 'package:graphql_caching/gql/__generated__/posts.data.gql.dart'
         GPostsData_posts,
         GPostsData_posts_data,
         GPostsData_posts_data_user;
-import 'package:graphql_caching/gql/__generated__/posts.req.gql.dart'
+import 'package:graphql_caching/gql/query/__generated__/posts.req.gql.dart'
     show GPostFragmentReq, GPostsReq;
-import 'package:graphql_caching/gql/__generated__/posts.var.gql.dart'
+import 'package:graphql_caching/gql/query/__generated__/posts.var.gql.dart'
     show GPostFragmentVars, GPostsVars;
 
 part 'serializers.gql.g.dart';
@@ -59,6 +65,9 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GCreatePostInput,
   GCreateTodoInput,
   GCreateUserInput,
+  GDeletePostData,
+  GDeletePostReq,
+  GDeletePostVars,
   GGeoInput,
   GOperatorKindEnum,
   GOperatorOptions,

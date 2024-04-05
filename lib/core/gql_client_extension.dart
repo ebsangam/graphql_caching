@@ -3,7 +3,7 @@ import 'package:ferry/typed_links.dart' as tl;
 import 'package:graphql_caching/model/result.dart';
 
 extension GqlClient on Client {
-  ResultStream<T> requestMaped<T, TData, TVars>({
+  ResultStream<T> run<T, TData, TVars>({
     required OperationRequest<TData, TVars> request,
     required T Function(TData? data) mapper,
     NextTypedLink<TData, TVars>? forward,
