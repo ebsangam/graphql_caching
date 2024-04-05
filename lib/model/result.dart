@@ -1,4 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:ferry/ferry.dart';
+import 'package:ferry/typed_links.dart';
+import 'package:flutter/material.dart';
+
 typedef ResultStream<T> = Stream<Result<T>>;
 
 enum DataSource {
@@ -16,17 +20,20 @@ enum DataSource {
   optimistic,
 }
 
+@immutable
 class Result<T> {
   final DataSource dataSource;
   final T? data;
   final GqlError? error;
 
-  Result({
+  const Result({
     this.dataSource = DataSource.none,
     this.data,
     this.error,
-  }) : assert(data != null || error != null,
-            'Either data or error must not be null.');
+  }) : assert(
+          data != null || error != null,
+          'Either data or error must not be null.',
+        );
 
   bool get hasData => data != null;
   bool get hasError => error != null;

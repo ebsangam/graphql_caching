@@ -121,7 +121,7 @@ class PostView extends StatelessWidget {
                 '${post.userName}, ${post.userEmail.toLowerCase()}',
                 style: Theme.of(context).textTheme.labelMedium,
               ),
-              Text(post.body ?? ''),
+              Text(post.body),
             ],
           ),
         ),
