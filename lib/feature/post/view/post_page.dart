@@ -37,7 +37,14 @@ class PostPage extends StatelessWidget {
                     itemCount: state.posts!.length,
                     itemBuilder: (context, index) {
                       final post = state.posts![index];
-                      return PostView(post: post);
+                      return PostView(
+                        post: post,
+                        onDismissed: (_) {
+                          context
+                              .read<PostsBloc>()
+                              .add(PostsDeleteEvent(post.id));
+                        },
+                      );
                     },
                   );
                 }

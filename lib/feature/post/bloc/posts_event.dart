@@ -8,5 +8,5 @@ class PostsRefreshEvent extends PostsEvent {}
 
 class PostsDeleteEvent extends PostsEvent {
   PostsDeleteEvent(this.id);
-  final int id;
+  final String id;
 }

@@ -4,6 +4,7 @@ import 'package:ferry/typed_links.dart';
 import 'package:flutter/material.dart';
 
 typedef ResultStream<T> = Stream<Result<T>>;
+typedef ResultFuture<T> = Future<Result<T>>;
 
 enum DataSource {
   /// A placeholder response source which can be used when waiting for

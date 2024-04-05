@@ -1,41 +1,21 @@
-import 'dart:developer';
-
-import 'package:ferry/ferry.dart';
 import 'package:flutter/material.dart';
-import 'package:graphql_caching/core/injector.dart';
-import 'package:graphql_caching/gql/query/__generated__/posts.req.gql.dart';
 import 'package:graphql_caching/model/post.dart';
 
 class PostView extends StatelessWidget {
   const PostView({
     required this.post,
     super.key,
+    this.onDismissed,
   });
 
   final Post post;
+  final void Function(DismissDirection direction)? onDismissed;
 
   @override
   Widget build(BuildContext context) {
     return Dismissible(
       key: ValueKey(post.id),
-      onDismissed: (direction) {
-        final cache = getIt<Client>().cache;
-
-        final postFragmentReq = GPostFragmentReq(
-          (b) => b..idFields = {'id': post.id},
-        );
-
-        final data = cache.readFragment(postFragmentReq);
-
-        final entityId = cache.identify(data)!;
-        cache.evict(entityId);
-
-        log(entityId);
-        // cache.writeFragment(
-        //   postFragmentReq,
-        //   data.rebuild((b) => b..stars = 4),
-        // );
-      },
+      onDismissed: onDismissed,
       child: Card(
         margin: const EdgeInsets.all(8),
         child: Padding(

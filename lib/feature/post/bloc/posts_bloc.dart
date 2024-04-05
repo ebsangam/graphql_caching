@@ -16,6 +16,7 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
   PostsBloc(this._repo) : super(PostsState.initial()) {
     on<PostsFetchEvent>(_onPostFetchEvent);
     on<PostsRefreshEvent>(_onPostRefreshEvent, transformer: restartable());
+    on<PostsDeleteEvent>(_onPostDeleteEvent);
   }
   final ZeroRepo _repo;
 
@@ -36,5 +37,12 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
     Emitter<PostsState> emit,
   ) {
     _repo.refresh();
+  }
+
+  FutureOr<void> _onPostDeleteEvent(
+    PostsDeleteEvent event,
+    Emitter<PostsState> emit,
+  ) {
+    _repo.delete(event.id);
   }
 }

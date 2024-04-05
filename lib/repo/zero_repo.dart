@@ -1,5 +1,6 @@
 import 'package:ferry/ferry.dart';
 import 'package:graphql_caching/core/gql_client_extension.dart';
+import 'package:graphql_caching/gql/mutation/__generated__/delete_post.req.gql.dart';
 import 'package:graphql_caching/gql/query/__generated__/posts.data.gql.dart';
 import 'package:graphql_caching/gql/query/__generated__/posts.req.gql.dart';
 import 'package:graphql_caching/model/post.dart';
@@ -12,7 +13,7 @@ class ZeroRepo {
   final Client client;
 
   ResultStream<List<Post>> get posts {
-    return client.run(
+    return client.queryStream(
       request: GPostsReq(),
       mapper: gPostsMapPost,
     );
@@ -22,10 +23,30 @@ class ZeroRepo {
     client.requestController.add(GPostsReq());
   }
 
-  void delete() {
-    // client.run(
-    //   request: GDe,
-    //   mapper: mapper,
+  void delete(String id) {
+    client.query(
+      request: GDeletePostReq(
+        (b) => b
+          ..vars.id = id
+          ..fetchPolicy = FetchPolicy.NetworkOnly,
+      ),
+      mapper: (data) => data!.deletePost!,
+    );
+
+    // final cache = getIt<Client>().cache;
+
+    // final postFragmentReq = GPostFragmentReq(
+    //   (b) => b..idFields = {'id': post.id},
+    // );
+
+    // final data = cache.readFragment(postFragmentReq);
+
+    // final entityId = cache.identify(data);
+    // cache.evict(entityId!);
+
+    // cache.writeFragment(
+    //   postFragmentReq,
+    //   data.rebuild((b) => b..stars = 4),
     // );
   }
 }
