@@ -33,21 +33,16 @@ class ZeroRepo {
       mapper: (data) => data!.deletePost!,
     );
 
-    // final cache = getIt<Client>().cache;
+    final cache = client.cache;
 
-    // final postFragmentReq = GPostFragmentReq(
-    //   (b) => b..idFields = {'id': post.id},
-    // );
+    final postFragmentReq = GPostFragmentReq(
+      (b) => b..idFields = {'id': id},
+    );
 
-    // final data = cache.readFragment(postFragmentReq);
+    final data = cache.readFragment(postFragmentReq);
 
-    // final entityId = cache.identify(data);
-    // cache.evict(entityId!);
-
-    // cache.writeFragment(
-    //   postFragmentReq,
-    //   data.rebuild((b) => b..stars = 4),
-    // );
+    final entityId = cache.identify(data);
+    cache.evict(entityId!);
   }
 }
 

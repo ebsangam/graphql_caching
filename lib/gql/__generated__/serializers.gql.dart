@@ -32,12 +32,24 @@ import 'package:graphql_caching/gql/__generated__/schema.schema.gql.dart'
         GUpdatePostInput,
         GUpdateTodoInput,
         GUpdateUserInput;
+import 'package:graphql_caching/gql/mutation/__generated__/create_post.data.gql.dart'
+    show GCreatePostData, GCreatePostData_createPost;
+import 'package:graphql_caching/gql/mutation/__generated__/create_post.req.gql.dart'
+    show GCreatePostReq;
+import 'package:graphql_caching/gql/mutation/__generated__/create_post.var.gql.dart'
+    show GCreatePostVars;
 import 'package:graphql_caching/gql/mutation/__generated__/delete_post.data.gql.dart'
     show GDeletePostData;
 import 'package:graphql_caching/gql/mutation/__generated__/delete_post.req.gql.dart'
     show GDeletePostReq;
 import 'package:graphql_caching/gql/mutation/__generated__/delete_post.var.gql.dart'
     show GDeletePostVars;
+import 'package:graphql_caching/gql/mutation/__generated__/update_post.data.gql.dart'
+    show GUpdatePostData, GUpdatePostData_updatePost;
+import 'package:graphql_caching/gql/mutation/__generated__/update_post.req.gql.dart'
+    show GUpdatePostReq;
+import 'package:graphql_caching/gql/mutation/__generated__/update_post.var.gql.dart'
+    show GUpdatePostVars;
 import 'package:graphql_caching/gql/query/__generated__/posts.data.gql.dart'
     show
         GPostFragmentData,
@@ -62,7 +74,11 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GCreateAlbumInput,
   GCreateCommentInput,
   GCreatePhotoInput,
+  GCreatePostData,
+  GCreatePostData_createPost,
   GCreatePostInput,
+  GCreatePostReq,
+  GCreatePostVars,
   GCreateTodoInput,
   GCreateUserInput,
   GDeletePostData,
@@ -90,7 +106,11 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GUpdateAlbumInput,
   GUpdateCommentInput,
   GUpdatePhotoInput,
+  GUpdatePostData,
+  GUpdatePostData_updatePost,
   GUpdatePostInput,
+  GUpdatePostReq,
+  GUpdatePostVars,
   GUpdateTodoInput,
   GUpdateUserInput,
 ])
