@@ -8,27 +8,9 @@ extension GqlClient on Client {
     required T Function(TData? data) mapper,
     NextTypedLink<TData, TVars>? forward,
   }) {
-    return this.request(request, forward).map((event) {
-      GqlError? error;
-
-      if (event.hasErrors) {
-        if (event.graphqlErrors?.isNotEmpty ?? false) {
-          error = ServerError();
-        } else if (event.linkException != null) {
-          error = LinkError();
-        }
-      }
-      return Result(
-        data: mapper.call(event.data),
-        dataSource: switch (event.dataSource) {
-          tl.DataSource.None => DataSource.none,
-          tl.DataSource.Link => DataSource.link,
-          tl.DataSource.Cache => DataSource.cache,
-          tl.DataSource.Optimistic => DataSource.optimistic,
-        },
-        error: error,
-      );
-    });
+    return this
+        .request(request, forward)
+        .map((value) => _mapResult(value, mapper));
   }
 
   ResultFuture<T> query<T, TData, TVars>({
@@ -36,26 +18,34 @@ extension GqlClient on Client {
     required T Function(TData? data) mapper,
     NextTypedLink<TData, TVars>? forward,
   }) {
-    return this.request(request, forward).first.then((value) {
-      GqlError? error;
+    return this
+        .request(request, forward)
+        .first
+        .then((value) => _mapResult(value, mapper));
+  }
 
-      if (value.hasErrors) {
-        if (value.graphqlErrors?.isNotEmpty ?? false) {
-          error = ServerError();
-        } else if (value.linkException != null) {
-          error = LinkError();
-        }
+  Result<T> _mapResult<T, TData, TVars>(
+    OperationResponse<TData, TVars> event,
+    T Function(TData? data) mapper,
+  ) {
+    GqlError? error;
+
+    if (event.hasErrors) {
+      if (event.graphqlErrors?.isNotEmpty ?? false) {
+        error = ServerError();
+      } else if (event.linkException != null) {
+        error = LinkError();
       }
-      return Result(
-        data: mapper.call(value.data),
-        dataSource: switch (value.dataSource) {
-          tl.DataSource.None => DataSource.none,
-          tl.DataSource.Link => DataSource.link,
-          tl.DataSource.Cache => DataSource.cache,
-          tl.DataSource.Optimistic => DataSource.optimistic,
-        },
-        error: error,
-      );
-    });
+    }
+    return Result(
+      data: mapper.call(event.data),
+      dataSource: switch (event.dataSource) {
+        tl.DataSource.None => DataSource.none,
+        tl.DataSource.Link => DataSource.link,
+        tl.DataSource.Cache => DataSource.cache,
+        tl.DataSource.Optimistic => DataSource.optimistic,
+      },
+      error: error,
+    );
   }
 }
