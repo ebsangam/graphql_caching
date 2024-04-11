@@ -48,6 +48,15 @@ dependencies:
   injectable: ^2.4.1
   go_router: ^13.2.2
   bloc_concurrency: ^0.2.5
+  hive_ui: ^1.0.14
+  built_value: ^8.9.2
+  built_collection: ^5.1.1
+
+  
+
+dependency_overrides: 
+  normalize:
+    path: package/ferry/packages/normalize
 
 dev_dependencies:
   flutter_test:

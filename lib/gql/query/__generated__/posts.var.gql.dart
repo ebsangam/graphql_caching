@@ -30,26 +30,3 @@ abstract class GPostsVars implements Built<GPostsVars, GPostsVarsBuilder> {
         json,
       );
 }
-
-abstract class GPostFragmentVars
-    implements Built<GPostFragmentVars, GPostFragmentVarsBuilder> {
-  GPostFragmentVars._();
-
-  factory GPostFragmentVars(
-          [void Function(GPostFragmentVarsBuilder b) updates]) =
-      _$GPostFragmentVars;
-
-  static Serializer<GPostFragmentVars> get serializer =>
-      _$gPostFragmentVarsSerializer;
-
-  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-        GPostFragmentVars.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GPostFragmentVars? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(
-        GPostFragmentVars.serializer,
-        json,
-      );
-}

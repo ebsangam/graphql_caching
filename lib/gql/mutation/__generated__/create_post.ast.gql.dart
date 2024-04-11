@@ -3,6 +3,8 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:gql/ast.dart' as _i1;
+import 'package:graphql_caching/gql/fragment/__generated__/post_fragment.ast.gql.dart'
+    as _i2;
 
 const CreatePost = _i1.OperationDefinitionNode(
   type: _i1.OperationType.mutation,
@@ -31,29 +33,15 @@ const CreatePost = _i1.OperationDefinitionNode(
       ],
       directives: [],
       selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'id'),
-          alias: null,
-          arguments: [],
+        _i1.FragmentSpreadNode(
+          name: _i1.NameNode(value: 'PostFragment'),
           directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'title'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'body'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
+        )
       ]),
     )
   ]),
 );
-const document = _i1.DocumentNode(definitions: [CreatePost]);
+const document = _i1.DocumentNode(definitions: [
+  CreatePost,
+  _i2.PostFragment,
+]);

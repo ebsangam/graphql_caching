@@ -32,8 +32,17 @@ import 'package:graphql_caching/gql/__generated__/schema.schema.gql.dart'
         GUpdatePostInput,
         GUpdateTodoInput,
         GUpdateUserInput;
+import 'package:graphql_caching/gql/fragment/__generated__/post_fragment.data.gql.dart'
+    show GPostFragmentData, GPostFragmentData_user;
+import 'package:graphql_caching/gql/fragment/__generated__/post_fragment.req.gql.dart'
+    show GPostFragmentReq;
+import 'package:graphql_caching/gql/fragment/__generated__/post_fragment.var.gql.dart'
+    show GPostFragmentVars;
 import 'package:graphql_caching/gql/mutation/__generated__/create_post.data.gql.dart'
-    show GCreatePostData, GCreatePostData_createPost;
+    show
+        GCreatePostData,
+        GCreatePostData_createPost,
+        GCreatePostData_createPost_user;
 import 'package:graphql_caching/gql/mutation/__generated__/create_post.req.gql.dart'
     show GCreatePostReq;
 import 'package:graphql_caching/gql/mutation/__generated__/create_post.var.gql.dart'
@@ -52,16 +61,14 @@ import 'package:graphql_caching/gql/mutation/__generated__/update_post.var.gql.d
     show GUpdatePostVars;
 import 'package:graphql_caching/gql/query/__generated__/posts.data.gql.dart'
     show
-        GPostFragmentData,
-        GPostFragmentData_user,
         GPostsData,
         GPostsData_posts,
         GPostsData_posts_data,
         GPostsData_posts_data_user;
 import 'package:graphql_caching/gql/query/__generated__/posts.req.gql.dart'
-    show GPostFragmentReq, GPostsReq;
+    show GPostsReq;
 import 'package:graphql_caching/gql/query/__generated__/posts.var.gql.dart'
-    show GPostFragmentVars, GPostsVars;
+    show GPostsVars;
 
 part 'serializers.gql.g.dart';
 
@@ -76,6 +83,7 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GCreatePhotoInput,
   GCreatePostData,
   GCreatePostData_createPost,
+  GCreatePostData_createPost_user,
   GCreatePostInput,
   GCreatePostReq,
   GCreatePostVars,

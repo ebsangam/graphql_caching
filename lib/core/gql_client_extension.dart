@@ -17,32 +17,45 @@ extension GqlClient on Client {
     TData? cacheData;
 
     return this.request(request, forward).transform(
-      StreamTransformer<OperationResponse<TData, TVars>,
-          Result<T>>.fromHandlers(
-        handleData: (data, sink) {
-          if (data.data != null) cacheData = data.data;
-          sink.add(
-            _mapResult(
-              value: data,
-              mapper: mapper,
-              previousData: cacheData,
-            ),
-          );
-        },
-      ),
-    );
+          StreamTransformer<OperationResponse<TData, TVars>,
+              Result<T>>.fromHandlers(
+            handleDone: (sink) {
+              sink.close();
+            },
+            handleData: (data, sink) {
+              if (data.data != null) cacheData = data.data;
+              sink.add(
+                _mapResult(
+                  value: data,
+                  mapper: mapper,
+                  previousData: cacheData,
+                ),
+              );
+            },
+          ),
+        );
   }
 
-  ResultFuture<T> query<T, TData, TVars>({
-    required OperationRequest<TData, TVars> request,
-    required T Function(TData? data) mapper,
-    NextTypedLink<TData, TVars>? forward,
-  }) {
-    return this
-        .request(request, forward)
-        .first
-        .then((value) => _mapResult(value: value, mapper: mapper));
-  }
+  // ResultFuture<T> query<T, TData, TVars>({
+  //   required OperationRequest<TData, TVars> request,
+  //   required T Function(TData? data) mapper,
+  //   NextTypedLink<TData, TVars>? forward,
+  // }) {
+  //   return this
+  //       .request(request, forward)
+  //       .firstWhere(
+  //         (e) => switch (request.fetchPolicy) {
+  //           FetchPolicy.CacheAndNetwork => e.dataSource == tl.DataSource.Link,
+  //           FetchPolicy.CacheFirst =>
+  //             (e.data != null && e.dataSource == tl.DataSource.Cache) ||
+  //                 e.dataSource == tl.DataSource.Link,
+  //           FetchPolicy.CacheOnly => e.dataSource == tl.DataSource.Cache,
+  //           FetchPolicy.NetworkOnly => e.dataSource == tl.DataSource.Link,
+  //           _ => e.dataSource == tl.DataSource.Link,
+  //         },
+  //       )
+  //       .then((value) => _mapResult(value: value, mapper: mapper));
+  // }
 
   Result<T> _mapResult<T, TData, TVars>({
     required OperationResponse<TData, TVars> value,

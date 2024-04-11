@@ -1,17 +1,8 @@
+# import '../fragment/post_fragment.graphql'
 query Posts($options: PageQueryOptions) {
   posts(options: $options) {
     data {
       ...PostFragment
     }
-  }
-}
-
-fragment PostFragment on Post {
-  id
-  title
-  body
-  user {
-    name
-    email
   }
 }

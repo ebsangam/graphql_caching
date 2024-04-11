@@ -25,9 +25,20 @@ class PostPage extends StatelessWidget {
                 ),
               ],
             ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                context.read<PostsBloc>().add(
+                      PostsCreateEvent(
+                        title: 'New Post',
+                        body: 'This is new post.',
+                      ),
+                    );
+              },
+              child: const Icon(Icons.add),
+            ),
             body: BlocBuilder<PostsBloc, PostsState>(
               builder: (context, state) {
-                if (state.hasError) {
+                if (state.hasError && !state.hasData) {
                   return Center(
                     child: Text(state.error!.toString()),
                   );

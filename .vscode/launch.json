@@ -1,0 +1,119 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "graphql_caching",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "graphql_caching (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "graphql_caching (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "ferry",
+      "cwd": "package/ferry",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "pokemon_explorer",
+      "cwd": "package/ferry/examples/pokemon_explorer",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "pokemon_explorer (profile mode)",
+      "cwd": "package/ferry/examples/pokemon_explorer",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "pokemon_explorer (release mode)",
+      "cwd": "package/ferry/examples/pokemon_explorer",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "ferry",
+      "cwd": "package/ferry/packages/ferry",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ferry_cache",
+      "cwd": "package/ferry/packages/ferry_cache",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ferry_exec",
+      "cwd": "package/ferry/packages/ferry_exec",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ferry_flutter",
+      "cwd": "package/ferry/packages/ferry_flutter",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ferry_flutter (profile mode)",
+      "cwd": "package/ferry/packages/ferry_flutter",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "ferry_flutter (release mode)",
+      "cwd": "package/ferry/packages/ferry_flutter",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "ferry_generator",
+      "cwd": "package/ferry/packages/ferry_generator",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ferry_hive_store",
+      "cwd": "package/ferry/packages/ferry_hive_store",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ferry_store",
+      "cwd": "package/ferry/packages/ferry_store",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ferry_test_graphql2",
+      "cwd": "package/ferry/packages/ferry_test_graphql2",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "normalize",
+      "cwd": "package/ferry/packages/normalize",
+      "request": "launch",
+      "type": "dart"
+    }
+  ]
+}

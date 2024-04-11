@@ -4,6 +4,7 @@ import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:graphql_caching/model/post.dart';
+import 'package:graphql_caching/model/result.dart';
 import 'package:graphql_caching/repo/zero_repo.dart';
 import 'package:injectable/injectable.dart';
 
@@ -17,6 +18,7 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
     on<PostsFetchEvent>(_onPostFetchEvent);
     on<PostsRefreshEvent>(_onPostRefreshEvent, transformer: restartable());
     on<PostsDeleteEvent>(_onPostDeleteEvent);
+    on<PostsCreateEvent>(_onPostCreateEvent);
   }
   final ZeroRepo _repo;
 
@@ -27,9 +29,21 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
     await emit.forEach(
       _repo.posts,
       onData: (data) {
-        return PostsState(posts: data.data ?? []);
+        return PostsState(
+          posts: data.data ?? [],
+          error: data.error,
+        );
       },
     );
+  }
+
+  FutureOr<void> _onPostCreateEvent(
+    PostsCreateEvent event,
+    Emitter<PostsState> emit,
+  ) async {
+    await _repo
+        .create(title: event.title, body: event.body)
+        .firstWhere((element) => element.dataSource == DataSource.link);
   }
 
   FutureOr<void> _onPostRefreshEvent(

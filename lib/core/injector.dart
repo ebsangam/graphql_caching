@@ -3,6 +3,7 @@ import 'package:ferry/typed_links.dart';
 import 'package:ferry_hive_store/ferry_hive_store.dart';
 import 'package:get_it/get_it.dart';
 import 'package:gql_http_link/gql_http_link.dart';
+import 'package:graphql_caching/cache_handlers/create_post_hanlder.dart';
 import 'package:graphql_caching/core/injector.config.dart';
 import 'package:injectable/injectable.dart';
 
@@ -16,8 +17,12 @@ abstract class InjectableModule {
   @preResolve
   Future<Cache> getFerryCache() {
     // ignore: inference_failure_on_function_invocation
-    return Hive.openBox('gqlCache')
-        .then((value) => Cache(store: HiveStore(value)));
+    return Hive.openBox('gqlCache').then(
+      (value) => Cache(
+        store: HiveStore(value),
+        // typePolicies: typePostPolicy,
+      ),
+    );
   }
 
   Client get client {
@@ -26,6 +31,9 @@ abstract class InjectableModule {
       cache: getIt<Cache>(),
       defaultFetchPolicies: {
         OperationType.query: FetchPolicy.CacheAndNetwork,
+      },
+      updateCacheHandlers: {
+        'createPostHander': createPostHandler,
       },
     );
   }
