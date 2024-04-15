@@ -11,7 +11,9 @@ final typePostPolicy = {
     fields: {
       'posts': FieldPolicy(
         keyArgs: const [],
-        // read: (existing, options) => existing,
+        // read: (existing, options) {
+        //   return existing;
+        // },
         merge: (existing, incoming, _) {
           log(existing.toString());
           log(existing.runtimeType.toString());
@@ -21,7 +23,9 @@ final typePostPolicy = {
             hashCode: const DeepCollectionEquality().hash,
           )
                 ..addAll(
-                  (existing as Map<dynamic, dynamic>?)?['data'] as Iterable,
+                  ((existing as Map<dynamic, dynamic>?)?['data']
+                          as Iterable?) ??
+                      [],
                 )
                 ..addAll(
                   (incoming as Map<dynamic, dynamic>?)?['data'] as Iterable,
