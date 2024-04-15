@@ -17,9 +17,11 @@ void createPostHandler(
   )!;
   final rebuilt = posts.rebuild(
     (b) => b
-      ..posts.data.first = GPostsData_posts_data.fromJson(
-        response.data!.createPost!.toJson(),
-      ),
+      ..posts.data.add(
+            GPostsData_posts_data.fromJson(
+              response.data!.createPost!.toJson(),
+            ),
+          ),
   );
   proxy.writeQuery(
     req,
