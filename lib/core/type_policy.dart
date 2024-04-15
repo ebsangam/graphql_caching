@@ -6,7 +6,7 @@ import 'dart:developer';
 import 'package:ferry/ferry.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-final typePostPolicy = {
+final typPolicies = {
   'Query': TypePolicy(
     fields: {
       'posts': FieldPolicy(

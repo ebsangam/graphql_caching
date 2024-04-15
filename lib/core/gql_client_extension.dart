@@ -36,27 +36,6 @@ extension GqlClient on Client {
         );
   }
 
-  // ResultFuture<T> query<T, TData, TVars>({
-  //   required OperationRequest<TData, TVars> request,
-  //   required T Function(TData? data) mapper,
-  //   NextTypedLink<TData, TVars>? forward,
-  // }) {
-  //   return this
-  //       .request(request, forward)
-  //       .firstWhere(
-  //         (e) => switch (request.fetchPolicy) {
-  //           FetchPolicy.CacheAndNetwork => e.dataSource == tl.DataSource.Link,
-  //           FetchPolicy.CacheFirst =>
-  //             (e.data != null && e.dataSource == tl.DataSource.Cache) ||
-  //                 e.dataSource == tl.DataSource.Link,
-  //           FetchPolicy.CacheOnly => e.dataSource == tl.DataSource.Cache,
-  //           FetchPolicy.NetworkOnly => e.dataSource == tl.DataSource.Link,
-  //           _ => e.dataSource == tl.DataSource.Link,
-  //         },
-  //       )
-  //       .then((value) => _mapResult(value: value, mapper: mapper));
-  // }
-
   Result<T> _mapResult<T, TData, TVars>({
     required OperationResponse<TData, TVars> value,
     required T Function(TData? data) mapper,

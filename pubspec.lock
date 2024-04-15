@@ -569,11 +569,12 @@ packages:
     source: hosted
     version: "1.0.0"
   normalize:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "package/ferry/packages/normalize"
-      relative: true
-    source: path
+      name: normalize
+      sha256: f78bf0552b9640c76369253f0b8fdabad4f3fbfc06bdae9359e71bee9a5b071b
+      url: "https://pub.dev"
+    source: hosted
     version: "0.9.1"
   package_config:
     dependency: transitive

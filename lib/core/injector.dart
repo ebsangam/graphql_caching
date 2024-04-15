@@ -5,6 +5,7 @@ import 'package:get_it/get_it.dart';
 import 'package:gql_http_link/gql_http_link.dart';
 import 'package:graphql_caching/cache_handlers/create_post_hanlder.dart';
 import 'package:graphql_caching/core/injector.config.dart';
+import 'package:graphql_caching/core/type_policy.dart';
 import 'package:injectable/injectable.dart';
 
 final getIt = GetIt.instance;
@@ -20,7 +21,7 @@ abstract class InjectableModule {
     return Hive.openBox('gqlCache').then(
       (value) => Cache(
         store: HiveStore(value),
-        // typePolicies: typePostPolicy,
+        typePolicies: typPolicies,
       ),
     );
   }

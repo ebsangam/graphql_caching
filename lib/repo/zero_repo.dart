@@ -87,22 +87,3 @@ Post mapPost(GPostFragment it) {
     userEmail: it.user?.email ?? 'lucifer@emai.com',
   );
 }
-
-// void createPostHandler(
-//   CacheProxy proxy,
-//   OperationResponse<GCreatePostData, GCreatePostVars> response,
-// ) {
-//   final posts = proxy.readQuery<GPostsData, GPostsVars>(
-//     ZeroRepo._gPostReq,
-//   )!;
-//   final rebuilt = posts.rebuild(
-//     (b) => b
-//       ..posts.data.first = GPostsData_posts_data.fromJson(
-//         response.data!.createPost!.toJson(),
-//       ),
-//   );
-//   proxy.writeQuery(
-//     ZeroRepo._gPostReq,
-//     rebuilt,
-//   );
-// }
