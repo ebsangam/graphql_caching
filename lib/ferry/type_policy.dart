@@ -4,7 +4,7 @@ import 'dart:developer';
 import 'package:collection/collection.dart';
 import 'package:ferry/ferry.dart';
 
-final typPolicies = {
+final typePolicies = {
   'Query': TypePolicy(
     fields: {
       'posts': FieldPolicy(
