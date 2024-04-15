@@ -1,16 +1,14 @@
 # graphql_caching
 
-A new Flutter project.
+A Flutter project showcasing GraphQL Caching using Ferry.
 
-## Getting Started
+## What is working?
+- Caching
+- Optimistic mutation
 
-This project is a starting point for a Flutter application.
+## What is not working
+- Customizing field merge behavious (necessary for pagination). [Issue here](https://github.com/gql-dart/ferry/issues/597) 
 
-A few resources to get you started if this is your first Flutter project:
+## Complexity
+High
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
