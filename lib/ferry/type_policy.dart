@@ -1,10 +1,8 @@
-// ignore_for_file: inference_failure_on_instance_creation, inference_failure_on_untyped_parameter, avoid_dynamic_calls
-
 import 'dart:collection';
 import 'dart:developer';
 
+import 'package:collection/collection.dart';
 import 'package:ferry/ferry.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 final typPolicies = {
   'Query': TypePolicy(

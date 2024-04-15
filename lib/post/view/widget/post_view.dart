@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:graphql_caching/model/post.dart';
+import 'package:graphql_caching/gql/query/__generated__/posts.data.gql.dart';
 
 class PostView extends StatelessWidget {
   const PostView({
@@ -8,7 +8,7 @@ class PostView extends StatelessWidget {
     this.onDismissed,
   });
 
-  final Post post;
+  final GPostsData_posts_data post;
   final void Function(DismissDirection direction)? onDismissed;
 
   @override
@@ -30,10 +30,10 @@ class PostView extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               Text(
-                '${post.userName}, ${post.userEmail.toLowerCase()}',
+                '${post.user?.name ?? 'null'}, ${post.user?.email?.toLowerCase() ?? 'null'}',
                 style: Theme.of(context).textTheme.labelMedium,
               ),
-              Text(post.body),
+              Text(post.body ?? 'null'),
             ],
           ),
         ),
