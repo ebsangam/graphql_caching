@@ -9,9 +9,6 @@ final typePolicies = {
     fields: {
       'posts': FieldPolicy(
         keyArgs: const [],
-        // read: (existing, options) {
-        //   return existing;
-        // },
         merge: (existing, incoming, _) {
           log(existing.toString());
           log(existing.runtimeType.toString());
@@ -29,7 +26,8 @@ final typePolicies = {
                   (incoming as Map<dynamic, dynamic>?)?['data'] as Iterable,
                 ))
               .toList();
-          return merged.toList();
+          final res = incoming?..['data'] = merged.toList();
+          return res;
         },
       ),
     },
