@@ -4,7 +4,10 @@ part of 'posts_bloc.dart';
 class PostsState with _$PostsState {
   const factory PostsState({
     List<Post>? posts,
+    @Default(1) int page,
     Object? error,
+    @Default(DataSource.none) DataSource dataSource,
+    @Default(true) bool hasMore,
   }) = _PostsState;
 
   const PostsState._();

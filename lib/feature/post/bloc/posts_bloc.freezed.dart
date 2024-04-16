@@ -17,7 +17,10 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$PostsState {
   List<Post>? get posts => throw _privateConstructorUsedError;
+  int get page => throw _privateConstructorUsedError;
   Object? get error => throw _privateConstructorUsedError;
+  DataSource get dataSource => throw _privateConstructorUsedError;
+  bool get hasMore => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PostsStateCopyWith<PostsState> get copyWith =>
@@ -30,7 +33,12 @@ abstract class $PostsStateCopyWith<$Res> {
           PostsState value, $Res Function(PostsState) then) =
       _$PostsStateCopyWithImpl<$Res, PostsState>;
   @useResult
-  $Res call({List<Post>? posts, Object? error});
+  $Res call(
+      {List<Post>? posts,
+      int page,
+      Object? error,
+      DataSource dataSource,
+      bool hasMore});
 }
 
 /// @nodoc
@@ -47,14 +55,29 @@ class _$PostsStateCopyWithImpl<$Res, $Val extends PostsState>
   @override
   $Res call({
     Object? posts = freezed,
+    Object? page = null,
     Object? error = freezed,
+    Object? dataSource = null,
+    Object? hasMore = null,
   }) {
     return _then(_value.copyWith(
       posts: freezed == posts
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
               as List<Post>?,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
       error: freezed == error ? _value.error : error,
+      dataSource: null == dataSource
+          ? _value.dataSource
+          : dataSource // ignore: cast_nullable_to_non_nullable
+              as DataSource,
+      hasMore: null == hasMore
+          ? _value.hasMore
+          : hasMore // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -67,7 +90,12 @@ abstract class _$$PostsStateImplCopyWith<$Res>
       __$$PostsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Post>? posts, Object? error});
+  $Res call(
+      {List<Post>? posts,
+      int page,
+      Object? error,
+      DataSource dataSource,
+      bool hasMore});
 }
 
 /// @nodoc
@@ -82,14 +110,29 @@ class __$$PostsStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? posts = freezed,
+    Object? page = null,
     Object? error = freezed,
+    Object? dataSource = null,
+    Object? hasMore = null,
   }) {
     return _then(_$PostsStateImpl(
       posts: freezed == posts
           ? _value._posts
           : posts // ignore: cast_nullable_to_non_nullable
               as List<Post>?,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
       error: freezed == error ? _value.error : error,
+      dataSource: null == dataSource
+          ? _value.dataSource
+          : dataSource // ignore: cast_nullable_to_non_nullable
+              as DataSource,
+      hasMore: null == hasMore
+          ? _value.hasMore
+          : hasMore // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -97,7 +140,12 @@ class __$$PostsStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$PostsStateImpl extends _PostsState {
-  const _$PostsStateImpl({final List<Post>? posts, this.error})
+  const _$PostsStateImpl(
+      {final List<Post>? posts,
+      this.page = 1,
+      this.error,
+      this.dataSource = DataSource.none,
+      this.hasMore = true})
       : _posts = posts,
         super._();
 
@@ -112,11 +160,20 @@ class _$PostsStateImpl extends _PostsState {
   }
 
   @override
+  @JsonKey()
+  final int page;
+  @override
   final Object? error;
+  @override
+  @JsonKey()
+  final DataSource dataSource;
+  @override
+  @JsonKey()
+  final bool hasMore;
 
   @override
   String toString() {
-    return 'PostsState(posts: $posts, error: $error)';
+    return 'PostsState(posts: $posts, page: $page, error: $error, dataSource: $dataSource, hasMore: $hasMore)';
   }
 
   @override
@@ -125,14 +182,21 @@ class _$PostsStateImpl extends _PostsState {
         (other.runtimeType == runtimeType &&
             other is _$PostsStateImpl &&
             const DeepCollectionEquality().equals(other._posts, _posts) &&
-            const DeepCollectionEquality().equals(other.error, error));
+            (identical(other.page, page) || other.page == page) &&
+            const DeepCollectionEquality().equals(other.error, error) &&
+            (identical(other.dataSource, dataSource) ||
+                other.dataSource == dataSource) &&
+            (identical(other.hasMore, hasMore) || other.hasMore == hasMore));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_posts),
-      const DeepCollectionEquality().hash(error));
+      page,
+      const DeepCollectionEquality().hash(error),
+      dataSource,
+      hasMore);
 
   @JsonKey(ignore: true)
   @override
@@ -142,14 +206,24 @@ class _$PostsStateImpl extends _PostsState {
 }
 
 abstract class _PostsState extends PostsState {
-  const factory _PostsState({final List<Post>? posts, final Object? error}) =
-      _$PostsStateImpl;
+  const factory _PostsState(
+      {final List<Post>? posts,
+      final int page,
+      final Object? error,
+      final DataSource dataSource,
+      final bool hasMore}) = _$PostsStateImpl;
   const _PostsState._() : super._();
 
   @override
   List<Post>? get posts;
   @override
+  int get page;
+  @override
   Object? get error;
+  @override
+  DataSource get dataSource;
+  @override
+  bool get hasMore;
   @override
   @JsonKey(ignore: true)
   _$$PostsStateImplCopyWith<_$PostsStateImpl> get copyWith =>

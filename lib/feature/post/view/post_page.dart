@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:graphql_caching/core/injector.dart';
@@ -44,19 +46,22 @@ class PostPage extends StatelessWidget {
                   );
                 }
                 if (state.hasData) {
-                  return ListView.builder(
-                    itemCount: state.posts!.length,
-                    itemBuilder: (context, index) {
-                      final post = state.posts![index];
-                      return PostView(
-                        post: post,
-                        onDismissed: (_) {
-                          context
-                              .read<PostsBloc>()
-                              .add(PostsDeleteEvent(post.id));
-                        },
-                      );
+                  return ListBuilder(
+                    hasMore: state.hasMore,
+                    onEndReach: () {
+                      // final page = (state.posts!.length / 10).ceil();
+                      log('ListView.builder');
+                      context.read<PostsBloc>().add(PostsNextPageEvent());
                     },
+                    items: state.posts!,
+                    builder: (context, item) => PostView(
+                      post: item,
+                      onDismissed: (_) {
+                        context
+                            .read<PostsBloc>()
+                            .add(PostsDeleteEvent(item.id));
+                      },
+                    ),
                   );
                 }
                 return const Center(
@@ -67,6 +72,37 @@ class PostPage extends StatelessWidget {
           );
         },
       ),
+    );
+  }
+}
+
+class ListBuilder<T> extends StatelessWidget {
+  const ListBuilder({
+    required this.items,
+    required this.builder,
+    required this.onEndReach,
+    required this.hasMore,
+    super.key,
+  });
+
+  final List<T> items;
+  final VoidCallback onEndReach;
+  final bool hasMore;
+
+  final Widget Function(BuildContext context, T item) builder;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: items.length + 1,
+      itemBuilder: (context, index) {
+        if (index == items.length) {
+          if (!hasMore) return const SizedBox.shrink();
+          onEndReach();
+          return const Center(child: CircularProgressIndicator());
+        }
+        return builder(context, items[index]);
+      },
     );
   }
 }

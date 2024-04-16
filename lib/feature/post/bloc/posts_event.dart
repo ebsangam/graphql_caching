@@ -6,6 +6,8 @@ class PostsFetchEvent extends PostsEvent {}
 
 class PostsRefreshEvent extends PostsEvent {}
 
+class PostsNextPageEvent extends PostsEvent {}
+
 class PostsCreateEvent extends PostsEvent {
   PostsCreateEvent({required this.title, required this.body});
 

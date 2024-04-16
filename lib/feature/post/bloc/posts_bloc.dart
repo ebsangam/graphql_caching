@@ -19,8 +19,11 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
     on<PostsRefreshEvent>(_onPostRefreshEvent, transformer: restartable());
     on<PostsDeleteEvent>(_onPostDeleteEvent);
     on<PostsCreateEvent>(_onPostCreateEvent);
+    on<PostsNextPageEvent>(_onPostsNextPageEvent, transformer: droppable());
   }
   final ZeroRepo _repo;
+
+  bool refreshing = false;
 
   FutureOr<void> _onPostFetchEvent(
     PostsFetchEvent event,
@@ -29,9 +32,15 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
     await emit.forEach(
       _repo.posts,
       onData: (data) {
+        if (data.dataSource == DataSource.link) {
+          refreshing = false;
+        }
+
         return PostsState(
           posts: data.data ?? [],
           error: data.error,
+          page: ((data.data?.length ?? 0) / 10).ceil(),
+          dataSource: data.dataSource,
         );
       },
     );
@@ -58,5 +67,15 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
     Emitter<PostsState> emit,
   ) {
     _repo.delete(event.id);
+  }
+
+  FutureOr<void> _onPostsNextPageEvent(
+    PostsNextPageEvent event,
+    Emitter<PostsState> emit,
+  ) {
+    if (!refreshing) {
+      refreshing = true;
+      _repo.nextPage(state.page + 1);
+    }
   }
 }

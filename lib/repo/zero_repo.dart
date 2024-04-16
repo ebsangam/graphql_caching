@@ -21,7 +21,12 @@ class ZeroRepo {
   final Client _client;
 
   static final _gPostReq = GPostsReq(
-    (b) => b..vars.options.paginate.limit = 10,
+    (b) => b
+      // [requestId] This will tell Ferry to include any results from subsequent
+      // requests with the same requestId in this request's result stream.
+      ..requestId = 'GPostsReq'
+      ..vars.options.paginate.limit = 10
+      ..vars.options.paginate.page = 1,
   );
 
   ResultStream<List<Post>> get posts {
@@ -30,6 +35,21 @@ class ZeroRepo {
       mapper: (data) {
         return data?.posts?.data?.map((p0) => mapPost(p0!)).toList() ?? [];
       },
+    );
+  }
+
+  void nextPage(int page) {
+    _client.requestController.add(
+      _gPostReq.rebuild(
+        (p0) => p0
+          ..vars.options.paginate.page = page
+          ..fetchPolicy = FetchPolicy.NetworkOnly
+          ..updateResult = (previous, result) =>
+              previous?.rebuild(
+                (b) => b..posts.data.addAll(result?.posts?.data ?? []),
+              ) ??
+              result,
+      ),
     );
   }
 
@@ -87,22 +107,3 @@ Post mapPost(GPostFragment it) {
     userEmail: it.user?.email ?? 'lucifer@emai.com',
   );
 }
-
-// void createPostHandler(
-//   CacheProxy proxy,
-//   OperationResponse<GCreatePostData, GCreatePostVars> response,
-// ) {
-//   final posts = proxy.readQuery<GPostsData, GPostsVars>(
-//     ZeroRepo._gPostReq,
-//   )!;
-//   final rebuilt = posts.rebuild(
-//     (b) => b
-//       ..posts.data.first = GPostsData_posts_data.fromJson(
-//         response.data!.createPost!.toJson(),
-//       ),
-//   );
-//   proxy.writeQuery(
-//     ZeroRepo._gPostReq,
-//     rebuilt,
-//   );
-// }
